@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */; };
 		1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */; };
-		1F006BA41AC047A1006CA3AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA31AC047A1006CA3AA /* ViewController.swift */; };
 		1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA51AC047A1006CA3AA /* Main.storyboard */; };
 		1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA81AC047A1006CA3AA /* Images.xcassets */; };
 		1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */; };
@@ -28,6 +27,8 @@
 		1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */; };
 		1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */; };
 		1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */; };
+		1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */; };
+		1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F006BA11AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrayerOfTheDay.xcdatamodel; sourceTree = "<group>"; };
-		1F006BA31AC047A1006CA3AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F006BA61AC047A1006CA3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F006BA81AC047A1006CA3AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F006BAB1AC047A1006CA3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingColors.swift; sourceTree = "<group>"; };
 		1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingBaseViewController.swift; sourceTree = "<group>"; };
+		1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePrayerViewController.swift; sourceTree = "<group>"; };
+		1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 				1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */,
 				1F006B9C1AC047A1006CA3AA /* Supporting Files */,
 				1F76D4F51AC1A8A7004684F3 /* view controllers */,
-				1F006BA31AC047A1006CA3AA /* ViewController.swift */,
 			);
 			path = PrayerOfTheDay;
 			sourceTree = "<group>";
@@ -160,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */,
+				1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */,
+				1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -299,12 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F006BA41AC047A1006CA3AA /* ViewController.swift in Sources */,
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
+				1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */,
+				1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */,
 				1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

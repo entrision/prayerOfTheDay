@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tph-1X-JZx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -20,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-1841" y="497"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Prayer View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SelectPrayerViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -31,13 +32,103 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-yI-e80">
+                                <rect key="frame" x="0.0" y="64" width="600" height="135"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="tPA-uX-1CN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-T6-bzz">
+                                <rect key="frame" x="6" y="205" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-iS-gu3">
+                                <rect key="frame" x="304" y="205" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-kE-Il8">
+                                <rect key="frame" x="6" y="337" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-ZQ-DiP">
+                                <rect key="frame" x="304" y="336" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-mv-sBZ">
+                                <rect key="frame" x="6" y="467" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-1W-gui">
+                                <rect key="frame" x="304" y="467" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="0Xf-kE-Il8" secondAttribute="height" id="39x-57-XzE"/>
+                            <constraint firstItem="0Xf-kE-Il8" firstAttribute="leading" secondItem="fQF-mv-sBZ" secondAttribute="leading" id="3wG-Up-Uxa"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="vYo-T6-bzz" secondAttribute="height" id="5dM-4e-ujU"/>
+                            <constraint firstItem="0Xf-kE-Il8" firstAttribute="top" secondItem="fPb-ZQ-DiP" secondAttribute="top" id="6XS-UQ-3wb"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="width" secondItem="UFJ-1W-gui" secondAttribute="width" id="6a4-Ub-jwl"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="width" secondItem="vYo-T6-bzz" secondAttribute="width" id="6ef-x6-KQ9"/>
+                            <constraint firstItem="vYo-T6-bzz" firstAttribute="top" secondItem="EzG-yI-e80" secondAttribute="bottom" constant="6" id="9Jw-JX-5qL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EzG-yI-e80" secondAttribute="trailing" constant="-16" id="Aa2-eG-9MW"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="fPb-ZQ-DiP" secondAttribute="height" id="B9j-U1-jsq"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="width" secondItem="fQF-mv-sBZ" secondAttribute="width" id="Cj6-MM-jEq"/>
+                            <constraint firstItem="EzG-yI-e80" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="DYr-z4-jjT"/>
+                            <constraint firstItem="0Xf-kE-Il8" firstAttribute="top" secondItem="vYo-T6-bzz" secondAttribute="bottom" constant="8" symbolic="YES" id="GGs-Dv-EOX"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="leading" secondItem="vYo-T6-bzz" secondAttribute="trailing" constant="8" symbolic="YES" id="HDH-OJ-1vc"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="UFJ-1W-gui" secondAttribute="height" id="Jgw-de-3dQ"/>
+                            <constraint firstItem="fPb-ZQ-DiP" firstAttribute="leading" secondItem="a9h-iS-gu3" secondAttribute="leading" id="LAB-Hv-iRK"/>
+                            <constraint firstItem="fPb-ZQ-DiP" firstAttribute="leading" secondItem="UFJ-1W-gui" secondAttribute="leading" id="ZBN-PX-izf"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="top" secondItem="vYo-T6-bzz" secondAttribute="top" id="ZNK-ZO-pTn"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="fQF-mv-sBZ" secondAttribute="height" id="aVV-CX-Sdo"/>
+                            <constraint firstItem="UFJ-1W-gui" firstAttribute="top" secondItem="fQF-mv-sBZ" secondAttribute="top" id="gjO-x9-V1N"/>
+                            <constraint firstItem="vYo-T6-bzz" firstAttribute="leading" secondItem="0Xf-kE-Il8" secondAttribute="leading" id="hZh-RH-p1e"/>
+                            <constraint firstItem="fQF-mv-sBZ" firstAttribute="top" secondItem="0Xf-kE-Il8" secondAttribute="bottom" constant="7" id="kY0-Bb-8pH"/>
+                            <constraint firstItem="EzG-yI-e80" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nPW-Jx-pDg"/>
+                            <constraint firstItem="vYo-T6-bzz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-10" id="oTu-fI-MyL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a9h-iS-gu3" secondAttribute="trailing" constant="-10" id="om6-Tg-mjw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fQF-mv-sBZ" secondAttribute="bottom" constant="9" id="qU8-ZL-94a"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="width" secondItem="fPb-ZQ-DiP" secondAttribute="width" id="rXb-hx-gbN"/>
+                            <constraint firstItem="a9h-iS-gu3" firstAttribute="width" secondItem="0Xf-kE-Il8" secondAttribute="width" id="xfT-Hw-Lty"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R9j-Q5-o1n"/>
+                    <connections>
+                        <outlet property="day1Image" destination="vYo-T6-bzz" id="a2X-dU-0nR"/>
+                        <outlet property="day2Image" destination="a9h-iS-gu3" id="Uij-Nu-9Im"/>
+                        <outlet property="day3Image" destination="0Xf-kE-Il8" id="v44-mR-5bf"/>
+                        <outlet property="day4Image" destination="fPb-ZQ-DiP" id="Vnp-8b-eLV"/>
+                        <outlet property="day5Image" destination="fQF-mv-sBZ" id="jzX-6u-uot"/>
+                        <outlet property="day6Image" destination="UFJ-1W-gui" id="svq-5P-TVv"/>
+                        <outlet property="todayImage" destination="EzG-yI-e80" id="v0Z-Qj-xvq"/>
+                        <segue destination="sAQ-CL-tZe" kind="show" identifier="Single" id="gxb-jR-E9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1095" y="497"/>
+        </scene>
+        <!--Single Prayer View Controller-->
+        <scene sceneID="StU-oM-wRW">
+            <objects>
+                <viewController id="sAQ-CL-tZe" customClass="SinglePrayerViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lU3-Qb-Kg3"/>
+                        <viewControllerLayoutGuide type="bottom" id="gmQ-Ld-aYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4si-aL-QdH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XG-TB-Uug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-363" y="497"/>
         </scene>
     </scenes>
 </document>

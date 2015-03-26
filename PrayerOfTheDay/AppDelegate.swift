@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = OperationBlessingColors.Blue
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         return true
     }
 

@@ -27,6 +27,7 @@
 		1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4391AC43F7A00DC2CE7 /* WebService.swift */; };
 		1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */; };
 		1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */; };
+		1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1F9ED4391AC43F7A00DC2CE7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingColors.swift; sourceTree = "<group>"; };
+		1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		1F76D4F51AC1A8A7004684F3 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
+				1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

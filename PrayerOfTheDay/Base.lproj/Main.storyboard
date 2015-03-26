@@ -4,16 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="Jxe-oX-slH">
-            <objects>
-                <tableViewController id="6vP-jb-jIi" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Root View Controller" id="DlZ-lP-Ndh"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tyc-j9-3fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1021" y="497"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="To4-M8-esh">
             <objects>
@@ -23,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6vP-jb-jIi" kind="relationship" relationship="rootViewController" id="mbu-Hw-pOv"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bBu-Ii-jpu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfJ-dv-GGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,10 +33,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="R9j-Q5-o1n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243" y="497"/>
+            <point key="canvasLocation" x="-1095" y="497"/>
         </scene>
     </scenes>
 </document>

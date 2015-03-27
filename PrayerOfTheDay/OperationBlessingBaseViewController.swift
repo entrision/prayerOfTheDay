@@ -31,7 +31,8 @@ class OperationBlessingBaseViewController: UIViewController {
         headerContainer.addSubview(bottomLabel)
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        //self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.title = ""
         self.navigationItem.titleView = headerContainer
     }
 

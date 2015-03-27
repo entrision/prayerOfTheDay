@@ -109,6 +109,7 @@
 		1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
+				1FC37A1E1AC56EB70059BE8B /* models */,
 				1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */,
 				1F9ED4381AC43F6500DC2CE7 /* classes */,
 				1F9ED43B1AC440D300DC2CE7 /* extensions */,
@@ -190,6 +191,13 @@
 				1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */,
 			);
 			name = extensions;
+			sourceTree = "<group>";
+		};
+		1FC37A1E1AC56EB70059BE8B /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,7 +21,13 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        todayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day1Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day2Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day3Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day4Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day5Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+        day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,14 +36,22 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // -------------------------------------------
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+    }
+    
+    // MARK: - gesture handler
+    
+    func prayerClicked(gesture: UITapGestureRecognizer) {
+        var image:UIView = gesture.view!
+        
+        // TODO: get the right Prayer
+        
+        self.performSegueWithIdentifier("SinglePrayerSegue", sender: nil)
+    }
+    
 }

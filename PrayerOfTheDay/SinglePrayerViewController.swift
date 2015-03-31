@@ -10,10 +10,14 @@ import UIKit
 
 class SinglePrayerViewController: OperationBlessingBaseViewController {
 
+    @IBOutlet var image:UIImageView!
+    @IBOutlet var location:UILabel!
+    @IBOutlet var prayer:UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        prayer.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {

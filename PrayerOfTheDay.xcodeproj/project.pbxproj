@@ -29,6 +29,12 @@
 		1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */; };
 		1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */; };
 		1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */; };
+		1FA242261ACAE1D100C05D37 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242201ACAE1D100C05D37 /* facebook.png */; };
+		1FA242271ACAE1D100C05D37 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242211ACAE1D100C05D37 /* google.png */; };
+		1FA242281ACAE1D100C05D37 /* pinetrest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242221ACAE1D100C05D37 /* pinetrest.png */; };
+		1FA242291ACAE1D100C05D37 /* tumblr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242231ACAE1D100C05D37 /* tumblr.png */; };
+		1FA2422A1ACAE1D100C05D37 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242241ACAE1D100C05D37 /* twitter.png */; };
+		1FA2422B1ACAE1D100C05D37 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242251ACAE1D100C05D37 /* youtube.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingBaseViewController.swift; sourceTree = "<group>"; };
 		1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePrayerViewController.swift; sourceTree = "<group>"; };
 		1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrayerViewController.swift; sourceTree = "<group>"; };
+		1FA242201ACAE1D100C05D37 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		1FA242211ACAE1D100C05D37 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
+		1FA242221ACAE1D100C05D37 /* pinetrest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinetrest.png; sourceTree = "<group>"; };
+		1FA242231ACAE1D100C05D37 /* tumblr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr.png; sourceTree = "<group>"; };
+		1FA242241ACAE1D100C05D37 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		1FA242251ACAE1D100C05D37 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +183,12 @@
 		1F9ED4331AC43CE700DC2CE7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1FA242201ACAE1D100C05D37 /* facebook.png */,
+				1FA242211ACAE1D100C05D37 /* google.png */,
+				1FA242221ACAE1D100C05D37 /* pinetrest.png */,
+				1FA242231ACAE1D100C05D37 /* tumblr.png */,
+				1FA242241ACAE1D100C05D37 /* twitter.png */,
+				1FA242251ACAE1D100C05D37 /* youtube.png */,
 				1F9ED4361AC43D7000DC2CE7 /* prayer-hands.png */,
 			);
 			name = images;
@@ -283,6 +301,8 @@
 				1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */,
 				1F9ED4301AC4351E00DC2CE7 /* Raleway-Regular.ttf in Resources */,
 				1F9ED42D1AC4351E00DC2CE7 /* Raleway-Heavy.ttf in Resources */,
+				1FA242261ACAE1D100C05D37 /* facebook.png in Resources */,
+				1FA2422B1ACAE1D100C05D37 /* youtube.png in Resources */,
 				1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */,
 				1F9ED4371AC43D7000DC2CE7 /* prayer-hands.png in Resources */,
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
@@ -292,6 +312,10 @@
 				1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */,
 				1F9ED4321AC4351E00DC2CE7 /* Raleway-Thin.ttf in Resources */,
 				1F9ED42E1AC4351E00DC2CE7 /* Raleway-Light.ttf in Resources */,
+				1FA242271ACAE1D100C05D37 /* google.png in Resources */,
+				1FA242281ACAE1D100C05D37 /* pinetrest.png in Resources */,
+				1FA2422A1ACAE1D100C05D37 /* twitter.png in Resources */,
+				1FA242291ACAE1D100C05D37 /* tumblr.png in Resources */,
 				1F9ED4311AC4351E00DC2CE7 /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

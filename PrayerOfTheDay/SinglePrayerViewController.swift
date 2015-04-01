@@ -13,6 +13,9 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var image:UIImageView!
     @IBOutlet var location:UILabel!
     @IBOutlet var prayer:UITextView!
+    @IBOutlet var photoButton:UIButton!
+    @IBOutlet var videoButton:UIButton!
+    @IBOutlet var donateButton:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +38,26 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - button handlers
+    // ----------------------------------------
+    
+    @IBAction func donateButtonClicked(sender: UIButton) {
+        let targetURL = NSURL(string: "https://secure.ob.org/site/Donation2;jsessionid=7ED640907B0CD046E1458FD0F8567FD9.app252b?&df_id=1320&1320.donation=form1")
+        let application=UIApplication.sharedApplication()
+        application.openURL(targetURL!);
+    }
+    
+    @IBAction func photoButtonClicked(sender: UIButton) {
+        let targetURL = NSURL(string: "http://photos.ob.org")
+        let application=UIApplication.sharedApplication()
+        application.openURL(targetURL!);
+    }
+    
+    @IBAction func videoButtonClicked(sender: UIButton) {
+        let targetURL = NSURL(string: "http://videos.ob.org")
+        let application=UIApplication.sharedApplication()
+        application.openURL(targetURL!);
+    }
 
 }

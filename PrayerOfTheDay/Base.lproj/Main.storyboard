@@ -183,6 +183,9 @@
                                                     <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="videoButtonClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="hfl-DU-XAn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXv-XY-eSS">
                                                 <rect key="frame" x="341" y="8" width="57" height="14"/>
@@ -195,6 +198,9 @@
                                                     <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="donateButtonClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="cU3-AD-18A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAH-mF-tiB">
                                                 <rect key="frame" x="155" y="8" width="93" height="14"/>
@@ -207,8 +213,11 @@
                                                     <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="photoButtonClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="2f5-OA-Abb"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="www.operationblessing.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u6-qi-LVx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.operationblessing.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u6-qi-LVx">
                                                 <rect key="frame" x="196" y="26" width="192" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="192" id="heu-cL-2Ck"/>
@@ -227,6 +236,7 @@
                                             <constraint firstItem="UXv-XY-eSS" firstAttribute="top" secondItem="VHW-fG-5c5" secondAttribute="top" constant="8" id="DMR-Ig-dxe"/>
                                             <constraint firstAttribute="centerX" secondItem="4u6-qi-LVx" secondAttribute="centerX" id="O4j-78-K6o"/>
                                             <constraint firstAttribute="centerX" secondItem="v0Z-2P-wei" secondAttribute="centerX" id="RHo-kK-duM"/>
+                                            <constraint firstItem="4u6-qi-LVx" firstAttribute="top" secondItem="UAH-mF-tiB" secondAttribute="bottom" constant="4" id="Rim-3D-TJa"/>
                                             <constraint firstItem="UXv-XY-eSS" firstAttribute="leading" secondItem="UAH-mF-tiB" secondAttribute="trailing" constant="93" id="SAE-GS-qmN"/>
                                             <constraint firstAttribute="height" constant="51" id="UAv-OH-9Ka"/>
                                         </constraints>
@@ -308,9 +318,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="donateButton" destination="UXv-XY-eSS" id="hGB-uk-sbB"/>
                         <outlet property="image" destination="s9P-O8-QyF" id="Lin-Uf-NQC"/>
                         <outlet property="location" destination="td1-Qm-jeO" id="V5L-Lr-gNB"/>
+                        <outlet property="photoButton" destination="UAH-mF-tiB" id="u3z-hL-cv8"/>
                         <outlet property="prayer" destination="8NJ-yv-FSx" id="aF3-ie-e19"/>
+                        <outlet property="videoButton" destination="v0Z-2P-wei" id="nBk-q6-gae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XG-TB-Uug" userLabel="First Responder" sceneMemberID="firstResponder"/>

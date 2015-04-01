@@ -45,6 +45,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     }
     
     // MARK: - gesture handler
+    // -------------------------------------------
     
     func prayerClicked(gesture: UITapGestureRecognizer) {
         var image:UIView = gesture.view!

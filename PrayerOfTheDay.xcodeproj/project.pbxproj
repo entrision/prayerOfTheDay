@@ -35,6 +35,11 @@
 		1FA242291ACAE1D100C05D37 /* tumblr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242231ACAE1D100C05D37 /* tumblr.png */; };
 		1FA2422A1ACAE1D100C05D37 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242241ACAE1D100C05D37 /* twitter.png */; };
 		1FA2422B1ACAE1D100C05D37 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242251ACAE1D100C05D37 /* youtube.png */; };
+		1FB5DD4B1ACDA73D001250DA /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5DD4A1ACDA73D001250DA /* settings.plist */; };
+		1FB5DD4F1ACDB299001250DA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD4D1ACDB299001250DA /* LoadingView.swift */; };
+		1FB5DD501ACDB299001250DA /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5DD4E1ACDB299001250DA /* LoadingView.xib */; };
+		1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */; };
+		1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD551ACDE8FC001250DA /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		1FA242231ACAE1D100C05D37 /* tumblr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr.png; sourceTree = "<group>"; };
 		1FA242241ACAE1D100C05D37 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		1FA242251ACAE1D100C05D37 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		1FB5DD4A1ACDA73D001250DA /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		1FB5DD4D1ACDB299001250DA /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1FB5DD4E1ACDB299001250DA /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPrayer.swift; path = ../PhotoPrayer.swift; sourceTree = "<group>"; };
+		1FB5DD551ACDE8FC001250DA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +131,15 @@
 		1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				1FC37A1E1AC56EB70059BE8B /* models */,
 				1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */,
 				1F9ED4381AC43F6500DC2CE7 /* classes */,
+				1FB5DD4C1ACDB27C001250DA /* custom views */,
 				1F9ED43B1AC440D300DC2CE7 /* extensions */,
 				1F9ED4331AC43CE700DC2CE7 /* images */,
 				1F006BA81AC047A1006CA3AA /* Images.xcassets */,
 				1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */,
 				1F006BA51AC047A1006CA3AA /* Main.storyboard */,
+				1FC37A1E1AC56EB70059BE8B /* models */,
 				1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */,
 				1F006B9C1AC047A1006CA3AA /* Supporting Files */,
 				1F76D4F51AC1A8A7004684F3 /* view controllers */,
@@ -149,6 +160,7 @@
 				1F9ED4281AC4351E00DC2CE7 /* Raleway-SemiBold.ttf */,
 				1F9ED4291AC4351E00DC2CE7 /* Raleway-Thin.ttf */,
 				1F006B9D1AC047A1006CA3AA /* Info.plist */,
+				1FB5DD4A1ACDA73D001250DA /* settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,6 +211,7 @@
 			children = (
 				1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */,
 				1F9ED4391AC43F7A00DC2CE7 /* WebService.swift */,
+				1FB5DD551ACDE8FC001250DA /* Utilities.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -211,9 +224,19 @@
 			name = extensions;
 			sourceTree = "<group>";
 		};
+		1FB5DD4C1ACDB27C001250DA /* custom views */ = {
+			isa = PBXGroup;
+			children = (
+				1FB5DD4D1ACDB299001250DA /* LoadingView.swift */,
+				1FB5DD4E1ACDB299001250DA /* LoadingView.xib */,
+			);
+			name = "custom views";
+			sourceTree = "<group>";
+		};
 		1FC37A1E1AC56EB70059BE8B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -307,6 +330,7 @@
 				1F9ED4371AC43D7000DC2CE7 /* prayer-hands.png in Resources */,
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
 				1F9ED42F1AC4351E00DC2CE7 /* Raleway-Medium.ttf in Resources */,
+				1FB5DD4B1ACDA73D001250DA /* settings.plist in Resources */,
 				1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */,
 				1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */,
 				1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */,
@@ -315,6 +339,7 @@
 				1FA242271ACAE1D100C05D37 /* google.png in Resources */,
 				1FA242281ACAE1D100C05D37 /* pinetrest.png in Resources */,
 				1FA2422A1ACAE1D100C05D37 /* twitter.png in Resources */,
+				1FB5DD501ACDB299001250DA /* LoadingView.xib in Resources */,
 				1FA242291ACAE1D100C05D37 /* tumblr.png in Resources */,
 				1F9ED4311AC4351E00DC2CE7 /* Raleway-SemiBold.ttf in Resources */,
 			);
@@ -336,12 +361,15 @@
 			files = (
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
+				1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
+				1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */,
 				1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */,
 				1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */,
 				1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */,
+				1FB5DD4F1ACDB299001250DA /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

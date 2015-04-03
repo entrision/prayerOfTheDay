@@ -22,13 +22,13 @@ class WebService: NSObject, NSURLConnectionDelegate {
     // MARK: - base methods
     // --------------------------------------------------
     
-    func get(webURL: NSString, apiToken: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
+    func get(webURL: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
         var url:NSURL = NSURL(string: baseAddress + webURL)!
         var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(apiToken, forHTTPHeaderField: "Authorization")
+        //request.setValue(apiToken, forHTTPHeaderField: "Authorization")
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(),
             completionHandler: { (connResponse: NSURLResponse!, connData: NSData!, connError: NSError!) -> Void in
@@ -40,7 +40,7 @@ class WebService: NSObject, NSURLConnectionDelegate {
         })
 
     }
-    
+/*
     func post(webURL: NSString, arguements: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
         var url:NSURL = NSURL(string: baseAddress + webURL)!
         var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
@@ -128,4 +128,5 @@ class WebService: NSObject, NSURLConnectionDelegate {
                 }
         })
     }
+*/
 }

@@ -259,7 +259,7 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-yv-FSx">
                                         <rect key="frame" x="8" y="191" width="584" height="137"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="137" id="c0O-y2-SJ4"/>
                                         </constraints>
@@ -457,6 +457,7 @@
                         <outlet property="location" destination="td1-Qm-jeO" id="V5L-Lr-gNB"/>
                         <outlet property="photoButton" destination="UAH-mF-tiB" id="u3z-hL-cv8"/>
                         <outlet property="prayer" destination="8NJ-yv-FSx" id="aF3-ie-e19"/>
+                        <outlet property="prayerHeightConstraint" destination="c0O-y2-SJ4" id="NDM-wj-ywQ"/>
                         <outlet property="videoButton" destination="v0Z-2P-wei" id="nBk-q6-gae"/>
                     </connections>
                 </viewController>

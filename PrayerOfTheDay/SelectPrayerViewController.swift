@@ -57,7 +57,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     // -------------------------------------------
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        var singlePrayerVC = segue.destinationViewController as SinglePrayerViewController
+        singlePrayerVC.prayerDate = sender as String
     }
     
     // MARK: - gesture handler
@@ -65,10 +66,11 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     func prayerClicked(gesture: UITapGestureRecognizer) {
         var image:UIView = gesture.view!
+        var day = image.tag
         
-        // TODO: get the right Prayer
-        
-        self.performSegueWithIdentifier("SinglePrayerSegue", sender: nil)
+        if let searchDate = prayers.objectForKey(day) as? String {
+            self.performSegueWithIdentifier("SinglePrayerSegue", sender: searchDate)
+        }
     }
     
     // MARK: - prayer loader
@@ -109,6 +111,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                                     dispatch_async(dispatch_get_main_queue()) {
                                         self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
                                     }
+                                    self.prayers.setObject(searchString, forKey: foundPrayers)
                                     foundPrayers++
                                 }
                             }
@@ -119,6 +122,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                 })
             } else {
                 self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
+                prayers.setObject(searchString, forKey: foundPrayers)
                 foundPrayers++
             }
             

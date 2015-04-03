@@ -16,16 +16,35 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var photoButton:UIButton!
     @IBOutlet var videoButton:UIButton!
     @IBOutlet var donateButton:UIButton!
+    @IBOutlet var prayerHeightConstraint:NSLayoutConstraint!
+    
+    var prayerDate:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        prayer.sizeToFit()
+        var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+        
+        if let data = selectedPrayer?.photo {
+            image.image = UIImage(data: data)
+        }
+        
+        prayer.text = selectedPrayer?.prayer
+        //prayer.sizeToFit()
+        
+        self.view.layoutIfNeeded()
+        
+        location.text = selectedPrayer?.location
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height)
+        prayer.textAlignment = NSTextAlignment.Center
     }
     
 

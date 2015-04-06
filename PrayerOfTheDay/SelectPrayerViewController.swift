@@ -85,6 +85,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         var service = WebService()
         var searchDate = currentDate
         
+        var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
+        var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
+        var baseAddress = settings.objectForKey("baseAddress") as NSString
+        
         for var i = 0; i < 30; i++ { // max 30 searches
             if (i > 0) {
                 var interval:NSTimeInterval = Double(-1*i*24*60*60)
@@ -97,29 +101,28 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
             var searchString = formatter.stringFromDate(searchDate)
   
             if(!Utilities.checkForPrayerOnDate(searchString)) {
-                service.get("photos/?date=\(searchString)",
-                    success:{ (response: NSURLResponse!, data: NSData!) -> Void in
-                        var couponArray: NSArray!
-                        
-                        var dataString:NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
-                        var error:NSError?
-                        
-                        if let jsonObj = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) as? NSArray {
-                            if (jsonObj.count > 0) {
-                                if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
-                                    Utilities.createPhotoPrayerFromDictionary(values)
-                                    dispatch_async(dispatch_get_main_queue()) {
-                                        self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
-                                    }
-                                    self.prayers.setObject(searchString, forKey: foundPrayers)
-                                    foundPrayers++
-                                }
+                let path: String = "\(baseAddress)photos/?date=\(searchString)"
+
+                var url: NSURL = NSURL(string: path)!
+                var request = NSURLRequest(URL: url)
+                var response: NSURLResponse?
+                
+                var error:NSError?
+                var data: NSData =  NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error:&error)!
+     
+                if let jsonObj = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) as? NSArray {
+                    if (jsonObj.count > 0) {
+                        if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
+                            Utilities.createPhotoPrayerFromDictionary(values)
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
                             }
+                            self.prayers.setObject(searchString, forKey: foundPrayers)
+                            foundPrayers++
                         }
-                        
-                    }, failure: { (error:NSError!) -> Void in
-                        println("ERROR: \(error.localizedDescription)")
-                })
+                    }
+                }
+                
             } else {
                 self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
                 prayers.setObject(searchString, forKey: foundPrayers)

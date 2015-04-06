@@ -52,16 +52,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-yI-e80" userLabel="Image View - today">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-yI-e80" userLabel="Image View - today">
                                 <rect key="frame" x="0.0" y="64" width="600" height="135"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="tPA-uX-1CN"/>
                                 </constraints>
                             </imageView>
-                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-T6-bzz" userLabel="Image View - day 1">
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-T6-bzz" userLabel="Image View - day 1">
                                 <rect key="frame" x="6" y="205" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-EW-AMY" userLabel="Label - day 1">
                                 <rect key="frame" x="6" y="307" width="285" height="21"/>
@@ -73,9 +73,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-iS-gu3" userLabel="Image View - day 2">
+                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-iS-gu3" userLabel="Image View - day 2">
                                 <rect key="frame" x="304" y="205" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-Kt-VnA" userLabel="Label - day 2">
                                 <rect key="frame" x="304" y="307" width="285" height="21"/>
@@ -87,9 +87,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-kE-Il8" userLabel="Image View - day 3">
+                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-kE-Il8" userLabel="Image View - day 3">
                                 <rect key="frame" x="6" y="336" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcX-1L-cnb" userLabel="Label - day 3">
                                 <rect key="frame" x="6" y="438" width="285" height="21"/>
@@ -101,9 +101,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-ZQ-DiP" userLabel="Image View - day 4">
+                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-ZQ-DiP" userLabel="Image View - day 4">
                                 <rect key="frame" x="304" y="336" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="40" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxK-au-7NT" userLabel="Label - day 4">
                                 <rect key="frame" x="304" y="438" width="286" height="21"/>
@@ -115,9 +115,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-mv-sBZ" userLabel="Image View - day 5">
+                            <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-mv-sBZ" userLabel="Image View - day 5">
                                 <rect key="frame" x="6" y="467" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="50" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-yz-qBj" userLabel="Label - day 5">
                                 <rect key="frame" x="6" y="569" width="285" height="21"/>
@@ -129,9 +129,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-1W-gui" userLabel="Image View - day 6">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" tag="6" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-1W-gui" userLabel="Image View - day 6">
                                 <rect key="frame" x="304" y="467" width="290" height="124"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="60" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4Q-2C-UQj" userLabel="Label - day 6">
                                 <rect key="frame" x="304" y="569" width="286" height="21"/>
@@ -411,7 +411,7 @@
                                             <constraint firstAttribute="height" constant="50" id="MH2-8V-ErE"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-O8-QyF">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-O8-QyF">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                         <color key="backgroundColor" red="0.76862745099999996" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>

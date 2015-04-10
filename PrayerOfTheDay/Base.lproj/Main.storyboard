@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tph-1X-JZx">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -238,7 +239,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Prayer of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW4-12-hgB">
-                                        <rect key="frame" x="183" y="148" width="234" height="21"/>
+                                        <rect key="frame" x="183" y="208" width="234" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="234" id="8yS-6Z-USc"/>
                                             <constraint firstAttribute="height" constant="21" id="A8Q-mh-ZUS"/>
@@ -248,7 +249,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td1-Qm-jeO">
-                                        <rect key="frame" x="183" y="167" width="234" height="21"/>
+                                        <rect key="frame" x="183" y="227" width="234" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="sxR-OG-so5"/>
                                             <constraint firstAttribute="width" constant="234" id="yey-vk-agj"/>
@@ -258,7 +259,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-yv-FSx">
-                                        <rect key="frame" x="8" y="191" width="584" height="137"/>
+                                        <rect key="frame" x="8" y="251" width="584" height="137"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="137" id="c0O-y2-SJ4"/>
@@ -268,7 +269,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHW-fG-5c5">
-                                        <rect key="frame" x="8" y="336" width="584" height="51"/>
+                                        <rect key="frame" x="8" y="396" width="584" height="51"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-2P-wei">
                                                 <rect key="frame" x="246" y="8" width="93" height="14"/>
@@ -340,7 +341,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCB-2A-GUl">
-                                        <rect key="frame" x="0.0" y="396" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="456" width="600" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-r7-7dx" userLabel="View - upper line">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -412,10 +413,10 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-O8-QyF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                         <color key="backgroundColor" red="0.76862745099999996" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="140" id="FxI-Y1-66P"/>
+                                            <constraint firstAttribute="height" constant="200" id="FxI-Y1-66P"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>

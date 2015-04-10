@@ -26,6 +26,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var day6Label: UILabel!
     
     var prayers = NSMutableDictionary()
+    var foundPrayers = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +40,11 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         
         var loadingScreen = LoadingView(frame: self.view.frame)
-        loadingScreen.setLabel("Loading Photo Prayer...")
+        loadingScreen.setLabel("Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
 
-        loadPrayers()
+        //loadPrayers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +52,9 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidAppear(animated: Bool) {
+        loadPrayers()
+    }
     
     // MARK: - Navigation
     // -------------------------------------------
@@ -79,9 +82,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     func loadPrayers() {
         // *** THINK ABOUT -  we need 7 prayers, they may not all be there on the server.
         // /api/v1/photos/?date=2010-01-01
-        // get the current date
+
         var currentDate = NSDate()
-        var foundPrayers = 0
         var service = WebService()
         var searchDate = currentDate
         
@@ -114,11 +116,14 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                     if (jsonObj.count > 0) {
                         if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
                             Utilities.createPhotoPrayerFromDictionary(values)
-                            dispatch_async(dispatch_get_main_queue()) {
-                                self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
-                            }
+                            self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString)
+                            
                             self.prayers.setObject(searchString, forKey: foundPrayers)
                             foundPrayers++
+                            
+                            if (checkForFullLoad(i)) {
+                                break
+                            }
                         }
                     }
                 }
@@ -127,12 +132,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                 self.loadPrayerUIforDayAndDate(foundPrayers, date: searchString)
                 prayers.setObject(searchString, forKey: foundPrayers)
                 foundPrayers++
-            }
-            
-            if (foundPrayers == 7 || i == 29) {
-                var loadingView = self.view.viewWithTag(70)
-                loadingView?.removeFromSuperview()
-                break
+                
+                if (checkForFullLoad(i)) {
+                    break
+                }
             }
         }
         
@@ -207,5 +210,15 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         default:
             return "SATURDAY"
         }
+    }
+    
+    func checkForFullLoad(iterator:Int)->Bool {
+        if (foundPrayers == 7 || iterator == 29) {
+            var loadingView = self.view.viewWithTag(70)
+            loadingView?.removeFromSuperview()
+            return true
+        }
+        
+        return false
     }
 }

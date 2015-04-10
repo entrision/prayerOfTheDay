@@ -13,6 +13,7 @@
 		1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA81AC047A1006CA3AA /* Images.xcassets */; };
 		1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */; };
 		1F006BB81AC047A1006CA3AA /* PrayerOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */; };
+		1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */; };
 		1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */; };
 		1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */; };
 		1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */; };
@@ -63,6 +64,7 @@
 		1F006BB11AC047A1006CA3AA /* PrayerOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006BB61AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerOfTheDayTests.swift; sourceTree = "<group>"; };
+		1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */,
 				1F006B9C1AC047A1006CA3AA /* Supporting Files */,
 				1F76D4F51AC1A8A7004684F3 /* view controllers */,
+				1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */,
 			);
 			path = PrayerOfTheDay;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				1FA242261ACAE1D100C05D37 /* facebook.png in Resources */,
 				1FA2422B1ACAE1D100C05D37 /* youtube.png in Resources */,
 				1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */,
+				1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */,
 				1F9ED4371AC43D7000DC2CE7 /* prayer-hands.png in Resources */,
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
 				1F9ED42F1AC4351E00DC2CE7 /* Raleway-Medium.ttf in Resources */,
@@ -445,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -470,7 +474,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -481,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -492,9 +496,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PrayerOfTheDay;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -502,9 +508,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PrayerOfTheDay;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

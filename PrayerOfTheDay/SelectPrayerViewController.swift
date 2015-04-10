@@ -27,6 +27,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     var prayers = NSMutableDictionary()
     var foundPrayers = 0
+    var screenLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,9 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        loadPrayers()
+        if (!screenLoaded) {
+            loadPrayers()
+        }
     }
     
     // MARK: - Navigation
@@ -216,6 +219,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         if (foundPrayers == 7 || iterator == 29) {
             var loadingView = self.view.viewWithTag(70)
             loadingView?.removeFromSuperview()
+            screenLoaded = true
             return true
         }
         

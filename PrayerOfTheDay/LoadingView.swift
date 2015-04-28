@@ -16,10 +16,6 @@ class LoadingView: UIView {
     var view: LoadingView?
     var spinner: UIActivityViewController!
     
-    override init() {
-        super.init()
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         var viewTemp = self.loadNib()
@@ -52,11 +48,11 @@ class LoadingView: UIView {
     
     private func loadNib() -> LoadingView {
         let bundle = NSBundle(forClass: self.dynamicType)
-        var view = bundle.loadNibNamed("LoadingView", owner: nil, options: nil)[0] as LoadingView
+        var view = bundle.loadNibNamed("LoadingView", owner: nil, options: nil)[0] as! LoadingView
         return view
     }
 
-    func setLabel(message: String) {
+    func setLoadingLabel(message: String) {
         self.view?.label.text = message
     }
 

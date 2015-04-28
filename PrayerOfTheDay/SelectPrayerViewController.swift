@@ -41,7 +41,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         
         var loadingScreen = LoadingView(frame: self.view.frame)
-        loadingScreen.setLabel("Loading Photo Prayers ...")
+        loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
 
@@ -63,8 +63,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     // -------------------------------------------
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var singlePrayerVC = segue.destinationViewController as SinglePrayerViewController
-        singlePrayerVC.prayerDate = sender as String
+        var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
+        singlePrayerVC.prayerDate = sender as! String
     }
     
     // MARK: - gesture handler
@@ -92,7 +92,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         
         var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
         var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        var baseAddress = settings.objectForKey("baseAddress") as NSString
+        var baseAddress = settings.objectForKey("baseAddress") as! NSString
         
         for var i = 0; i < 30; i++ { // max 30 searches
             if (i > 0) {

@@ -16,14 +16,14 @@ class WebService: NSObject, NSURLConnectionDelegate {
         super.init()
         var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
         var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        baseAddress = settings.objectForKey("baseAddress") as NSString
+        baseAddress = settings.objectForKey("baseAddress") as! NSString
     }
     
     // MARK: - base methods
     // --------------------------------------------------
     
     func get(webURL: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
-        var url:NSURL = NSURL(string: baseAddress + webURL)!
+        var url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
         var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")

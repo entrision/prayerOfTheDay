@@ -17,6 +17,10 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var videoButton:UIButton!
     @IBOutlet var donateButton:UIButton!
     @IBOutlet var prayerHeightConstraint:NSLayoutConstraint!
+    @IBOutlet var contentViewHeightConstraint:NSLayoutConstraint!
+    @IBOutlet var scroll:UIScrollView!
+    @IBOutlet var contentView:UIView!
+    @IBOutlet var socialView:UIView!
     
     var prayerDate:String!
     
@@ -29,7 +33,10 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
             image.image = UIImage(data: data)
         }
         
-        prayer.text = selectedPrayer?.prayer
+        if let prayerText = selectedPrayer?.prayer {
+            prayer.text = prayerText
+        }
+        //prayer.text = selectedPrayer?.prayer + "\n\n" + selectedPrayer?.prayer
         //prayer.sizeToFit()
         
         self.view.layoutIfNeeded()
@@ -42,9 +49,18 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        //scroll.contentSize = contentView.frame.size
+    }
+    
     override func viewWillAppear(animated: Bool) {
         prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height)
         prayer.textAlignment = NSTextAlignment.Center
+
+        contentView.frame.size = CGSizeMake(contentView.frame.width, socialView.frame.height + socialView.frame.origin.y)
+        scroll.contentSize = contentView.frame.size
+        scroll.layoutIfNeeded()
+        self.view.layoutIfNeeded()
     }
     
 

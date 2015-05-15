@@ -63,8 +63,14 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     // -------------------------------------------
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
-        singlePrayerVC.prayerDate = sender as! String
+        //var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
+        //singlePrayerVC.prayerDate = sender as! String
+        
+        var containerVC = segue.destinationViewController as! PrayerContainerViewController
+        //containerVC.startDate = sender as! String
+        containerVC.startIndex = sender as! Int
+        containerVC.prayers = prayers
+        
     }
     
     // MARK: - gesture handler
@@ -74,9 +80,12 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         var image:UIView = gesture.view!
         var day = image.tag
         
+        self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
+        /*
         if let searchDate = prayers.objectForKey(day) as? String {
             self.performSegueWithIdentifier("SinglePrayerSegue", sender: searchDate)
         }
+*/
     }
     
     // MARK: - prayer loader

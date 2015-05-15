@@ -222,17 +222,35 @@
                         <outlet property="day6Label" destination="l4Q-2C-UQj" id="PP4-JD-NDJ"/>
                         <outlet property="todayImage" destination="EzG-yI-e80" id="v0Z-Qj-xvq"/>
                         <outlet property="todayLabel" destination="Bsc-dk-GN2" id="e29-T9-r2A"/>
-                        <segue destination="sAQ-CL-tZe" kind="show" identifier="SinglePrayerSegue" id="gxb-jR-E9U"/>
+                        <segue destination="ILM-9d-Lkj" kind="show" identifier="SinglePrayerSegue" id="olf-yK-goL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1095" y="497"/>
         </scene>
+        <!--Prayer Container View Controller-->
+        <scene sceneID="fys-wC-G32">
+            <objects>
+                <viewController id="ILM-9d-Lkj" customClass="PrayerContainerViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gaK-92-ucV"/>
+                        <viewControllerLayoutGuide type="bottom" id="5R7-CK-V7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MmI-om-1fM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygo-NO-Z2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="497"/>
+        </scene>
         <!--Single Prayer View Controller-->
         <scene sceneID="StU-oM-wRW">
             <objects>
-                <viewController id="sAQ-CL-tZe" customClass="SinglePrayerViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SinglePrayerViewController" id="sAQ-CL-tZe" customClass="SinglePrayerViewController" customModule="PrayerOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lU3-Qb-Kg3"/>
                         <viewControllerLayoutGuide type="bottom" id="gmQ-Ld-aYa"/>
@@ -584,25 +602,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XG-TB-Uug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="497"/>
+            <point key="canvasLocation" x="270" y="1190"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XgO-KI-kbj">
+        <!--Page View Controller-->
+        <scene sceneID="G9E-kv-T6H">
             <objects>
-                <viewController id="5eA-hf-8Un" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xr3-68-4mG"/>
-                        <viewControllerLayoutGuide type="bottom" id="0yq-Gu-2gA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="51Q-xn-4bT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hK4-ZA-Gvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2Pz-9v-zeh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVE-TS-3r8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="1198"/>
+            <point key="canvasLocation" x="-366" y="1190"/>
         </scene>
     </scenes>
     <resources>

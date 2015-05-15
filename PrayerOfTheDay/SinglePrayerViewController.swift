@@ -23,6 +23,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var socialView:UIView!
     
     var prayerDate:String!
+    var pageIndex:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()

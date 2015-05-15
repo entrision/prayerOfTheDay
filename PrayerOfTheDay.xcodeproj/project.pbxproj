@@ -14,6 +14,7 @@
 		1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */; };
 		1F006BB81AC047A1006CA3AA /* PrayerOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */; };
 		1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */; };
+		1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */; };
 		1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */; };
 		1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */; };
 		1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */; };
@@ -65,6 +66,7 @@
 		1F006BB61AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerOfTheDayTests.swift; sourceTree = "<group>"; };
 		1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerContainerViewController.swift; sourceTree = "<group>"; };
 		1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */,
 				1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */,
 				1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */,
+				1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
 				1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */,
+				1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,

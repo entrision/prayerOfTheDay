@@ -39,7 +39,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         //prayer.text = selectedPrayer?.prayer + "\n\n" + selectedPrayer?.prayer
         //prayer.sizeToFit()
         
-        self.view.layoutIfNeeded()
+        //self.view.layoutIfNeeded()
         
         location.text = selectedPrayer?.location
     }
@@ -54,7 +54,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height)
+        prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height + 50)
         prayer.textAlignment = NSTextAlignment.Center
 
         contentView.frame.size = CGSizeMake(contentView.frame.width, socialView.frame.height + socialView.frame.origin.y)

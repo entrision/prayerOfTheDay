@@ -58,8 +58,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height + 50)
         prayer.textAlignment = NSTextAlignment.Center
 
-        contentView.frame.size = CGSizeMake(contentView.frame.width, socialView.frame.height + socialView.frame.origin.y)
-        scroll.contentSize = contentView.frame.size
         scroll.layoutIfNeeded()
         self.view.layoutIfNeeded()
     }

@@ -28,14 +28,15 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
         
         let controllers: NSArray = [singlePrayerVC]
         
-        self.automaticallyAdjustsScrollViewInsets = false
         pageViewController!.setViewControllers(controllers as [AnyObject], direction: .Forward, animated: false, completion: nil)
         
         self.addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
         
         //pageViewController?.view.frame = self.view.bounds
+        pageViewController?.view.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height)
         pageViewController?.didMoveToParentViewController(self)
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class SinglePrayerViewController: OperationBlessingBaseViewController {
 
@@ -62,17 +63,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         self.view.layoutIfNeeded()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     // MARK: - button handlers
     // ----------------------------------------
     
@@ -120,6 +110,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     @IBAction func twitterClicked(sender: UITapGestureRecognizer) {
+        /*
         var url = NSURL(string: "twitter://user?screen_name=operationbless")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -128,6 +119,22 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         }
         
         UIApplication.sharedApplication().openURL(url!)
+*/
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+            
+            var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitterSheet.setInitialText("Photo Prayer of the Day")
+            
+            var image = selectedPrayer?.photo
+            twitterSheet.addImage(UIImage(data:image!))
+            
+            self.presentViewController(twitterSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Twitter", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func tumblrClicked(sender: UITapGestureRecognizer) {
@@ -153,6 +160,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     @IBAction func facebookClicked(sender: UITapGestureRecognizer) {
+        /*
         var url = NSURL(string: "fb://operationblessing")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -161,5 +169,23 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         }
         
         UIApplication.sharedApplication().openURL(url!)
+*/
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+            
+            var prayer = selectedPrayer?.prayer
+            facebookSheet.setInitialText("Photo Prayer of the Day\n" + prayer!)
+            
+            var image = selectedPrayer?.photo
+            facebookSheet.addImage(UIImage(data:image!))
+            
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Facebook", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 }

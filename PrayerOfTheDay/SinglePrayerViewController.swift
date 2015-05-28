@@ -52,10 +52,14 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         //scroll.contentSize = contentView.frame.size
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
         prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height + 50)
         prayer.textAlignment = NSTextAlignment.Center
 

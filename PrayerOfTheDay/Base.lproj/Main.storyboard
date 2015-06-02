@@ -240,8 +240,93 @@
                     <view key="view" contentMode="scaleToFill" id="MmI-om-1fM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
+                                        <rect key="frame" x="150" y="12" width="300" height="27"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-4N-bgm" userLabel="Button - google">
+                                                <rect key="frame" x="166" y="4" width="20" height="20"/>
+                                                <state key="normal" image="google.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="googleClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="pTc-fd-dgu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-Os-E3F" userLabel="Button - twitter">
+                                                <rect key="frame" x="62" y="4" width="20" height="20"/>
+                                                <state key="normal" image="twitter.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twitterClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="CDT-kg-Je6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Ch-Fpy" userLabel="Button - tumblr">
+                                                <rect key="frame" x="114" y="4" width="20" height="20"/>
+                                                <state key="normal" image="tumblr.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tumblrClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="olE-GI-PVP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-T3-hsH" userLabel="Button - facebook">
+                                                <rect key="frame" x="10" y="4" width="20" height="20"/>
+                                                <state key="normal" image="facebook.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="facebookClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="Eyd-AP-jkh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeA-XP-mHl" userLabel="Button - pinterest">
+                                                <rect key="frame" x="218" y="4" width="20" height="20"/>
+                                                <state key="normal" image="pinetrest.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pinterestClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="k9k-UE-Y9V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyR-vo-Bki" userLabel="Button - youtube">
+                                                <rect key="frame" x="270" y="4" width="20" height="20"/>
+                                                <state key="normal" image="youtube.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="youTubeClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="hOc-9k-coW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Deh-Fb-MIa"/>
+                                            <constraint firstAttribute="height" constant="27" id="gxJ-nv-NER"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="hjF-IE-rgF" secondAttribute="centerX" id="3qt-Bq-hi3"/>
+                                    <constraint firstAttribute="height" constant="52" id="UK3-9P-IQJ"/>
+                                    <constraint firstItem="hjF-IE-rgF" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="12" id="jYv-tz-1Kj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5R7-CK-V7U" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="bottom" id="3gK-Nt-2jp"/>
+                            <constraint firstItem="cZX-Pq-3CI" firstAttribute="leading" secondItem="MmI-om-1fM" secondAttribute="leading" id="G6A-X3-YeY"/>
+                            <constraint firstAttribute="trailing" secondItem="cZX-Pq-3CI" secondAttribute="trailing" id="irg-GZ-rXV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="socialView" destination="cZX-Pq-3CI" id="Ovo-5V-BD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygo-NO-Z2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,100 +348,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="EZ2-aR-0wQ" userLabel="View - content container">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="652"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCB-2A-GUl">
-                                                <rect key="frame" x="0.0" y="550" width="600" height="52"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-r7-7dx" userLabel="View - upper line">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4x-bj-Ug5" userLabel="View - lower line">
-                                                        <rect key="frame" x="0.0" y="48" width="600" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrD-gS-A5N" userLabel="View - button view">
-                                                        <rect key="frame" x="150" y="11" width="300" height="27"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr6-Vl-xMC" userLabel="Button - google">
-                                                                <rect key="frame" x="165" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="google.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="googleClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="Rqb-1K-3EO"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-wQ-xaq" userLabel="Button - twitter">
-                                                                <rect key="frame" x="56" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="twitter.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="twitterClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="ByJ-vb-8K8"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JM1-m1-Gls" userLabel="Button - tumblr">
-                                                                <rect key="frame" x="106" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="tumblr.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="tumblrClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="YFM-g4-JJv"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvF-tQ-Pa3" userLabel="Button - youtube">
-                                                                <rect key="frame" x="274" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="youtube.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="youTubeClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="Tn8-mB-jUJ"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRm-27-RdD" userLabel="Button - facebook">
-                                                                <rect key="frame" x="3" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="facebook.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="facebookClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="bDb-3r-j9Y"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-73-rfl" userLabel="Button - pinterest">
-                                                                <rect key="frame" x="217" y="4" width="20" height="20"/>
-                                                                <state key="normal" image="pinetrest.png">
-                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="pinterestClicked:" destination="sAQ-CL-tZe" eventType="touchUpInside" id="2IP-Nk-gOR"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="27" id="GW4-5v-iqC"/>
-                                                            <constraint firstAttribute="width" constant="300" id="jsO-0r-z20"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="centerX" secondItem="YrD-gS-A5N" secondAttribute="centerX" id="0rj-De-4Ls"/>
-                                                    <constraint firstAttribute="bottom" secondItem="D4x-bj-Ug5" secondAttribute="bottom" constant="3" id="4cX-bb-dGA"/>
-                                                    <constraint firstAttribute="centerX" secondItem="YrD-gS-A5N" secondAttribute="centerX" id="4fd-ub-EYQ"/>
-                                                    <constraint firstItem="YrD-gS-A5N" firstAttribute="top" secondItem="lNj-r7-7dx" secondAttribute="bottom" constant="10" id="8D2-FB-swD"/>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="top" secondItem="YrD-gS-A5N" secondAttribute="bottom" constant="10" id="93B-YV-qR6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="lNj-r7-7dx" secondAttribute="bottom" constant="51" id="Hth-X3-TRi"/>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="leading" secondItem="CCB-2A-GUl" secondAttribute="leading" id="Iij-pC-YLR"/>
-                                                    <constraint firstItem="lNj-r7-7dx" firstAttribute="top" secondItem="CCB-2A-GUl" secondAttribute="top" id="dFT-JC-V6d"/>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="top" secondItem="CCB-2A-GUl" secondAttribute="top" constant="48" id="fZb-8Y-2uk"/>
-                                                    <constraint firstAttribute="bottom" secondItem="D4x-bj-Ug5" secondAttribute="bottom" constant="3" id="hl9-al-m2N"/>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="leading" secondItem="lNj-r7-7dx" secondAttribute="leading" id="sFC-7A-94F"/>
-                                                    <constraint firstItem="D4x-bj-Ug5" firstAttribute="trailing" secondItem="lNj-r7-7dx" secondAttribute="trailing" id="uiX-9m-sI1"/>
-                                                </constraints>
-                                            </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-yv-FSx">
                                                 <rect key="frame" x="15" y="436" width="570" height="55"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -495,13 +488,8 @@
                                             <constraint firstAttribute="trailing" secondItem="8NJ-yv-FSx" secondAttribute="trailing" constant="15" id="CBy-Uy-tG0"/>
                                             <constraint firstAttribute="trailing" secondItem="VHW-fG-5c5" secondAttribute="trailing" constant="8" id="CYw-Lu-fix"/>
                                             <constraint firstItem="s9P-O8-QyF" firstAttribute="top" secondItem="EZ2-aR-0wQ" secondAttribute="top" id="DIa-dN-rT9"/>
-                                            <constraint firstItem="CCB-2A-GUl" firstAttribute="leading" secondItem="EZ2-aR-0wQ" secondAttribute="leading" id="EYc-uG-kQc"/>
-                                            <constraint firstAttribute="trailing" secondItem="CCB-2A-GUl" secondAttribute="trailing" id="HJB-47-49o"/>
-                                            <constraint firstItem="CCB-2A-GUl" firstAttribute="top" secondItem="VHW-fG-5c5" secondAttribute="bottom" constant="1" id="HYj-hk-yzK"/>
-                                            <constraint firstAttribute="trailing" secondItem="CCB-2A-GUl" secondAttribute="trailing" constant="16" id="MZC-ea-TNt"/>
                                             <constraint firstItem="VHW-fG-5c5" firstAttribute="top" secondItem="8NJ-yv-FSx" secondAttribute="bottom" constant="10" id="PZt-Ji-Isn"/>
                                             <constraint firstItem="VHW-fG-5c5" firstAttribute="top" secondItem="8NJ-yv-FSx" secondAttribute="bottom" constant="10" id="UUH-0Q-5tR"/>
-                                            <constraint firstAttribute="bottom" secondItem="CCB-2A-GUl" secondAttribute="bottom" constant="50" id="Zau-Yx-qGW"/>
                                             <constraint firstItem="td1-Qm-jeO" firstAttribute="top" secondItem="fW4-12-hgB" secondAttribute="bottom" constant="3" id="aVE-HY-efs"/>
                                             <constraint firstItem="8NJ-yv-FSx" firstAttribute="top" secondItem="td1-Qm-jeO" secondAttribute="bottom" id="bSn-Pi-01y"/>
                                             <constraint firstItem="fW4-12-hgB" firstAttribute="top" secondItem="s9P-O8-QyF" secondAttribute="bottom" constant="7" id="fd1-Tv-XM5"/>
@@ -512,7 +500,6 @@
                                             <constraint firstItem="s9P-O8-QyF" firstAttribute="leading" secondItem="EZ2-aR-0wQ" secondAttribute="leading" id="nJh-hG-GHz"/>
                                             <constraint firstAttribute="centerX" secondItem="td1-Qm-jeO" secondAttribute="centerX" id="oYo-Bf-f0f"/>
                                             <constraint firstAttribute="centerX" secondItem="fW4-12-hgB" secondAttribute="centerX" constant="-0.5" id="xQw-h1-LFj"/>
-                                            <constraint firstItem="CCB-2A-GUl" firstAttribute="top" secondItem="VHW-fG-5c5" secondAttribute="bottom" constant="1" id="xjA-TH-x02"/>
                                             <constraint firstItem="8NJ-yv-FSx" firstAttribute="top" secondItem="td1-Qm-jeO" secondAttribute="bottom" id="yRd-F8-lEu"/>
                                             <constraint firstItem="fW4-12-hgB" firstAttribute="top" secondItem="s9P-O8-QyF" secondAttribute="bottom" id="zT7-u4-q8E"/>
                                         </constraints>
@@ -520,18 +507,27 @@
                                             <mask key="constraints">
                                                 <exclude reference="iBF-mP-rjG"/>
                                                 <exclude reference="fd1-Tv-XM5"/>
-                                                <exclude reference="MZC-ea-TNt"/>
                                             </mask>
                                         </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="EZ2-aR-0wQ" firstAttribute="height" secondItem="vqd-yI-aYt" secondAttribute="height" id="34i-Yt-KtC"/>
                                     <constraint firstItem="EZ2-aR-0wQ" firstAttribute="top" secondItem="vqd-yI-aYt" secondAttribute="top" id="BRL-dK-kp7"/>
-                                    <constraint firstAttribute="bottom" secondItem="EZ2-aR-0wQ" secondAttribute="bottom" constant="-52" id="EN3-Rc-m9r"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZ2-aR-0wQ" secondAttribute="bottom" id="EN3-Rc-m9r"/>
                                     <constraint firstAttribute="trailing" secondItem="EZ2-aR-0wQ" secondAttribute="trailing" id="ZnH-5k-vvb"/>
                                     <constraint firstAttribute="centerX" secondItem="EZ2-aR-0wQ" secondAttribute="centerX" id="c1v-74-N4T"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZ2-aR-0wQ" secondAttribute="bottom" id="jJR-v8-DNf"/>
+                                    <constraint firstItem="EZ2-aR-0wQ" firstAttribute="width" secondItem="vqd-yI-aYt" secondAttribute="width" id="ls8-zJ-70N"/>
                                     <constraint firstItem="EZ2-aR-0wQ" firstAttribute="leading" secondItem="vqd-yI-aYt" secondAttribute="leading" id="oka-TJ-OV8"/>
+                                    <constraint firstItem="EZ2-aR-0wQ" firstAttribute="top" secondItem="vqd-yI-aYt" secondAttribute="top" id="q3a-oQ-huB"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BRL-dK-kp7"/>
+                                        <exclude reference="EN3-Rc-m9r"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -539,9 +535,17 @@
                             <constraint firstItem="vqd-yI-aYt" firstAttribute="top" secondItem="4si-aL-QdH" secondAttribute="top" id="Gc4-eB-ca5"/>
                             <constraint firstItem="vqd-yI-aYt" firstAttribute="leading" secondItem="4si-aL-QdH" secondAttribute="leading" id="IKC-zZ-bDg"/>
                             <constraint firstAttribute="centerX" secondItem="vqd-yI-aYt" secondAttribute="centerX" id="Id5-d7-Spu"/>
+                            <constraint firstItem="gmQ-Ld-aYa" firstAttribute="top" secondItem="vqd-yI-aYt" secondAttribute="bottom" id="RWD-DG-AN2"/>
+                            <constraint firstItem="gmQ-Ld-aYa" firstAttribute="top" secondItem="vqd-yI-aYt" secondAttribute="bottom" id="URI-Vk-4EJ"/>
                             <constraint firstItem="gmQ-Ld-aYa" firstAttribute="top" secondItem="vqd-yI-aYt" secondAttribute="bottom" id="dAC-NJ-Zhd"/>
                             <constraint firstAttribute="trailing" secondItem="vqd-yI-aYt" secondAttribute="trailing" id="jwF-3n-Uoc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RWD-DG-AN2"/>
+                                <exclude reference="dAC-NJ-Zhd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="EZ2-aR-0wQ" id="6P0-G8-cid"/>
@@ -552,7 +556,6 @@
                         <outlet property="prayer" destination="8NJ-yv-FSx" id="aF3-ie-e19"/>
                         <outlet property="prayerHeightConstraint" destination="5H9-zp-axO" id="JQi-ps-8f2"/>
                         <outlet property="scroll" destination="vqd-yI-aYt" id="Raf-i1-mnb"/>
-                        <outlet property="socialView" destination="CCB-2A-GUl" id="xce-a8-rOm"/>
                         <outlet property="videoButton" destination="v0Z-2P-wei" id="nBk-q6-gae"/>
                     </connections>
                 </viewController>

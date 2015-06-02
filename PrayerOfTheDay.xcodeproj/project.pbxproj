@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0201B1DFB5200D9EFD3 /* SocialView.swift */; };
+		042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */; };
+		042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0241B1E266500D9EFD3 /* Strings.swift */; };
 		1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */; };
 		1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */; };
 		1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA51AC047A1006CA3AA /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042EF0201B1DFB5200D9EFD3 /* SocialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
+		042EF0241B1E266500D9EFD3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 				1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */,
 				1F9ED4391AC43F7A00DC2CE7 /* WebService.swift */,
 				1FB5DD551ACDE8FC001250DA /* Utilities.swift */,
+				042EF0241B1E266500D9EFD3 /* Strings.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -239,6 +246,8 @@
 			children = (
 				1FB5DD4D1ACDB299001250DA /* LoadingView.swift */,
 				1FB5DD4E1ACDB299001250DA /* LoadingView.xib */,
+				042EF0201B1DFB5200D9EFD3 /* SocialView.swift */,
+				042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */,
 			);
 			name = "custom views";
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
 				1F9ED42F1AC4351E00DC2CE7 /* Raleway-Medium.ttf in Resources */,
 				1FB5DD4B1ACDA73D001250DA /* settings.plist in Resources */,
+				042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */,
 				1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */,
 				1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */,
 				1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */,
@@ -374,8 +384,10 @@
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
 				1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */,
+				042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */,
 				1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
+				042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
 				1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */,

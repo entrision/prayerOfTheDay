@@ -44,6 +44,20 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         //self.view.layoutIfNeeded()
         
         location.text = selectedPrayer?.location
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: Selector("youTubeClicked:"), name: Strings.tappedYoutubeNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("facebookClicked:"), name: Strings.tappedFacebookNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("twitterClicked:"), name: Strings.tappedTwitterNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("tumblrClicked:"), name: Strings.tappedTumblrNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("googleClicked:"), name: Strings.tappedGoogleNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("pinterestClicked:"), name: Strings.tappedPinterestNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,7 +105,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     // MARK: - social media handlers
     // ----------------------------------------
     
-    @IBAction func youTubeClicked(sender: UITapGestureRecognizer) {
+    func youTubeClicked(notification: NSNotification) {
         var url = NSURL(string: "vnd.youtube://watch?v=SSnn0r4chuA#action=share")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -102,7 +116,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    @IBAction func pinterestClicked(sender: UITapGestureRecognizer) {
+    func pinterestClicked(notification: NSNotification) {
         var url = NSURL(string: "pinterest://user/operationbless/")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -113,7 +127,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    @IBAction func twitterClicked(sender: UITapGestureRecognizer) {
+    func twitterClicked(notification: NSNotification) {
         /*
         var url = NSURL(string: "twitter://user?screen_name=operationbless")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
@@ -141,7 +155,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         }
     }
     
-    @IBAction func tumblrClicked(sender: UITapGestureRecognizer) {
+    func tumblrClicked(notification: NSNotification) {
         var url = NSURL(string: "pinterest://user/operationbless/")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -152,7 +166,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    @IBAction func googleClicked(sender: UITapGestureRecognizer) {
+    func googleClicked(notification: NSNotification) {
         var url = NSURL(string: "gplus://110842766638826456360/posts")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -163,7 +177,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    @IBAction func facebookClicked(sender: UITapGestureRecognizer) {
+    func facebookClicked(notification: NSNotification) {
         /*
         var url = NSURL(string: "fb://operationblessing")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)

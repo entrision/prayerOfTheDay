@@ -10,6 +10,7 @@
 		042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0201B1DFB5200D9EFD3 /* SocialView.swift */; };
 		042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */; };
 		042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0241B1E266500D9EFD3 /* Strings.swift */; };
+		04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04461D361B1F4A7C00E0197C /* Pinterest.framework */; };
 		1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */; };
 		1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */; };
 		1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA51AC047A1006CA3AA /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 		042EF0201B1DFB5200D9EFD3 /* SocialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
 		042EF0241B1E266500D9EFD3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		04461D361B1F4A7C00E0197C /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pinterest.framework; path = ../../../Downloads/PinItSDKiOS/Pinterest.embeddedframework/Pinterest.framework; sourceTree = "<group>"; };
+		04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrayerOfTheDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +130,7 @@
 		1F006B901AC047A1006CA3AA = {
 			isa = PBXGroup;
 			children = (
+				04461D361B1F4A7C00E0197C /* Pinterest.framework */,
 				1F14DC7A1B0B636F004B38B4 /* Social.framework */,
 				1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */,
 				1F006BB41AC047A1006CA3AA /* PrayerOfTheDayTests */,
@@ -204,6 +209,7 @@
 				1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */,
 				1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */,
 				1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */,
+				04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -518,11 +524,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
+				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -531,11 +544,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
+				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 			};
 			name = Release;
 		};

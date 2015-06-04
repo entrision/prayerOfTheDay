@@ -68,7 +68,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         
         var containerVC = segue.destinationViewController as! PrayerContainerViewController
         //containerVC.startDate = sender as! String
-        containerVC.startIndex = sender as! Int
+        containerVC.startIndex = (sender as! Int)
         containerVC.prayers = prayers
         
     }

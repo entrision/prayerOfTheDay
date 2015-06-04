@@ -164,14 +164,25 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     func tumblrClicked(notification: NSNotification) {
-        var url = NSURL(string: "pinterest://user/operationbless/")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        var url = NSURL(string: "pinterest://user/operationbless/")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "http://operationblessing.tumblr.com/?mc_cid=fbdcb9fd67&mc_eid=1700c53f2c")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "http://operationblessing.tumblr.com/?mc_cid=fbdcb9fd67&mc_eid=1700c53f2c")
+        let prayer = selectedPrayer!.prayer.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        var shareURL = NSURL(string: "tumblr://x-callback-url/link?title=Daily%20Photo%20Prayer&url=\(selectedPrayer!.photoURL)")
+        var canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
+        
+        if !canOpenURL {
+            shareURL = NSURL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer!.photoURL)")
         }
         
-        UIApplication.sharedApplication().openURL(url!)
+        UIApplication.sharedApplication().openURL(shareURL!)
     }
     
     func googleClicked(notification: NSNotification) {

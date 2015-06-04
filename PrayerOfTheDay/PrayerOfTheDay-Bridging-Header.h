@@ -3,3 +3,5 @@
 //
 
 #import <Pinterest/Pinterest.h>
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>

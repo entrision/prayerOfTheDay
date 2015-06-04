@@ -28,6 +28,16 @@
 				<string>pin1445483</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.entrision.dailyphotoprayer</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.entrision.dailyphotoprayer</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>5</string>

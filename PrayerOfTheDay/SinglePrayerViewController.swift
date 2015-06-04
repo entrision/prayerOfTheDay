@@ -9,7 +9,7 @@
 import UIKit
 import Social
 
-class SinglePrayerViewController: OperationBlessingBaseViewController {
+class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignInDelegate {
 
     @IBOutlet var image:UIImageView!
     @IBOutlet var location:UILabel!
@@ -186,14 +186,21 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     func googleClicked(notification: NSNotification) {
-        var url = NSURL(string: "gplus://110842766638826456360/posts")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        var url = NSURL(string: "gplus://110842766638826456360/posts")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "https://plus.google.com/110842766638826456360/posts")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "https://plus.google.com/110842766638826456360/posts")
-        }
-        
-        UIApplication.sharedApplication().openURL(url!)
+        let signIn = GPPSignIn.sharedInstance()
+        signIn.shouldFetchGooglePlusUser = true
+        signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
+        signIn.delegate = self
+        signIn.scopes = [kGTLAuthScopePlusLogin]
+        signIn.authenticate()
     }
     
     func facebookClicked(notification: NSNotification) {
@@ -224,5 +231,19 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    //MARK: GPPShareDelegate
+    
+    func finishedWithAuth(auth: GTMOAuth2Authentication,  error: NSError ) -> Void{
+
+        let shareBuilder = GPPShare.sharedInstance().nativeShareDialog()
+        shareBuilder.attachImageData(selectedPrayer!.photo)
+        shareBuilder.setPrefillText(selectedPrayer!.prayer)
+        shareBuilder.open()
+    }
+    
+    func didDisconnectWithError ( error: NSError) -> Void{
+        debugPrintln("TEST2")
     }
 }

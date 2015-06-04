@@ -23,13 +23,14 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var contentView:UIView!
     @IBOutlet var socialView:UIView!
     
+    var selectedPrayer: PhotoPrayer?
     var prayerDate:String!
     var pageIndex:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+        selectedPrayer = Utilities.getPrayerForDate(prayerDate)
         
         if let data = selectedPrayer?.photo {
             image.image = UIImage(data: data)
@@ -117,14 +118,21 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     }
     
     func pinterestClicked(notification: NSNotification) {
-        var url = NSURL(string: "pinterest://user/operationbless/")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        var url = NSURL(string: "pinterest://user/operationbless/")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "https://www.pinterest.com/operationbless/")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "https://www.pinterest.com/operationbless/")
-        }
+        let pinterest = notification.object as! Pinterest
         
-        UIApplication.sharedApplication().openURL(url!)
+        let imageUrl = NSURL(string: selectedPrayer!.photoURL)
+        let sourceUrl = NSURL(string: "")
+        
+        pinterest.createPinWithImageURL(imageUrl, sourceURL: sourceUrl, description: selectedPrayer?.prayer)
     }
     
     func twitterClicked(notification: NSNotification) {

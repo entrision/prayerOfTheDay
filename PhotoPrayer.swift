@@ -16,6 +16,7 @@ class PhotoPrayer: NSManagedObject {
     @NSManaged var date: String
     @NSManaged var location: String
     @NSManaged var photo: NSData
+    @NSManaged var photoURL: String
     @NSManaged var prayer: String
     @NSManaged var serverID: NSNumber
 

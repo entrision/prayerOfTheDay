@@ -24,6 +24,7 @@ class Utilities {
         if let firstURL = values.objectForKey("url") as? NSDictionary {
             let webURL = NSURL(string: firstURL.objectForKey("url") as! String)
             let data = NSData(contentsOfURL: webURL!)
+            prayer.setValue(webURL?.absoluteString, forKey: "photoURL")
             prayer.setValue(data, forKey: "photo")
         }
         

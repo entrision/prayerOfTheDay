@@ -110,7 +110,11 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
     }
     
     @IBAction func pinterestClicked(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedPinterestNotification, object: nil)
+        
+        var pinterest = Pinterest()
+        pinterest.setValue("1445483", forKey: "clientId")
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedPinterestNotification, object: pinterest)
     }
     
     @IBAction func twitterClicked(sender: AnyObject) {

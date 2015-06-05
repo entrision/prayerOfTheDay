@@ -351,11 +351,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-yv-FSx">
-                                                <rect key="frame" x="15" y="436" width="570" height="55"/>
+                                                <rect key="frame" x="15" y="436" width="570" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="5H9-zp-axO"/>
-                                                </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -388,7 +385,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHW-fG-5c5">
-                                                <rect key="frame" x="8" y="501" width="584" height="48"/>
+                                                <rect key="frame" x="8" y="578" width="584" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-2P-wei">
                                                         <rect key="frame" x="262" y="0.0" width="93" height="28"/>
@@ -489,7 +486,6 @@
                                             <constraint firstAttribute="trailing" secondItem="VHW-fG-5c5" secondAttribute="trailing" constant="8" id="CYw-Lu-fix"/>
                                             <constraint firstItem="s9P-O8-QyF" firstAttribute="top" secondItem="EZ2-aR-0wQ" secondAttribute="top" id="DIa-dN-rT9"/>
                                             <constraint firstItem="VHW-fG-5c5" firstAttribute="top" secondItem="8NJ-yv-FSx" secondAttribute="bottom" constant="10" id="PZt-Ji-Isn"/>
-                                            <constraint firstItem="VHW-fG-5c5" firstAttribute="top" secondItem="8NJ-yv-FSx" secondAttribute="bottom" constant="10" id="UUH-0Q-5tR"/>
                                             <constraint firstItem="td1-Qm-jeO" firstAttribute="top" secondItem="fW4-12-hgB" secondAttribute="bottom" constant="3" id="aVE-HY-efs"/>
                                             <constraint firstItem="8NJ-yv-FSx" firstAttribute="top" secondItem="td1-Qm-jeO" secondAttribute="bottom" id="bSn-Pi-01y"/>
                                             <constraint firstItem="fW4-12-hgB" firstAttribute="top" secondItem="s9P-O8-QyF" secondAttribute="bottom" constant="7" id="fd1-Tv-XM5"/>
@@ -506,6 +502,7 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="iBF-mP-rjG"/>
+                                                <exclude reference="yRd-F8-lEu"/>
                                                 <exclude reference="fd1-Tv-XM5"/>
                                             </mask>
                                         </variation>
@@ -554,7 +551,6 @@
                         <outlet property="location" destination="td1-Qm-jeO" id="V5L-Lr-gNB"/>
                         <outlet property="photoButton" destination="UAH-mF-tiB" id="u3z-hL-cv8"/>
                         <outlet property="prayer" destination="8NJ-yv-FSx" id="aF3-ie-e19"/>
-                        <outlet property="prayerHeightConstraint" destination="5H9-zp-axO" id="JQi-ps-8f2"/>
                         <outlet property="scroll" destination="vqd-yI-aYt" id="Raf-i1-mnb"/>
                         <outlet property="videoButton" destination="v0Z-2P-wei" id="nBk-q6-gae"/>
                     </connections>

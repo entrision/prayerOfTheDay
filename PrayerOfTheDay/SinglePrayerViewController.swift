@@ -17,7 +17,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     @IBOutlet var photoButton:UIButton!
     @IBOutlet var videoButton:UIButton!
     @IBOutlet var donateButton:UIButton!
-    @IBOutlet var prayerHeightConstraint:NSLayoutConstraint!
     @IBOutlet var contentViewHeightConstraint:NSLayoutConstraint!
     @IBOutlet var scroll:UIScrollView!
     @IBOutlet var contentView:UIView!
@@ -74,10 +73,10 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        
-        prayerHeightConstraint.constant = CGFloat(prayer.sizeThatFits(CGSizeMake(prayer.frame.size.width, CGFloat.max)).height + 50)
-        prayer.textAlignment = NSTextAlignment.Center
 
+        prayer.textAlignment = NSTextAlignment.Center
+        prayer.scrollEnabled = false
+        
         scroll.layoutIfNeeded()
         self.view.layoutIfNeeded()
     }

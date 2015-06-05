@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0201B1DFB5200D9EFD3 /* SocialView.swift */; };
+		042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */; };
+		042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0241B1E266500D9EFD3 /* Strings.swift */; };
+		043CF90B1B20A850009916C1 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 043CF90A1B20A850009916C1 /* GooglePlus.bundle */; };
+		043CF90C1B20AB45009916C1 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 043CF90A1B20A850009916C1 /* GooglePlus.bundle */; };
+		04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04461D361B1F4A7C00E0197C /* Pinterest.framework */; };
+		0480FEAB1B20981600547685 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAA1B20981600547685 /* GooglePlus.framework */; };
+		0480FEAD1B20995F00547685 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */; };
+		0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAE1B2099B800547685 /* AddressBook.framework */; };
+		0480FEB11B2099BF00547685 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB01B2099BF00547685 /* AssetsLibrary.framework */; };
+		0480FEB31B2099C700547685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB21B2099C700547685 /* Foundation.framework */; };
+		0480FEB51B2099D000547685 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB41B2099D000547685 /* CoreLocation.framework */; };
+		0480FEB71B2099D400547685 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB61B2099D400547685 /* CoreMotion.framework */; };
+		0480FEB91B2099DC00547685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB81B2099DC00547685 /* CoreGraphics.framework */; };
+		0480FEBB1B2099E000547685 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEBA1B2099E000547685 /* CoreText.framework */; };
+		0480FEBD1B2099ED00547685 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEBC1B2099ED00547685 /* MediaPlayer.framework */; };
+		0480FEBF1B2099F300547685 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEBE1B2099F300547685 /* Security.framework */; };
+		0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC01B2099FB00547685 /* SystemConfiguration.framework */; };
+		0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC21B2099FF00547685 /* UIKit.framework */; };
 		1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */; };
 		1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */; };
 		1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA51AC047A1006CA3AA /* Main.storyboard */; };
@@ -56,6 +75,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042EF0201B1DFB5200D9EFD3 /* SocialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
+		042EF0241B1E266500D9EFD3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		043CF90A1B20A850009916C1 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
+		04461D361B1F4A7C00E0197C /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pinterest.framework; path = ../../../Downloads/PinItSDKiOS/Pinterest.embeddedframework/Pinterest.framework; sourceTree = "<group>"; };
+		04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrayerOfTheDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		0480FEAA1B20981600547685 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.framework"; sourceTree = "<group>"; };
+		0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GoogleOpenSource.framework"; sourceTree = "<group>"; };
+		0480FEAE1B2099B800547685 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		0480FEB01B2099BF00547685 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0480FEB21B2099C700547685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0480FEB41B2099D000547685 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0480FEB61B2099D400547685 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0480FEB81B2099DC00547685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0480FEBA1B2099E000547685 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0480FEBC1B2099ED00547685 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0480FEBE1B2099F300547685 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0480FEC01B2099FB00547685 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0480FEC21B2099FF00547685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +141,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043CF90B1B20A850009916C1 /* GooglePlus.bundle in Frameworks */,
+				0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */,
+				0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */,
+				0480FEBF1B2099F300547685 /* Security.framework in Frameworks */,
+				0480FEBD1B2099ED00547685 /* MediaPlayer.framework in Frameworks */,
+				0480FEBB1B2099E000547685 /* CoreText.framework in Frameworks */,
+				0480FEB91B2099DC00547685 /* CoreGraphics.framework in Frameworks */,
+				0480FEB71B2099D400547685 /* CoreMotion.framework in Frameworks */,
+				0480FEB51B2099D000547685 /* CoreLocation.framework in Frameworks */,
+				0480FEB31B2099C700547685 /* Foundation.framework in Frameworks */,
+				0480FEB11B2099BF00547685 /* AssetsLibrary.framework in Frameworks */,
+				0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */,
+				0480FEAD1B20995F00547685 /* GoogleOpenSource.framework in Frameworks */,
+				0480FEAB1B20981600547685 /* GooglePlus.framework in Frameworks */,
+				04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +173,21 @@
 		1F006B901AC047A1006CA3AA = {
 			isa = PBXGroup;
 			children = (
+				043CF90A1B20A850009916C1 /* GooglePlus.bundle */,
+				0480FEC21B2099FF00547685 /* UIKit.framework */,
+				0480FEC01B2099FB00547685 /* SystemConfiguration.framework */,
+				0480FEBE1B2099F300547685 /* Security.framework */,
+				0480FEBC1B2099ED00547685 /* MediaPlayer.framework */,
+				0480FEBA1B2099E000547685 /* CoreText.framework */,
+				0480FEB81B2099DC00547685 /* CoreGraphics.framework */,
+				0480FEB61B2099D400547685 /* CoreMotion.framework */,
+				0480FEB41B2099D000547685 /* CoreLocation.framework */,
+				0480FEB21B2099C700547685 /* Foundation.framework */,
+				0480FEB01B2099BF00547685 /* AssetsLibrary.framework */,
+				0480FEAE1B2099B800547685 /* AddressBook.framework */,
+				0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */,
+				0480FEAA1B20981600547685 /* GooglePlus.framework */,
+				04461D361B1F4A7C00E0197C /* Pinterest.framework */,
 				1F14DC7A1B0B636F004B38B4 /* Social.framework */,
 				1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */,
 				1F006BB41AC047A1006CA3AA /* PrayerOfTheDayTests */,
@@ -198,6 +266,7 @@
 				1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */,
 				1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */,
 				1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */,
+				04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -222,6 +291,7 @@
 				1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */,
 				1F9ED4391AC43F7A00DC2CE7 /* WebService.swift */,
 				1FB5DD551ACDE8FC001250DA /* Utilities.swift */,
+				042EF0241B1E266500D9EFD3 /* Strings.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -239,6 +309,8 @@
 			children = (
 				1FB5DD4D1ACDB299001250DA /* LoadingView.swift */,
 				1FB5DD4E1ACDB299001250DA /* LoadingView.xib */,
+				042EF0201B1DFB5200D9EFD3 /* SocialView.swift */,
+				042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */,
 			);
 			name = "custom views";
 			sourceTree = "<group>";
@@ -332,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043CF90C1B20AB45009916C1 /* GooglePlus.bundle in Resources */,
 				1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */,
 				1F9ED4301AC4351E00DC2CE7 /* Raleway-Regular.ttf in Resources */,
 				1F9ED42D1AC4351E00DC2CE7 /* Raleway-Heavy.ttf in Resources */,
@@ -343,6 +416,7 @@
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
 				1F9ED42F1AC4351E00DC2CE7 /* Raleway-Medium.ttf in Resources */,
 				1FB5DD4B1ACDA73D001250DA /* settings.plist in Resources */,
+				042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */,
 				1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */,
 				1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */,
 				1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */,
@@ -374,8 +448,10 @@
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
 				1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */,
+				042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */,
 				1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,
+				042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */,
 				1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */,
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
 				1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */,
@@ -506,11 +582,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
+					"/Users/hunterwhittle/Downloads/google-plus-ios-sdk-1.7.1",
+				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"${inherited}",
+				);
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -519,11 +607,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
+					"/Users/hunterwhittle/Downloads/google-plus-ios-sdk-1.7.1",
+				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"${inherited}",
+				);
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 			};
 			name = Release;
 		};

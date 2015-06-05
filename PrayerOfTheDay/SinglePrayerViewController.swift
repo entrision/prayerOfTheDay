@@ -9,7 +9,7 @@
 import UIKit
 import Social
 
-class SinglePrayerViewController: OperationBlessingBaseViewController {
+class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignInDelegate {
 
     @IBOutlet var image:UIImageView!
     @IBOutlet var location:UILabel!
@@ -23,13 +23,14 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     @IBOutlet var contentView:UIView!
     @IBOutlet var socialView:UIView!
     
+    var selectedPrayer: PhotoPrayer?
     var prayerDate:String!
     var pageIndex:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+        selectedPrayer = Utilities.getPrayerForDate(prayerDate)
         
         if let data = selectedPrayer?.photo {
             image.image = UIImage(data: data)
@@ -44,6 +45,20 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         //self.view.layoutIfNeeded()
         
         location.text = selectedPrayer?.location
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: Selector("youTubeClicked:"), name: Strings.tappedYoutubeNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("facebookClicked:"), name: Strings.tappedFacebookNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("twitterClicked:"), name: Strings.tappedTwitterNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("tumblrClicked:"), name: Strings.tappedTumblrNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("googleClicked:"), name: Strings.tappedGoogleNotification, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("pinterestClicked:"), name: Strings.tappedPinterestNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,7 +106,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
     // MARK: - social media handlers
     // ----------------------------------------
     
-    @IBAction func youTubeClicked(sender: UITapGestureRecognizer) {
+    func youTubeClicked(notification: NSNotification) {
         var url = NSURL(string: "vnd.youtube://watch?v=SSnn0r4chuA#action=share")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
@@ -102,18 +117,25 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    @IBAction func pinterestClicked(sender: UITapGestureRecognizer) {
-        var url = NSURL(string: "pinterest://user/operationbless/")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+    func pinterestClicked(notification: NSNotification) {
+//        var url = NSURL(string: "pinterest://user/operationbless/")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "https://www.pinterest.com/operationbless/")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "https://www.pinterest.com/operationbless/")
-        }
+        let pinterest = notification.object as! Pinterest
         
-        UIApplication.sharedApplication().openURL(url!)
+        let imageUrl = NSURL(string: selectedPrayer!.photoURL)
+        let sourceUrl = NSURL(string: "")
+        
+        pinterest.createPinWithImageURL(imageUrl, sourceURL: sourceUrl, description: selectedPrayer?.prayer)
     }
     
-    @IBAction func twitterClicked(sender: UITapGestureRecognizer) {
+    func twitterClicked(notification: NSNotification) {
         /*
         var url = NSURL(string: "twitter://user?screen_name=operationbless")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
@@ -141,29 +163,47 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
         }
     }
     
-    @IBAction func tumblrClicked(sender: UITapGestureRecognizer) {
-        var url = NSURL(string: "pinterest://user/operationbless/")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+    func tumblrClicked(notification: NSNotification) {
+//        var url = NSURL(string: "pinterest://user/operationbless/")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "http://operationblessing.tumblr.com/?mc_cid=fbdcb9fd67&mc_eid=1700c53f2c")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "http://operationblessing.tumblr.com/?mc_cid=fbdcb9fd67&mc_eid=1700c53f2c")
+        let prayer = selectedPrayer!.prayer.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        var shareURL = NSURL(string: "tumblr://x-callback-url/link?title=Daily%20Photo%20Prayer&url=\(selectedPrayer!.photoURL)")
+        var canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
+        
+        if !canOpenURL {
+            shareURL = NSURL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer!.photoURL)")
         }
         
-        UIApplication.sharedApplication().openURL(url!)
+        UIApplication.sharedApplication().openURL(shareURL!)
     }
     
-    @IBAction func googleClicked(sender: UITapGestureRecognizer) {
-        var url = NSURL(string: "gplus://110842766638826456360/posts")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+    func googleClicked(notification: NSNotification) {
+//        var url = NSURL(string: "gplus://110842766638826456360/posts")
+//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
+//        
+//        if(!canOpenURL) {
+//            url = NSURL(string: "https://plus.google.com/110842766638826456360/posts")
+//        }
+//        
+//        UIApplication.sharedApplication().openURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "https://plus.google.com/110842766638826456360/posts")
-        }
-        
-        UIApplication.sharedApplication().openURL(url!)
+        let signIn = GPPSignIn.sharedInstance()
+        signIn.shouldFetchGooglePlusUser = true
+        signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
+        signIn.delegate = self
+        signIn.scopes = [kGTLAuthScopePlusLogin]
+        signIn.authenticate()
     }
     
-    @IBAction func facebookClicked(sender: UITapGestureRecognizer) {
+    func facebookClicked(notification: NSNotification) {
         /*
         var url = NSURL(string: "fb://operationblessing")
         var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
@@ -191,5 +231,19 @@ class SinglePrayerViewController: OperationBlessingBaseViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    //MARK: GPPShareDelegate
+    
+    func finishedWithAuth(auth: GTMOAuth2Authentication,  error: NSError ) -> Void{
+
+        let shareBuilder = GPPShare.sharedInstance().nativeShareDialog()
+        shareBuilder.attachImageData(selectedPrayer!.photo)
+        shareBuilder.setPrefillText(selectedPrayer!.prayer)
+        shareBuilder.open()
+    }
+    
+    func didDisconnectWithError ( error: NSError) -> Void{
+        debugPrintln("TEST2")
     }
 }

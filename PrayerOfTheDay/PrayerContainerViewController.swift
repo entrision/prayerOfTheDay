@@ -14,6 +14,8 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
     var prayers: NSMutableDictionary!
     var startIndex: Int?
     
+    @IBOutlet weak var socialView: SocialView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +39,8 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
         pageViewController?.view.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height)
         pageViewController?.didMoveToParentViewController(self)
         self.automaticallyAdjustsScrollViewInsets = false
+
+        view.bringSubviewToFront(socialView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,5 +100,36 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+    
+    // MARK: - social media handlers
+    // ----------------------------------------
+    
+    @IBAction func youTubeClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedYoutubeNotification, object: nil)
+    }
+    
+    @IBAction func pinterestClicked(sender: AnyObject) {
+        
+        var pinterest = Pinterest()
+        pinterest.setValue("1445483", forKey: "clientId")
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedPinterestNotification, object: pinterest)
+    }
+    
+    @IBAction func twitterClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedTwitterNotification, object: nil)
+    }
+    
+    @IBAction func tumblrClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedTumblrNotification, object: nil)
+    }
+    
+    @IBAction func googleClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedGoogleNotification, object: nil)
+    }
+    
+    @IBAction func facebookClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedFacebookNotification, object: nil)
     }
 }

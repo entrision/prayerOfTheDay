@@ -80,7 +80,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         var image:UIView = gesture.view!
         var day = image.tag
         
-        self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
+        if prayers.objectForKey(day) != nil {
+            self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
+        }
+
         /*
         if let searchDate = prayers.objectForKey(day) as? String {
             self.performSegueWithIdentifier("SinglePrayerSegue", sender: searchDate)

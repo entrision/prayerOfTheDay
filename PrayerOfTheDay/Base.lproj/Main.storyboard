@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tph-1X-JZx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tph-1X-JZx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -242,10 +242,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
+                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
-                                        <rect key="frame" x="150" y="12" width="300" height="27"/>
+                                        <rect key="frame" x="150" y="35" width="300" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-4N-bgm" userLabel="Button - google">
                                                 <rect key="frame" x="166" y="4" width="20" height="20"/>
@@ -308,12 +308,24 @@
                                             <constraint firstAttribute="height" constant="27" id="gxJ-nv-NER"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE THIS PHOTO PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-2I-Zpf">
+                                        <rect key="frame" x="150" y="8" width="300" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="0Oo-he-knd"/>
+                                            <constraint firstAttribute="width" constant="300" id="RdP-8f-F1q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="hjF-IE-rgF" secondAttribute="centerX" id="3qt-Bq-hi3"/>
-                                    <constraint firstAttribute="height" constant="52" id="UK3-9P-IQJ"/>
-                                    <constraint firstItem="hjF-IE-rgF" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="12" id="jYv-tz-1Kj"/>
+                                    <constraint firstItem="XVk-2I-Zpf" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="8" id="JWE-iU-PTP"/>
+                                    <constraint firstAttribute="height" constant="75" id="UK3-9P-IQJ"/>
+                                    <constraint firstAttribute="centerX" secondItem="XVk-2I-Zpf" secondAttribute="centerX" id="e9T-9M-f7h"/>
+                                    <constraint firstItem="hjF-IE-rgF" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="35" id="jYv-tz-1Kj"/>
                                 </constraints>
                             </view>
                         </subviews>

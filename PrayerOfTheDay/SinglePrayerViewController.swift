@@ -17,10 +17,8 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     @IBOutlet var photoButton:UIButton!
     @IBOutlet var videoButton:UIButton!
     @IBOutlet var donateButton:UIButton!
-    @IBOutlet var contentViewHeightConstraint:NSLayoutConstraint!
     @IBOutlet var scroll:UIScrollView!
     @IBOutlet var contentView:UIView!
-    @IBOutlet var socialView:UIView!
     
     var selectedPrayer: PhotoPrayer?
     var prayerDate:String!
@@ -67,7 +65,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //scroll.contentSize = contentView.frame.size
+//        scroll.contentSize = contentView.frame.size
     }
     
     override func viewWillAppear(animated: Bool) {

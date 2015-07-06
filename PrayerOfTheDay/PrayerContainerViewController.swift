@@ -35,10 +35,10 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
         self.addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
         
-        //pageViewController?.view.frame = self.view.bounds
-        pageViewController?.view.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height)
+        pageViewController?.view.frame = CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height - socialView.frame.size.height)
         pageViewController?.didMoveToParentViewController(self)
         self.automaticallyAdjustsScrollViewInsets = false
+        self.edgesForExtendedLayout = UIRectEdge.None
 
         view.bringSubviewToFront(socialView)
     }
@@ -47,7 +47,6 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -92,14 +91,6 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
         singlePrayerVC.pageIndex = index
         
         return singlePrayerVC
-    }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return prayers.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
     }
     
     // MARK: - social media handlers

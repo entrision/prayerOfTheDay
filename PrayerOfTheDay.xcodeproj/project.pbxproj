@@ -10,11 +10,6 @@
 		042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0201B1DFB5200D9EFD3 /* SocialView.swift */; };
 		042EF0231B1DFB5F00D9EFD3 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */; };
 		042EF0251B1E266500D9EFD3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF0241B1E266500D9EFD3 /* Strings.swift */; };
-		043CF90B1B20A850009916C1 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 043CF90A1B20A850009916C1 /* GooglePlus.bundle */; };
-		043CF90C1B20AB45009916C1 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 043CF90A1B20A850009916C1 /* GooglePlus.bundle */; };
-		04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04461D361B1F4A7C00E0197C /* Pinterest.framework */; };
-		0480FEAB1B20981600547685 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAA1B20981600547685 /* GooglePlus.framework */; };
-		0480FEAD1B20995F00547685 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */; };
 		0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEAE1B2099B800547685 /* AddressBook.framework */; };
 		0480FEB11B2099BF00547685 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB01B2099BF00547685 /* AssetsLibrary.framework */; };
 		0480FEB31B2099C700547685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEB21B2099C700547685 /* Foundation.framework */; };
@@ -26,6 +21,10 @@
 		0480FEBF1B2099F300547685 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEBE1B2099F300547685 /* Security.framework */; };
 		0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC01B2099FB00547685 /* SystemConfiguration.framework */; };
 		0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC21B2099FF00547685 /* UIKit.framework */; };
+		04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30C51B444C3300609A5B /* Pinterest.framework */; };
+		04FC30C81B444C5000609A5B /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */; };
+		04FC30CA1B444C6400609A5B /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04FC30C91B444C6400609A5B /* GooglePlus.bundle */; };
+		04FC30CC1B444C7400609A5B /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30CB1B444C7400609A5B /* GooglePlus.framework */; };
 		1F006B9F1AC047A1006CA3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */; };
 		1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */; };
 		1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA51AC047A1006CA3AA /* Main.storyboard */; };
@@ -78,11 +77,7 @@
 		042EF0201B1DFB5200D9EFD3 /* SocialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
 		042EF0241B1E266500D9EFD3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		043CF90A1B20A850009916C1 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
-		04461D361B1F4A7C00E0197C /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pinterest.framework; path = ../../../Downloads/PinItSDKiOS/Pinterest.embeddedframework/Pinterest.framework; sourceTree = "<group>"; };
 		04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrayerOfTheDay-Bridging-Header.h"; sourceTree = "<group>"; };
-		0480FEAA1B20981600547685 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.framework"; sourceTree = "<group>"; };
-		0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GoogleOpenSource.framework"; sourceTree = "<group>"; };
 		0480FEAE1B2099B800547685 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		0480FEB01B2099BF00547685 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0480FEB21B2099C700547685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +89,10 @@
 		0480FEBE1B2099F300547685 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0480FEC01B2099FB00547685 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0480FEC21B2099FF00547685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04FC30C51B444C3300609A5B /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
+		04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		04FC30C91B444C6400609A5B /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		04FC30CB1B444C7400609A5B /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,9 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043CF90B1B20A850009916C1 /* GooglePlus.bundle in Frameworks */,
 				0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */,
+				04FC30CC1B444C7400609A5B /* GooglePlus.framework in Frameworks */,
 				0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */,
+				04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */,
 				0480FEBF1B2099F300547685 /* Security.framework in Frameworks */,
 				0480FEBD1B2099ED00547685 /* MediaPlayer.framework in Frameworks */,
 				0480FEBB1B2099E000547685 /* CoreText.framework in Frameworks */,
@@ -153,9 +153,7 @@
 				0480FEB31B2099C700547685 /* Foundation.framework in Frameworks */,
 				0480FEB11B2099BF00547685 /* AssetsLibrary.framework in Frameworks */,
 				0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */,
-				0480FEAD1B20995F00547685 /* GoogleOpenSource.framework in Frameworks */,
-				0480FEAB1B20981600547685 /* GooglePlus.framework in Frameworks */,
-				04461D371B1F4A7C00E0197C /* Pinterest.framework in Frameworks */,
+				04FC30C81B444C5000609A5B /* GoogleOpenSource.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +171,6 @@
 		1F006B901AC047A1006CA3AA = {
 			isa = PBXGroup;
 			children = (
-				043CF90A1B20A850009916C1 /* GooglePlus.bundle */,
 				0480FEC21B2099FF00547685 /* UIKit.framework */,
 				0480FEC01B2099FB00547685 /* SystemConfiguration.framework */,
 				0480FEBE1B2099F300547685 /* Security.framework */,
@@ -185,9 +182,10 @@
 				0480FEB21B2099C700547685 /* Foundation.framework */,
 				0480FEB01B2099BF00547685 /* AssetsLibrary.framework */,
 				0480FEAE1B2099B800547685 /* AddressBook.framework */,
-				0480FEAC1B20995F00547685 /* GoogleOpenSource.framework */,
-				0480FEAA1B20981600547685 /* GooglePlus.framework */,
-				04461D361B1F4A7C00E0197C /* Pinterest.framework */,
+				04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */,
+				04FC30CB1B444C7400609A5B /* GooglePlus.framework */,
+				04FC30C91B444C6400609A5B /* GooglePlus.bundle */,
+				04FC30C51B444C3300609A5B /* Pinterest.framework */,
 				1F14DC7A1B0B636F004B38B4 /* Social.framework */,
 				1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */,
 				1F006BB41AC047A1006CA3AA /* PrayerOfTheDayTests */,
@@ -404,7 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043CF90C1B20AB45009916C1 /* GooglePlus.bundle in Resources */,
+				04FC30CA1B444C6400609A5B /* GooglePlus.bundle in Resources */,
 				1F006BA71AC047A1006CA3AA /* Main.storyboard in Resources */,
 				1F9ED4301AC4351E00DC2CE7 /* Raleway-Regular.ttf in Resources */,
 				1F9ED42D1AC4351E00DC2CE7 /* Raleway-Heavy.ttf in Resources */,
@@ -588,6 +586,7 @@
 					"$(inherited)",
 					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
 					"/Users/hunterwhittle/Downloads/google-plus-ios-sdk-1.7.1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -596,7 +595,7 @@
 					"${inherited}",
 				);
 				PRODUCT_NAME = PrayerOfTheDay;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15e6cd8d-7e1e-4c86-b594-91d9576a6d95";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -613,6 +612,7 @@
 					"$(inherited)",
 					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
 					"/Users/hunterwhittle/Downloads/google-plus-ios-sdk-1.7.1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -621,7 +621,7 @@
 					"${inherited}",
 				);
 				PRODUCT_NAME = PrayerOfTheDay;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15e6cd8d-7e1e-4c86-b594-91d9576a6d95";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 			};
 			name = Release;

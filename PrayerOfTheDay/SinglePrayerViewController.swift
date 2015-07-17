@@ -147,7 +147,8 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
             var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
             
             var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterSheet.setInitialText("Photo Prayer of the Day")
+            let prayerString = selectedPrayer?.prayer
+            twitterSheet.setInitialText("\(prayerString?.substringToIndex(advance(prayerString!.startIndex, 110)))...")
             
             var image = selectedPrayer?.photo
             twitterSheet.addImage(UIImage(data:image!))

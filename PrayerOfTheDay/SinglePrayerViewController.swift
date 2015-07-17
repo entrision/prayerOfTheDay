@@ -31,6 +31,10 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
         
         if let data = selectedPrayer?.photo {
             image.image = UIImage(data: data)
+            
+            if image.image!.size.height > image.image!.size.width {
+                image.contentMode = UIViewContentMode.Top
+            }
         }
         
         if let prayerText = selectedPrayer?.prayer {

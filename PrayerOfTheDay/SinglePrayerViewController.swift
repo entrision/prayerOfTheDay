@@ -44,7 +44,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
         location.text = selectedPrayer?.location
         
         let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: Selector("youTubeClicked:"), name: Strings.tappedYoutubeNotification, object: nil)
         notificationCenter.addObserver(self, selector: Selector("facebookClicked:"), name: Strings.tappedFacebookNotification, object: nil)
         notificationCenter.addObserver(self, selector: Selector("twitterClicked:"), name: Strings.tappedTwitterNotification, object: nil)
         notificationCenter.addObserver(self, selector: Selector("tumblrClicked:"), name: Strings.tappedTumblrNotification, object: nil)
@@ -83,7 +82,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     // ----------------------------------------
     
     @IBAction func donateButtonClicked(sender: UIButton) {
-        let targetURL = NSURL(string: "https://secure.ob.org/site/Donation2;jsessionid=7ED640907B0CD046E1458FD0F8567FD9.app252b?&df_id=1320&1320.donation=form1")
+        let targetURL = NSURL(string: "https://secure.ob.org/site/Donation2?df_id=8000&8000.donation=form1")
         let application=UIApplication.sharedApplication()
         application.openURL(targetURL!);
     }
@@ -102,17 +101,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
 
     // MARK: - social media handlers
     // ----------------------------------------
-    
-    func youTubeClicked(notification: NSNotification) {
-        var url = NSURL(string: "vnd.youtube://watch?v=SSnn0r4chuA#action=share")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
-        
-        if(!canOpenURL) {
-            url = NSURL(string: "https://www.youtube.com/user/operationblessing")
-        }
-        
-        UIApplication.sharedApplication().openURL(url!)
-    }
     
     func pinterestClicked(notification: NSNotification) {
 //        var url = NSURL(string: "pinterest://user/operationbless/")

@@ -96,10 +96,6 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
     // MARK: - social media handlers
     // ----------------------------------------
     
-    @IBAction func youTubeClicked(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedYoutubeNotification, object: nil)
-    }
-    
     @IBAction func pinterestClicked(sender: AnyObject) {
         
         var pinterest = Pinterest()

@@ -246,7 +246,7 @@
                                         <rect key="frame" x="150" y="35" width="300" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-4N-bgm" userLabel="Button - google">
-                                                <rect key="frame" x="166" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="194" y="4" width="20" height="20"/>
                                                 <state key="normal" image="google.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -255,7 +255,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-Os-E3F" userLabel="Button - twitter">
-                                                <rect key="frame" x="62" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="86" y="4" width="20" height="20"/>
                                                 <state key="normal" image="twitter.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -264,7 +264,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Ch-Fpy" userLabel="Button - tumblr">
-                                                <rect key="frame" x="114" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="140" y="4" width="20" height="20"/>
                                                 <state key="normal" image="tumblr.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -273,7 +273,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-T3-hsH" userLabel="Button - facebook">
-                                                <rect key="frame" x="10" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="4" width="20" height="20"/>
                                                 <state key="normal" image="facebook.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -282,21 +282,12 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeA-XP-mHl" userLabel="Button - pinterest">
-                                                <rect key="frame" x="218" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="248" y="4" width="20" height="20"/>
                                                 <state key="normal" image="pinetrest.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="pinterestClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="k9k-UE-Y9V"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyR-vo-Bki" userLabel="Button - youtube">
-                                                <rect key="frame" x="270" y="4" width="20" height="20"/>
-                                                <state key="normal" image="youtube.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="youTubeClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="hOc-9k-coW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -527,6 +518,5 @@
         <image name="pinetrest.png" width="32" height="32"/>
         <image name="tumblr.png" width="32" height="32"/>
         <image name="twitter.png" width="32" height="32"/>
-        <image name="youtube.png" width="32" height="32"/>
     </resources>
 </document>

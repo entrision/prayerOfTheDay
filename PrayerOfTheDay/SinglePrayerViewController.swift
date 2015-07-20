@@ -198,33 +198,35 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     }
     
     func facebookClicked(notification: NSNotification) {
-        /*
-        var url = NSURL(string: "fb://operationblessing")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
         
-        if(!canOpenURL) {
-            url = NSURL(string: "https://www.facebook.com/operationblessing")
+        if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
+            let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo), userGenerated: true)
+            
+            let prayer = selectedPrayer.prayer
+            photo.caption = "Photo Prayer of the Day\n" + prayer
+            
+            let content = FBSDKSharePhotoContent()
+            content.photos = [photo]
+            
+            FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: nil)
         }
         
-        UIApplication.sharedApplication().openURL(url!)
-*/
-        
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
-            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
-            
-            var prayer = selectedPrayer?.prayer
-            facebookSheet.setInitialText("Photo Prayer of the Day\n" + prayer!)
-            
-            var image = selectedPrayer?.photo
-            facebookSheet.addImage(UIImage(data:image!))
-            
-            self.presentViewController(facebookSheet, animated: true, completion: nil)
-        } else {
-            var alert = UIAlertController(title: "Facebook", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+//        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+//            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+//            var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
+//            
+//            var prayer = selectedPrayer?.prayer
+//            facebookSheet.setInitialText("Photo Prayer of the Day\n" + prayer!)
+//            
+//            var image = selectedPrayer?.photo
+//            facebookSheet.addImage(UIImage(data:image!))
+//            
+//            self.presentViewController(facebookSheet, animated: true, completion: nil)
+//        } else {
+//            var alert = UIAlertController(title: "Facebook", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
     }
     
     //MARK: GPPShareDelegate

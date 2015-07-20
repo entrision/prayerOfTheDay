@@ -201,14 +201,9 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
         
         if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
             let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo), userGenerated: true)
-            
-            let prayer = selectedPrayer.prayer
-            photo.caption = "Photo Prayer of the Day\n" + prayer
-            
             let content = FBSDKSharePhotoContent()
             content.photos = [photo]
-            
-            FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: nil)
+            FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: self)
         }
         
 //        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
@@ -241,5 +236,23 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     
     func didDisconnectWithError ( error: NSError) -> Void{
         debugPrintln("TEST2")
+    }
+}
+
+extension SinglePrayerViewController: FBSDKSharingDelegate {
+    
+    func sharer(sharer: FBSDKSharing!, didCompleteWithResults results: [NSObject : AnyObject]!) {
+        
+    }
+    
+    func sharer(sharer: FBSDKSharing!, didFailWithError error: NSError!) {
+        
+        var alert = UIAlertController(title: "Facebook", message: "Please login to your Facebook account by going to Settings > Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func sharerDidCancel(sharer: FBSDKSharing!) {
+        
     }
 }

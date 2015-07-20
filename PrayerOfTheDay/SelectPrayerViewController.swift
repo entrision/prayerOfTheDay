@@ -46,8 +46,6 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         self.view.addSubview(loadingScreen)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillEnterForeground:"), name: UIApplicationWillEnterForegroundNotification, object: nil)
-
-        //loadPrayers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -262,9 +260,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     //MARK: Notifications
     
     func applicationWillEnterForeground(notification: NSNotification) {
-        if screenLoaded {
-            foundPrayers = 0
-            loadPrayers()
-        }
+        //Commenting until we can find a way to make async request
+//        if screenLoaded {
+//            self.foundPrayers = 0
+//            self.loadPrayers()
+//        }
     }
 }

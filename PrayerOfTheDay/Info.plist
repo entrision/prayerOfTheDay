@@ -46,7 +46,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>11</string>
+	<key>FacebookAppID</key>
+	<string>482242538600727</string>
+	<key>FacebookDisplayName</key>
+	<string>Daily Photo Prayer</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
@@ -56,10 +60,6 @@
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>FacebookAppID</key>
-	<string>482242538600727</string>
-	<key>FacebookDisplayName</key>
-	<string>Daily Photo Prayer</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

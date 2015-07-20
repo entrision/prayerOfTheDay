@@ -595,7 +595,7 @@
 					"${inherited}",
 				);
 				PRODUCT_NAME = PrayerOfTheDay;
-				PROVISIONING_PROFILE = "15e6cd8d-7e1e-4c86-b594-91d9576a6d95";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -607,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Entrision LLC (HXK9RLY6C2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/hunterwhittle/Downloads/PinItSDKiOS/Pinterest.embeddedframework,
@@ -621,7 +621,7 @@
 					"${inherited}",
 				);
 				PRODUCT_NAME = PrayerOfTheDay;
-				PROVISIONING_PROFILE = "15e6cd8d-7e1e-4c86-b594-91d9576a6d95";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 			};
 			name = Release;

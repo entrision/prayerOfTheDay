@@ -140,7 +140,11 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
             
             var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             let prayerString = selectedPrayer?.prayer
-            twitterSheet.setInitialText("\(prayerString?.substringToIndex(advance(prayerString!.startIndex, 110)))...")
+            if count(prayerString!) > 114 {
+                twitterSheet.setInitialText("\(prayerString!.substringToIndex(advance(prayerString!.startIndex, 114)))...")
+            } else {
+                twitterSheet.setInitialText(prayerString!)
+            }
             
             var image = selectedPrayer?.photo
             twitterSheet.addImage(UIImage(data:image!))

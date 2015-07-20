@@ -44,6 +44,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillEnterForeground:"), name: UIApplicationWillEnterForegroundNotification, object: nil)
 
         //loadPrayers()
     }
@@ -57,6 +59,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         if (!screenLoaded) {
             loadPrayers()
         }
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: - Navigation
@@ -250,6 +256,15 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
             imageView.contentMode = UIViewContentMode.Top
         } else {
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        }
+    }
+    
+    //MARK: Notifications
+    
+    func applicationWillEnterForeground(notification: NSNotification) {
+        if screenLoaded {
+            foundPrayers = 0
+            loadPrayers()
         }
     }
 }

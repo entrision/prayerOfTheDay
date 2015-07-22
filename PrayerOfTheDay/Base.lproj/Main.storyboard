@@ -236,11 +236,17 @@
                         <viewControllerLayoutGuide type="bottom" id="5R7-CK-V7U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MmI-om-1fM">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-X2-cNG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="461"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ILM-9d-Lkj" id="Yd4-Os-5qL"/>
+                                </connections>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="525" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="461" width="600" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
                                         <rect key="frame" x="150" y="35" width="300" height="27"/>
@@ -321,12 +327,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5R7-CK-V7U" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="bottom" id="3gK-Nt-2jp"/>
+                            <constraint firstItem="fTS-X2-cNG" firstAttribute="leading" secondItem="MmI-om-1fM" secondAttribute="leading" id="4Hi-QF-uqD"/>
                             <constraint firstItem="cZX-Pq-3CI" firstAttribute="leading" secondItem="MmI-om-1fM" secondAttribute="leading" id="G6A-X3-YeY"/>
+                            <constraint firstItem="cZX-Pq-3CI" firstAttribute="top" secondItem="fTS-X2-cNG" secondAttribute="bottom" id="N0L-27-MYc"/>
                             <constraint firstAttribute="trailing" secondItem="cZX-Pq-3CI" secondAttribute="trailing" id="irg-GZ-rXV"/>
+                            <constraint firstItem="fTS-X2-cNG" firstAttribute="top" secondItem="gaK-92-ucV" secondAttribute="bottom" id="j3w-vF-5UC"/>
+                            <constraint firstAttribute="trailing" secondItem="fTS-X2-cNG" secondAttribute="trailing" id="jPp-ax-skL"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="socialView" destination="cZX-Pq-3CI" id="Ovo-5V-BD8"/>
+                        <outlet property="theScrollView" destination="fTS-X2-cNG" id="fhg-Hr-5db"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygo-NO-Z2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,9 +499,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cbq-Pj-kCD" firstAttribute="leading" secondItem="zgB-og-ZBG" secondAttribute="leading" id="0kn-ng-Ztc"/>
+                            <constraint firstItem="nh3-TF-FQ1" firstAttribute="top" secondItem="Cbq-Pj-kCD" secondAttribute="bottom" id="1Y0-A6-B7I"/>
                             <constraint firstAttribute="trailing" secondItem="Cbq-Pj-kCD" secondAttribute="trailing" id="Csf-EU-Amp"/>
                             <constraint firstItem="Cbq-Pj-kCD" firstAttribute="top" secondItem="zgB-og-ZBG" secondAttribute="top" id="DKp-A6-3s8"/>
-                            <constraint firstItem="nh3-TF-FQ1" firstAttribute="top" secondItem="Cbq-Pj-kCD" secondAttribute="bottom" id="Ig2-2y-jhJ"/>
                             <constraint firstItem="Cbq-Pj-kCD" firstAttribute="top" secondItem="zgB-og-ZBG" secondAttribute="top" id="Mda-gs-Q4O"/>
                             <constraint firstItem="p3t-k3-tnd" firstAttribute="width" secondItem="zgB-og-ZBG" secondAttribute="width" id="XLu-8t-1zB"/>
                             <constraint firstItem="Cbq-Pj-kCD" firstAttribute="leading" secondItem="zgB-og-ZBG" secondAttribute="leading" id="fgM-33-wAS"/>

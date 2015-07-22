@@ -8,89 +8,56 @@
 
 import UIKit
 
-class PrayerContainerViewController: OperationBlessingBaseViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class PrayerContainerViewController: OperationBlessingBaseViewController {
 
-    var pageViewController: UIPageViewController?
     var prayers: NSMutableDictionary!
     var startIndex: Int?
     
+    @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var socialView: SocialView!
+    
+    var viewsLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        pageViewController = storyboard.instantiateViewControllerWithIdentifier("PageViewController") as? UIPageViewController
-        pageViewController?.dataSource = self
-        pageViewController?.delegate = self
-
-        let singlePrayerVC = self.storyboard?.instantiateViewControllerWithIdentifier("SinglePrayerViewController") as! SinglePrayerViewController
-        singlePrayerVC.prayerDate = prayers.objectForKey(startIndex!) as! String
-        singlePrayerVC.pageIndex = startIndex
+        theScrollView.delegate = self
+        theScrollView.pagingEnabled = true
+        theScrollView.showsHorizontalScrollIndicator = false
+        theScrollView.showsVerticalScrollIndicator = false
+        theScrollView.scrollsToTop = false
         
-        let controllers: NSArray = [singlePrayerVC]
-        
-        pageViewController!.setViewControllers(controllers as [AnyObject], direction: .Forward, animated: false, completion: nil)
-        
-        self.addChildViewController(pageViewController!)
-        self.view.addSubview(pageViewController!.view)
-        
-        pageViewController?.view.frame = CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height - socialView.frame.size.height)
-        pageViewController?.didMoveToParentViewController(self)
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.edgesForExtendedLayout = UIRectEdge.None
-
         view.bringSubviewToFront(socialView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: - page view delegate
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! SinglePrayerViewController).pageIndex!
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        if (index <= 0) {
-            return nil
+        if !viewsLoaded {
+            
+            let view1 = NSBundle.mainBundle().loadNibNamed("SinglePrayerView", owner: self, options: nil)[0] as! SinglePrayerView
+            view1.frame = theScrollView.bounds
+            
+            let view2 = NSBundle.mainBundle().loadNibNamed("SinglePrayerView", owner: self, options: nil)[0] as! SinglePrayerView
+            view2.frame = theScrollView.bounds
+            
+            let scrollArray: NSArray = [view1, view2]
+            
+            for(var i=0; i<scrollArray.count; ++i) {
+                let theWidth = theScrollView.frame.size.width;
+                let frame = CGRectMake(theWidth*CGFloat(i), 0, theScrollView.frame.size.width, theScrollView.frame.size.height)
+                
+                let subview = UIView(frame: frame)
+                subview.addSubview(scrollArray[i] as! UIView)
+                self.theScrollView.addSubview(subview)
+            }
+            
+            let width = self.theScrollView.frame.size.width * CGFloat(scrollArray.count)
+            let contentSize = CGSizeMake(width, self.theScrollView.frame.size.height);
+            theScrollView.contentSize = contentSize;
+            
+            viewsLoaded = true
         }
-        
-        index--
-        
-        return viewControllerAtIndex(index)
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! SinglePrayerViewController).pageIndex!
-        
-        index++
-        
-        if (index >= prayers.count) {
-            return nil
-        }
-        
-        return viewControllerAtIndex(index)
-    }
-    
-    func viewControllerAtIndex(index: Int) -> UIViewController? {
-
-        let singlePrayerVC = self.storyboard?.instantiateViewControllerWithIdentifier("SinglePrayerViewController") as! SinglePrayerViewController
-        singlePrayerVC.prayerDate = prayers.objectForKey(index) as! String
-        singlePrayerVC.pageIndex = index
-        
-        return singlePrayerVC
     }
     
     // MARK: - social media handlers
@@ -119,4 +86,9 @@ class PrayerContainerViewController: OperationBlessingBaseViewController, UIPage
     @IBAction func facebookClicked(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(Strings.tappedFacebookNotification, object: nil)
     }
+}
+
+extension PrayerContainerViewController: UIScrollViewDelegate {
+    
+    
 }

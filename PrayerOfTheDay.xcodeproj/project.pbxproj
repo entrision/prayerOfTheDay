@@ -21,6 +21,8 @@
 		0480FEBF1B2099F300547685 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEBE1B2099F300547685 /* Security.framework */; };
 		0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC01B2099FB00547685 /* SystemConfiguration.framework */; };
 		0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC21B2099FF00547685 /* UIKit.framework */; };
+		048376D31B6035EE002E2E27 /* SinglePrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048376D21B6035EE002E2E27 /* SinglePrayerView.swift */; };
+		048376D51B6035FA002E2E27 /* SinglePrayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048376D41B6035FA002E2E27 /* SinglePrayerView.xib */; };
 		048D4EE91B5D644800BAC817 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D4EE81B5D644800BAC817 /* FBSDKCoreKit.framework */; };
 		048D4EEB1B5D6B8E00BAC817 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D4EEA1B5D6B8E00BAC817 /* FBSDKShareKit.framework */; };
 		04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30C51B444C3300609A5B /* Pinterest.framework */; };
@@ -91,6 +93,8 @@
 		0480FEBE1B2099F300547685 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0480FEC01B2099FB00547685 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0480FEC21B2099FF00547685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		048376D21B6035EE002E2E27 /* SinglePrayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePrayerView.swift; sourceTree = "<group>"; };
+		048376D41B6035FA002E2E27 /* SinglePrayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinglePrayerView.xib; sourceTree = "<group>"; };
 		048D4EE81B5D644800BAC817 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		048D4EEA1B5D6B8E00BAC817 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		04FC30C51B444C3300609A5B /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				1FB5DD4E1ACDB299001250DA /* LoadingView.xib */,
 				042EF0201B1DFB5200D9EFD3 /* SocialView.swift */,
 				042EF0221B1DFB5F00D9EFD3 /* SocialView.xib */,
+				048376D21B6035EE002E2E27 /* SinglePrayerView.swift */,
+				048376D41B6035FA002E2E27 /* SinglePrayerView.xib */,
 			);
 			name = "custom views";
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */,
 				1F9ED4321AC4351E00DC2CE7 /* Raleway-Thin.ttf in Resources */,
 				1F9ED42E1AC4351E00DC2CE7 /* Raleway-Light.ttf in Resources */,
+				048376D51B6035FA002E2E27 /* SinglePrayerView.xib in Resources */,
 				1FA242271ACAE1D100C05D37 /* google.png in Resources */,
 				1FA242281ACAE1D100C05D37 /* pinetrest.png in Resources */,
 				1FA2422A1ACAE1D100C05D37 /* twitter.png in Resources */,
@@ -455,6 +462,7 @@
 				1F006BA21AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld in Sources */,
 				1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */,
 				1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */,
+				048376D31B6035EE002E2E27 /* SinglePrayerView.swift in Sources */,
 				042EF0211B1DFB5200D9EFD3 /* SocialView.swift in Sources */,
 				1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */,
 				1F9ED43A1AC43F7A00DC2CE7 /* WebService.swift in Sources */,

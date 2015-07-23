@@ -107,14 +107,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     // ----------------------------------------
     
     func pinterestClicked(notification: NSNotification) {
-//        var url = NSURL(string: "pinterest://user/operationbless/")
-//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
-//        
-//        if(!canOpenURL) {
-//            url = NSURL(string: "https://www.pinterest.com/operationbless/")
-//        }
-//        
-//        UIApplication.sharedApplication().openURL(url!)
         
         let pinterest = notification.object as! Pinterest
         
@@ -125,16 +117,7 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     }
     
     func twitterClicked(notification: NSNotification) {
-        /*
-        var url = NSURL(string: "twitter://user?screen_name=operationbless")
-        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
-        
-        if(!canOpenURL) {
-            url = NSURL(string: "https://twitter.com/operationbless")
-        }
-        
-        UIApplication.sharedApplication().openURL(url!)
-*/
+
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             var selectedPrayer = Utilities.getPrayerForDate(prayerDate)
             
@@ -158,14 +141,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     }
     
     func tumblrClicked(notification: NSNotification) {
-//        var url = NSURL(string: "pinterest://user/operationbless/")
-//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
-//        
-//        if(!canOpenURL) {
-//            url = NSURL(string: "http://operationblessing.tumblr.com/?mc_cid=fbdcb9fd67&mc_eid=1700c53f2c")
-//        }
-//        
-//        UIApplication.sharedApplication().openURL(url!)
         
         let prayer = selectedPrayer!.prayer.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         
@@ -180,14 +155,6 @@ class SinglePrayerViewController: OperationBlessingBaseViewController, GPPSignIn
     }
     
     func googleClicked(notification: NSNotification) {
-//        var url = NSURL(string: "gplus://110842766638826456360/posts")
-//        var canOpenURL = UIApplication.sharedApplication().canOpenURL(url!)
-//        
-//        if(!canOpenURL) {
-//            url = NSURL(string: "https://plus.google.com/110842766638826456360/posts")
-//        }
-//        
-//        UIApplication.sharedApplication().openURL(url!)
         
         let signIn = GPPSignIn.sharedInstance()
         signIn.shouldFetchGooglePlusUser = true

@@ -52,7 +52,6 @@
 		1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */; };
 		1F9ED43F1AC4414F00DC2CE7 /* OperationBlessingColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */; };
 		1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */; };
-		1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */; };
 		1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */; };
 		1FA242261ACAE1D100C05D37 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242201ACAE1D100C05D37 /* facebook.png */; };
 		1FA242271ACAE1D100C05D37 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA242211ACAE1D100C05D37 /* google.png */; };
@@ -128,7 +127,6 @@
 		1F9ED43C1AC4411500DC2CE7 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1F9ED43E1AC4414F00DC2CE7 /* OperationBlessingColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingColors.swift; sourceTree = "<group>"; };
 		1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBlessingBaseViewController.swift; sourceTree = "<group>"; };
-		1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePrayerViewController.swift; sourceTree = "<group>"; };
 		1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrayerViewController.swift; sourceTree = "<group>"; };
 		1FA242201ACAE1D100C05D37 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		1FA242211ACAE1D100C05D37 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				1F9ED4401AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift */,
-				1F9ED4421AC483C700DC2CE7 /* SinglePrayerViewController.swift */,
 				1F9ED4441AC483DB00DC2CE7 /* SelectPrayerViewController.swift */,
 				1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */,
 				04461D381B1F4AD200E0197C /* PrayerOfTheDay-Bridging-Header.h */,
@@ -471,7 +468,6 @@
 				1F9ED43D1AC4411500DC2CE7 /* UIColorExtensions.swift in Sources */,
 				1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */,
 				1F9ED4451AC483DB00DC2CE7 /* SelectPrayerViewController.swift in Sources */,
-				1F9ED4431AC483C700DC2CE7 /* SinglePrayerViewController.swift in Sources */,
 				1F9ED4411AC476EA00DC2CE7 /* OperationBlessingBaseViewController.swift in Sources */,
 				1FB5DD4F1ACDB299001250DA /* LoadingView.swift in Sources */,
 			);

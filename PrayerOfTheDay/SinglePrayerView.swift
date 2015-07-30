@@ -30,7 +30,7 @@ class SinglePrayerView: UIView {
                 image.image = UIImage(data: data)
                 
                 if image.image!.size.height > image.image!.size.width {
-                    image.contentMode = UIViewContentMode.Top
+                    image.contentMode = UIViewContentMode.ScaleAspectFit
                 }
             }
         }

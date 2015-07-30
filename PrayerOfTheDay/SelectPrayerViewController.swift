@@ -251,7 +251,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     func checkForVerticalImage(imageView: UIImageView) {
         
         if imageView.image!.size.height > imageView.image!.size.width {
-            imageView.contentMode = UIViewContentMode.Top
+            imageView.contentMode = UIViewContentMode.ScaleAspectFit
         } else {
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
         }

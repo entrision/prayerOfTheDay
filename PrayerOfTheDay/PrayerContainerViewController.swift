@@ -92,7 +92,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
             let imageUrl = NSURL(string: selectedPrayer.photoURL)
             let sourceUrl = NSURL(string: "")
             
-            pinterest.createPinWithImageURL(imageUrl, sourceURL: sourceUrl, description: selectedPrayer.prayer)
+            pinterest.createPinWithImageURL(imageUrl, sourceURL: sourceUrl, description: "\(selectedPrayer.location) - \(selectedPrayer.prayer)")
         }
     }
     
@@ -102,7 +102,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
             let prayerDate = sortedPrayers[currentIndex!] as! String
             if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
                 var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                let prayerString = selectedPrayer.prayer
+                let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)"
                 if count(prayerString) > 114 {
                     twitterSheet.setInitialText("\(prayerString.substringToIndex(advance(prayerString.startIndex, 114)))...")
                 } else {
@@ -125,15 +125,16 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         
         let prayerDate = sortedPrayers[currentIndex!] as! String
         if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-            let prayer = selectedPrayer.prayer.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             
-            var shareURL = NSURL(string: "tumblr://x-callback-url/link?title=Daily%20Photo%20Prayer&url=\(selectedPrayer.photoURL)")
+            UIPasteboard.generalPasteboard().images = [UIImage(data: selectedPrayer.photo)!]
+
+            var shareURL = NSURL(string: "tumblr://x-callback-url/photo?caption=Daily%20Photo%20Prayer")
             var canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
-            
+
             if !canOpenURL {
                 shareURL = NSURL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer.photoURL)")
             }
-            
+        
             UIApplication.sharedApplication().openURL(shareURL!)
         }
     }
@@ -152,10 +153,19 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         
         let prayerDate = sortedPrayers[currentIndex!] as! String
         if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-            let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo), userGenerated: true)
-            let content = FBSDKSharePhotoContent()
-            content.photos = [photo]
-            FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: self)
+            
+            if UIApplication.sharedApplication().canOpenURL(NSURL(string: "fb://")!) || SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+                let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo), userGenerated: true)
+                let content = FBSDKSharePhotoContent()
+                content.photos = [photo]
+                FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: self)
+            } else {
+                let theContent = FBSDKShareLinkContent()
+                theContent.imageURL = NSURL(string: selectedPrayer.photoURL)
+                theContent.contentTitle = "Daily Photo Prayer"
+                theContent.contentDescription = "\(selectedPrayer.location) - \(selectedPrayer.prayer)"
+                FBSDKShareDialog.showFromViewController(self, withContent: theContent, delegate: self)
+            }
         }
     }
 }
@@ -176,7 +186,8 @@ extension PrayerContainerViewController: FBSDKSharingDelegate {
     }
     
     func sharer(sharer: FBSDKSharing!, didFailWithError error: NSError!) {
-        var alert = UIAlertController(title: "Facebook", message: "Please login to your Facebook account by going to Settings > Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
+        println(error)
+        var alert = UIAlertController(title: "Uh oh!", message: "Something went wrong when sharing to Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -194,7 +205,7 @@ extension PrayerContainerViewController: GPPSignInDelegate {
         if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
             let shareBuilder = GPPShare.sharedInstance().nativeShareDialog()
             shareBuilder.attachImageData(selectedPrayer.photo)
-            shareBuilder.setPrefillText(selectedPrayer.prayer)
+            shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
             shareBuilder.open()
         }
     }

@@ -240,7 +240,7 @@
                                         <rect key="frame" x="150" y="35" width="300" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-4N-bgm" userLabel="Button - google">
-                                                <rect key="frame" x="194" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="193" y="3" width="22" height="22"/>
                                                 <state key="normal" image="google.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -249,7 +249,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-Os-E3F" userLabel="Button - twitter">
-                                                <rect key="frame" x="86" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="85" y="3" width="22" height="22"/>
                                                 <state key="normal" image="twitter.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -258,7 +258,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Ch-Fpy" userLabel="Button - tumblr">
-                                                <rect key="frame" x="140" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="139" y="3" width="22" height="22"/>
                                                 <state key="normal" image="tumblr.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -267,7 +267,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-T3-hsH" userLabel="Button - facebook">
-                                                <rect key="frame" x="32" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="31" y="3" width="22" height="22"/>
                                                 <state key="normal" image="facebook.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -276,7 +276,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeA-XP-mHl" userLabel="Button - pinterest">
-                                                <rect key="frame" x="248" y="4" width="20" height="20"/>
+                                                <rect key="frame" x="247" y="3" width="22" height="22"/>
                                                 <state key="normal" image="pinetrest.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>

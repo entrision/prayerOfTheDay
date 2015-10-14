@@ -40,7 +40,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         day5Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         
-        var loadingScreen = LoadingView(frame: self.view.frame)
+        let loadingScreen = LoadingView(frame: self.view.frame)
         loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
@@ -70,7 +70,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         //var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
         //singlePrayerVC.prayerDate = sender as! String
         
-        var containerVC = segue.destinationViewController as! PrayerContainerViewController
+        let containerVC = segue.destinationViewController as! PrayerContainerViewController
         //containerVC.startDate = sender as! String
         containerVC.startIndex = (sender as! Int)
         containerVC.prayers = prayers
@@ -81,8 +81,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     // -------------------------------------------
     
     func prayerClicked(gesture: UITapGestureRecognizer) {
-        var image:UIView = gesture.view!
-        var day = image.tag
+        let image:UIView = gesture.view!
+        let day = image.tag
         
         if prayers.objectForKey(day) != nil {
             self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
@@ -218,7 +218,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         let formatter  = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let todayDate = formatter.dateFromString(date)!
-        let myCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let day = myCalendar?.component(NSCalendarUnit.Weekday, fromDate: todayDate) as Int!
         
         switch(day) {
@@ -241,7 +241,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     func checkForFullLoad(iterator:Int)->Bool {
         if (foundPrayers == 7 || iterator == 29) {
-            var loadingView = self.view.viewWithTag(70)
+            let loadingView = self.view.viewWithTag(70)
             loadingView?.removeFromSuperview()
             screenLoaded = true
             return true

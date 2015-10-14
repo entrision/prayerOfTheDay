@@ -14,8 +14,8 @@ class WebService: NSObject, NSURLConnectionDelegate {
     
     override init() {
         super.init()
-        var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
-        var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
+        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
+        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
         baseAddress = settings.objectForKey("baseAddress") as! NSString
     }
     
@@ -23,8 +23,8 @@ class WebService: NSObject, NSURLConnectionDelegate {
     // --------------------------------------------------
     
     func get(webURL: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
-        var url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
-        var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

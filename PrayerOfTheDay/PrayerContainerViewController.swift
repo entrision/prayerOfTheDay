@@ -104,7 +104,9 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
                 let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)" as String
                 if prayerString.characters.count > 114 {
-                    twitterSheet.setInitialText("\(prayerString.substringToIndex(advance(prayerString.startIndex, 114)))...")
+                    //twitterSheet.setInitialText("\(prayerString.substringToIndex(advance(prayerString.startIndex, 114)))...")
+
+                    twitterSheet.setInitialText("\((prayerString as NSString).substringToIndex(114))...")
                 } else {
                     twitterSheet.setInitialText(prayerString)
                 }

@@ -377,7 +377,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = OperationBlessing;
 				TargetAttributes = {
 					1F006B981AC047A1006CA3AA = {
@@ -533,6 +533,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -606,6 +607,7 @@
 					"-ObjC",
 					"${inherited}",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.entrision.dailyphotoprayer;
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
@@ -628,6 +630,7 @@
 					"-ObjC",
 					"${inherited}",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.entrision.dailyphotoprayer;
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
@@ -648,6 +651,7 @@
 				);
 				INFOPLIST_FILE = PrayerOfTheDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OperationBlessing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrayerOfTheDay.app/PrayerOfTheDay";
 			};
@@ -663,6 +667,7 @@
 				);
 				INFOPLIST_FILE = PrayerOfTheDayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OperationBlessing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrayerOfTheDay.app/PrayerOfTheDay";
 			};

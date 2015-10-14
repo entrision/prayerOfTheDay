@@ -84,7 +84,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
     
     @IBAction func pinterestClicked(sender: AnyObject) {
         
-        var pinterest = Pinterest()
+        let pinterest = Pinterest()
         pinterest.setValue("1445483", forKey: "clientId")
         
         let prayerDate = sortedPrayers[currentIndex!] as! String
@@ -101,23 +101,25 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let prayerDate = sortedPrayers[currentIndex!] as! String
             if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-                var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)"
-                if count(prayerString) > 114 {
+                let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)" as String
+                if prayerString.characters.count > 114 {
                     twitterSheet.setInitialText("\(prayerString.substringToIndex(advance(prayerString.startIndex, 114)))...")
                 } else {
                     twitterSheet.setInitialText(prayerString)
                 }
                 
-                var image = selectedPrayer.photo
+                let image = selectedPrayer.photo
                 twitterSheet.addImage(UIImage(data:image))
                 
                 self.presentViewController(twitterSheet, animated: true, completion: nil)
             }
         } else {
-            var alert = UIAlertController(title: "Twitter", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Twitter", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+         
+            
         }
     }
     
@@ -129,7 +131,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
             UIPasteboard.generalPasteboard().images = [UIImage(data: selectedPrayer.photo)!]
 
             var shareURL = NSURL(string: "tumblr://x-callback-url/photo?caption=Daily%20Photo%20Prayer")
-            var canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
+            let canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
 
             if !canOpenURL {
                 shareURL = NSURL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer.photoURL)")
@@ -186,8 +188,8 @@ extension PrayerContainerViewController: FBSDKSharingDelegate {
     }
     
     func sharer(sharer: FBSDKSharing!, didFailWithError error: NSError!) {
-        println(error)
-        var alert = UIAlertController(title: "Uh oh!", message: "Something went wrong when sharing to Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
+        print(error)
+        let alert = UIAlertController(title: "Uh oh!", message: "Something went wrong when sharing to Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -211,6 +213,6 @@ extension PrayerContainerViewController: GPPSignInDelegate {
     }
     
     func didDisconnectWithError ( error: NSError) -> Void{
-        debugPrintln("TEST2")
+        debugPrint("TEST2")
     }
 }

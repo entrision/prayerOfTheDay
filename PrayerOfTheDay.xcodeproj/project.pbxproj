@@ -23,8 +23,6 @@
 		0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480FEC21B2099FF00547685 /* UIKit.framework */; };
 		048376D31B6035EE002E2E27 /* SinglePrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048376D21B6035EE002E2E27 /* SinglePrayerView.swift */; };
 		048376D51B6035FA002E2E27 /* SinglePrayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048376D41B6035FA002E2E27 /* SinglePrayerView.xib */; };
-		048D4EE91B5D644800BAC817 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D4EE81B5D644800BAC817 /* FBSDKCoreKit.framework */; };
-		048D4EEB1B5D6B8E00BAC817 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D4EEA1B5D6B8E00BAC817 /* FBSDKShareKit.framework */; };
 		04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30C51B444C3300609A5B /* Pinterest.framework */; };
 		04FC30C81B444C5000609A5B /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */; };
 		04FC30CA1B444C6400609A5B /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04FC30C91B444C6400609A5B /* GooglePlus.bundle */; };
@@ -35,6 +33,8 @@
 		1F006BA91AC047A1006CA3AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BA81AC047A1006CA3AA /* Images.xcassets */; };
 		1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */; };
 		1F006BB81AC047A1006CA3AA /* PrayerOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */; };
+		1F1296CA1BC5897600B04F24 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1296C91BC5897600B04F24 /* FBSDKShareKit.framework */; };
+		1F1296CC1BC5898800B04F24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1296CB1BC5898800B04F24 /* FBSDKCoreKit.framework */; };
 		1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F14DC7A1B0B636F004B38B4 /* Social.framework */; };
 		1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */; };
 		1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */; };
@@ -94,8 +94,6 @@
 		0480FEC21B2099FF00547685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		048376D21B6035EE002E2E27 /* SinglePrayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePrayerView.swift; sourceTree = "<group>"; };
 		048376D41B6035FA002E2E27 /* SinglePrayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinglePrayerView.xib; sourceTree = "<group>"; };
-		048D4EE81B5D644800BAC817 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		048D4EEA1B5D6B8E00BAC817 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		04FC30C51B444C3300609A5B /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
 		04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		04FC30C91B444C6400609A5B /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
@@ -110,6 +108,8 @@
 		1F006BB11AC047A1006CA3AA /* PrayerOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006BB61AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerOfTheDayTests.swift; sourceTree = "<group>"; };
+		1F1296C91BC5897600B04F24 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		1F1296CB1BC5898800B04F24 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1F14DC7A1B0B636F004B38B4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerContainerViewController.swift; sourceTree = "<group>"; };
@@ -146,9 +146,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1296CC1BC5898800B04F24 /* FBSDKCoreKit.framework in Frameworks */,
+				1F1296CA1BC5897600B04F24 /* FBSDKShareKit.framework in Frameworks */,
 				0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */,
 				04FC30CC1B444C7400609A5B /* GooglePlus.framework in Frameworks */,
-				048D4EEB1B5D6B8E00BAC817 /* FBSDKShareKit.framework in Frameworks */,
 				0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */,
 				04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */,
 				0480FEBF1B2099F300547685 /* Security.framework in Frameworks */,
@@ -160,7 +161,6 @@
 				0480FEB31B2099C700547685 /* Foundation.framework in Frameworks */,
 				0480FEB11B2099BF00547685 /* AssetsLibrary.framework in Frameworks */,
 				0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */,
-				048D4EE91B5D644800BAC817 /* FBSDKCoreKit.framework in Frameworks */,
 				04FC30C81B444C5000609A5B /* GoogleOpenSource.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
 			);
@@ -179,8 +179,8 @@
 		1F006B901AC047A1006CA3AA = {
 			isa = PBXGroup;
 			children = (
-				048D4EEA1B5D6B8E00BAC817 /* FBSDKShareKit.framework */,
-				048D4EE81B5D644800BAC817 /* FBSDKCoreKit.framework */,
+				1F1296CB1BC5898800B04F24 /* FBSDKCoreKit.framework */,
+				1F1296C91BC5897600B04F24 /* FBSDKShareKit.framework */,
 				0480FEC21B2099FF00547685 /* UIKit.framework */,
 				0480FEC01B2099FB00547685 /* SystemConfiguration.framework */,
 				0480FEBE1B2099F300547685 /* Security.framework */,
@@ -546,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -582,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -605,6 +605,7 @@
 					/Users/hunterwhittle/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -633,6 +634,7 @@
 					/Users/hunterwhittle/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",

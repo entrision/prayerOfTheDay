@@ -102,49 +102,51 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         // *** THINK ABOUT -  we need 7 prayers, they may not all be there on the server.
         // /api/v1/photos/?date=2010-01-01
 
-        var currentDate = NSDate()
-        var service = WebService()
+        let currentDate = NSDate()
         var searchDate = currentDate
         
-        var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
-        var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        var baseAddress = settings.objectForKey("baseAddress") as! NSString
+        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
+        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
+        let baseAddress = settings.objectForKey("baseAddress") as! NSString
         
         for var i = 0; i < 30; i++ { // max 30 searches
             if (i > 0) {
-                var interval:NSTimeInterval = Double(-1*i*24*60*60)
+                let interval:NSTimeInterval = Double(-1*i*24*60*60)
                 searchDate = currentDate.dateByAddingTimeInterval(interval)
             }
             
             let formatter = NSDateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             
-            var searchString = formatter.stringFromDate(searchDate)
+            let searchString = formatter.stringFromDate(searchDate)
   
             if(!Utilities.checkForPrayerOnDate(searchString)) {
                 let path: String = "\(baseAddress)photos/?date=\(searchString)"
 
-                var url: NSURL = NSURL(string: path)!
-                var request = NSURLRequest(URL: url)
+                let url: NSURL = NSURL(string: path)!
+                let request = NSURLRequest(URL: url)
                 var response: NSURLResponse?
                 
-                var error:NSError?
-                var data: NSData =  NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error:&error)!
+                do {
+                    let data: NSData =  try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
      
-                if let jsonObj = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) as? NSArray {
-                    if (jsonObj.count > 0) {
-                        if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
-                            Utilities.createPhotoPrayerFromDictionary(values)
-                            self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString)
-                            
-                            self.prayers.setObject(searchString, forKey: foundPrayers)
-                            foundPrayers++
-                            
-                            if (checkForFullLoad(i)) {
-                                break
+                    if let jsonObj = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? NSArray {
+                        if (jsonObj.count > 0) {
+                            if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
+                                Utilities.createPhotoPrayerFromDictionary(values)
+                                self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString)
+                                
+                                self.prayers.setObject(searchString, forKey: foundPrayers)
+                                foundPrayers++
+                                
+                                if (checkForFullLoad(i)) {
+                                    break
+                                }
                             }
                         }
                     }
+                } catch let error as NSError {
+                    print(error)
                 }
                 
             } else {
@@ -217,7 +219,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         let todayDate = formatter.dateFromString(date)!
         let myCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-        let day = myCalendar?.component(.WeekdayCalendarUnit, fromDate: todayDate) as Int!
+        let day = myCalendar?.component(NSCalendarUnit.Weekday, fromDate: todayDate) as Int!
         
         switch(day) {
         case 1:

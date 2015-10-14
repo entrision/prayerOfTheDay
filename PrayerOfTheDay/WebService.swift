@@ -31,11 +31,13 @@ class WebService: NSObject, NSURLConnectionDelegate {
         //request.setValue(apiToken, forHTTPHeaderField: "Authorization")
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(),
-            completionHandler: { (connResponse: NSURLResponse!, connData: NSData!, connError: NSError!) -> Void in
-                if (connError == nil) {
-                    success(response: connResponse, data: connData)
+            completionHandler: { (connResponse: NSURLResponse?, connData: NSData?, connError: NSError?) -> Void in
+            
+                if let data = connData {
+                    success(response: connResponse!, data: data)
+                    
                 } else {
-                    failure(error: connError)
+                    failure(error: connError!)
                 }
         })
 

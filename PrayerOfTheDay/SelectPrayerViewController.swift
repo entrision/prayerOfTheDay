@@ -40,7 +40,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         day5Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         
-        var loadingScreen = LoadingView(frame: self.view.frame)
+        let loadingScreen = LoadingView(frame: self.view.frame)
         loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
@@ -70,7 +70,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         //var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
         //singlePrayerVC.prayerDate = sender as! String
         
-        var containerVC = segue.destinationViewController as! PrayerContainerViewController
+        let containerVC = segue.destinationViewController as! PrayerContainerViewController
         //containerVC.startDate = sender as! String
         containerVC.startIndex = (sender as! Int)
         containerVC.prayers = prayers
@@ -81,8 +81,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     // -------------------------------------------
     
     func prayerClicked(gesture: UITapGestureRecognizer) {
-        var image:UIView = gesture.view!
-        var day = image.tag
+        let image:UIView = gesture.view!
+        let day = image.tag
         
         if prayers.objectForKey(day) != nil {
             self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
@@ -102,49 +102,51 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         // *** THINK ABOUT -  we need 7 prayers, they may not all be there on the server.
         // /api/v1/photos/?date=2010-01-01
 
-        var currentDate = NSDate()
-        var service = WebService()
+        let currentDate = NSDate()
         var searchDate = currentDate
         
-        var path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
-        var settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        var baseAddress = settings.objectForKey("baseAddress") as! NSString
+        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
+        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
+        let baseAddress = settings.objectForKey("baseAddress") as! NSString
         
         for var i = 0; i < 30; i++ { // max 30 searches
             if (i > 0) {
-                var interval:NSTimeInterval = Double(-1*i*24*60*60)
+                let interval:NSTimeInterval = Double(-1*i*24*60*60)
                 searchDate = currentDate.dateByAddingTimeInterval(interval)
             }
             
             let formatter = NSDateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             
-            var searchString = formatter.stringFromDate(searchDate)
+            let searchString = formatter.stringFromDate(searchDate)
   
             if(!Utilities.checkForPrayerOnDate(searchString)) {
                 let path: String = "\(baseAddress)photos/?date=\(searchString)"
 
-                var url: NSURL = NSURL(string: path)!
-                var request = NSURLRequest(URL: url)
+                let url: NSURL = NSURL(string: path)!
+                let request = NSURLRequest(URL: url)
                 var response: NSURLResponse?
                 
-                var error:NSError?
-                var data: NSData =  NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error:&error)!
+                do {
+                    let data: NSData =  try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
      
-                if let jsonObj = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) as? NSArray {
-                    if (jsonObj.count > 0) {
-                        if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
-                            Utilities.createPhotoPrayerFromDictionary(values)
-                            self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString)
-                            
-                            self.prayers.setObject(searchString, forKey: foundPrayers)
-                            foundPrayers++
-                            
-                            if (checkForFullLoad(i)) {
-                                break
+                    if let jsonObj = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? NSArray {
+                        if (jsonObj.count > 0) {
+                            if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
+                                Utilities.createPhotoPrayerFromDictionary(values)
+                                self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString)
+                                
+                                self.prayers.setObject(searchString, forKey: foundPrayers)
+                                foundPrayers++
+                                
+                                if (checkForFullLoad(i)) {
+                                    break
+                                }
                             }
                         }
                     }
+                } catch let error as NSError {
+                    print(error)
                 }
                 
             } else {
@@ -216,8 +218,8 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         let formatter  = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let todayDate = formatter.dateFromString(date)!
-        let myCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-        let day = myCalendar?.component(.WeekdayCalendarUnit, fromDate: todayDate) as Int!
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let day = myCalendar?.component(NSCalendarUnit.Weekday, fromDate: todayDate) as Int!
         
         switch(day) {
         case 1:
@@ -239,7 +241,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     func checkForFullLoad(iterator:Int)->Bool {
         if (foundPrayers == 7 || iterator == 29) {
-            var loadingView = self.view.viewWithTag(70)
+            let loadingView = self.view.viewWithTag(70)
             loadingView?.removeFromSuperview()
             screenLoaded = true
             return true
@@ -251,7 +253,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     func checkForVerticalImage(imageView: UIImageView) {
         
         if imageView.image!.size.height > imageView.image!.size.width {
-            imageView.contentMode = UIViewContentMode.Top
+            imageView.contentMode = UIViewContentMode.ScaleAspectFit
         } else {
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
         }

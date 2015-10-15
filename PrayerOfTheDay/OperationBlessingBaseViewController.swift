@@ -13,18 +13,18 @@ class OperationBlessingBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var headerContainer = UIView(frame: CGRectMake(20, 40, 320, 40))
-        var imageView = UIImageView(frame: CGRectMake(0, 0, 40, 40))
+        let headerContainer = UIView(frame: CGRectMake(20, 40, 320, 40))
+        let imageView = UIImageView(frame: CGRectMake(0, 0, 40, 40))
         imageView.image = UIImage(named:"prayer-hands.png")
         headerContainer.addSubview(imageView)
         
-        var topLabel = UILabel(frame: CGRectMake(48, 0, 100, 15))
+        let topLabel = UILabel(frame: CGRectMake(48, 0, 100, 15))
         topLabel.text = "DAILY PHOTO"
         topLabel.textColor = UIColor.whiteColor()
         topLabel.font = UIFont(name: "Raleway-Bold", size: 14)
         headerContainer.addSubview(topLabel)
         
-        var bottomLabel = UILabel(frame: CGRectMake(48, 15, 100, 20))
+        let bottomLabel = UILabel(frame: CGRectMake(48, 15, 100, 20))
         bottomLabel.text = "PRAYER"
         bottomLabel.textColor = UIColor.whiteColor()
         bottomLabel.font = UIFont(name: "Raleway", size: 23)

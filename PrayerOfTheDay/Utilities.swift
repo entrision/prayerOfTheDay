@@ -15,7 +15,7 @@ class Utilities {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context = appDelegate.managedObjectContext!
         
-        let prayer = NSEntityDescription.insertNewObjectForEntityForName("PhotoPrayer", inManagedObjectContext: context) as! NSManagedObject
+        let prayer = NSEntityDescription.insertNewObjectForEntityForName("PhotoPrayer", inManagedObjectContext: context)
         prayer.setValue(values.objectForKey("id"), forKey: "serverID")
         prayer.setValue(values.objectForKey("prayer"), forKey: "prayer")
         prayer.setValue(values.objectForKey("location"), forKey: "location")
@@ -30,9 +30,10 @@ class Utilities {
         
         prayer.setValue(values.objectForKey("for_date"), forKey: "date")
         
-        var error: NSError?
-        if (!context.save(&error)) {
-            println("ERROR saving Coupon \(error), \(error?.userInfo)")
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print(error)
         }
     }
     
@@ -45,12 +46,14 @@ class Utilities {
         
         fetchRequest.predicate = searchQuery
         
-        var error: NSError?
-        
-        let fetchResults = context.executeFetchRequest(fetchRequest, error: &error) as! [NSManagedObject]?
-        
-        if (fetchResults?.count > 0) {
-            return true
+        do {
+            let fetchResults = try context.executeFetchRequest(fetchRequest)
+            
+            if (fetchResults.count > 0) {
+                return true
+            }
+        } catch let error as NSError {
+            print(error)
         }
 
         return false
@@ -65,16 +68,20 @@ class Utilities {
         
         fetchRequest.predicate = searchQuery
         
-        var error: NSError?
+        do {
+            let fetchResults = try context.executeFetchRequest(fetchRequest)
         
-        let fetchResults = context.executeFetchRequest(fetchRequest, error: &error) as! [NSManagedObject]?
-        
-        if (fetchResults?.count > 0) {
-            let prayer = fetchResults?[0] as! PhotoPrayer
-            return prayer
-        } else {
-            return nil
+            if (fetchResults.count > 0) {
+                let prayer = fetchResults[0] as! PhotoPrayer
+                return prayer
+            } else {
+                return nil
+            }
+        } catch let error as NSError {
+            print(error)
         }
+        
+        return nil
 
     }
 }

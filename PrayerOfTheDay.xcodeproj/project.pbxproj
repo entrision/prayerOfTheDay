@@ -64,6 +64,7 @@
 		1FB5DD501ACDB299001250DA /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5DD4E1ACDB299001250DA /* LoadingView.xib */; };
 		1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */; };
 		1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD551ACDE8FC001250DA /* Utilities.swift */; };
+		2C2EC5E9AFFDAC0CBC920CC3 /* libPods-PrayerOfTheDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		04FC30C71B444C5000609A5B /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		04FC30C91B444C6400609A5B /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		04FC30CB1B444C7400609A5B /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrayerOfTheDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,8 @@
 		1FB5DD4E1ACDB299001250DA /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPrayer.swift; path = ../PhotoPrayer.swift; sourceTree = "<group>"; };
 		1FB5DD551ACDE8FC001250DA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
+		4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */,
 				04FC30C81B444C5000609A5B /* GoogleOpenSource.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
+				2C2EC5E9AFFDAC0CBC920CC3 /* libPods-PrayerOfTheDay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +205,8 @@
 				1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */,
 				1F006BB41AC047A1006CA3AA /* PrayerOfTheDayTests */,
 				1F006B9A1AC047A1006CA3AA /* Products */,
+				F5FEABB0E8FAA2BC264B94A3 /* Pods */,
+				5226270FB654C9D70492F6D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,6 +339,23 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		5226270FB654C9D70492F6D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5FEABB0E8FAA2BC264B94A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */,
+				46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,9 +363,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F006BBB1AC047A1006CA3AA /* Build configuration list for PBXNativeTarget "PrayerOfTheDay" */;
 			buildPhases = (
+				DE2BEA0B16CA2C0484197958 /* Check Pods Manifest.lock */,
 				1F006B951AC047A1006CA3AA /* Sources */,
 				1F006B961AC047A1006CA3AA /* Frameworks */,
 				1F006B971AC047A1006CA3AA /* Resources */,
+				59491E1C12B84D9476C1196D /* Embed Pods Frameworks */,
+				50F9667D146EE91C22E069BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,6 +478,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50F9667D146EE91C22E069BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59491E1C12B84D9476C1196D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2BEA0B16CA2C0484197958 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F006B951AC047A1006CA3AA /* Sources */ = {
@@ -594,6 +669,7 @@
 		};
 		1F006BBC1AC047A1006CA3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -617,6 +693,7 @@
 		};
 		1F006BBD1AC047A1006CA3AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -7,3 +7,4 @@
 #import <GoogleOpenSource/GoogleOpenSource.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
+#import "PinterestSDK.h"

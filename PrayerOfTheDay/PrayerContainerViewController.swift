@@ -84,16 +84,21 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
     
     @IBAction func pinterestClicked(sender: AnyObject) {
         
-        let pinterest = Pinterest()
-        pinterest.setValue("1445483", forKey: "clientId")
-        
-        let prayerDate = sortedPrayers[currentIndex!] as! String
-        if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-            let imageUrl = NSURL(string: selectedPrayer.photoURL)
-            let sourceUrl = NSURL(string: "")
-            
-            pinterest.createPinWithImageURL(imageUrl, sourceURL: sourceUrl, description: "\(selectedPrayer.location) - \(selectedPrayer.prayer)")
-        }
+        PDKClient.sharedInstance().authenticateWithPermissions([PDKClientWritePublicPermissions], withSuccess: { (response) -> Void in
+            let prayerDate = self.sortedPrayers[self.currentIndex!] as! String
+            if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
+                let imageUrl = NSURL(string: selectedPrayer.photoURL)
+                PDKClient.sharedInstance().createPinWithImageURL(imageUrl, link: NSURL(string: ""), onBoard: "", description: selectedPrayer.location, withSuccess: { (response) -> Void in
+                    var x = 0
+                    x++
+                }, andFailure: { (error) -> Void in
+                    print(error.localizedDescription)
+                })
+            }
+        }, andFailure: { (error) -> Void in
+            var x = 0
+            x++
+        })
     }
     
     @IBAction func twitterClicked(sender: AnyObject) {
@@ -104,9 +109,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
                 let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)" as String
                 if prayerString.characters.count > 114 {
-                    //twitterSheet.setInitialText("\(prayerString.substringToIndex(advance(prayerString.startIndex, 114)))...")
-
-                    twitterSheet.setInitialText("\((prayerString as NSString).substringToIndex(114))...")
+                    twitterSheet.setInitialText("\((prayerString as NSString).substringToIndex(110))...")
                 } else {
                     twitterSheet.setInitialText(prayerString)
                 }

@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
+        PDKClient.configureSharedInstanceWithAppId("4796297795159987745")
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
@@ -31,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if GPPURLHandler.handleURL(url, sourceApplication: sourceApplication, annotation: annotation) {
             return true
         } else if FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation) {
+            return true
+        } else if PDKClient.sharedInstance().handleCallbackURL(url) {
             return true
         }
         

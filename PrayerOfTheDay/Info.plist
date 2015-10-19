@@ -6,6 +6,17 @@
 	<array>
 		<string>fbauth2</string>
 		<string>pinterestsdk.v1</string>
+        <string>com-google-gidconsent-google</string>
+        <string>com-google-gidconsent-youtube</string>
+        <string>com-google-gidconsent</string>
+        <string>com.google.gppconsent.2.4.1</string>
+        <string>com.google.gppconsent.2.4.0</string>
+        <string>googlechrome</string>
+        <string>googlechrome-x-callback</string>
+        <string>hasgplus4</string>
+        <string>com.google.gppconsent.2.3.0</string>
+        <string>com.google.gppconsent.2.2.0</string>
+        <string>com.google.gppconsent</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

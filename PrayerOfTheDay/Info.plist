@@ -26,23 +26,17 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>pdk4796297795159987745</string>
+				<string>pdk4796805634599167979</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb482242538600727</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>pin1445483</string>
 			</array>
 		</dict>
 		<dict>
@@ -81,6 +75,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Photo Prayer</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -88,7 +84,7 @@
 			<key>pinterest.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
-				<string>YES</string>
+				<true/>
 				<key>NSExceptionAllowInsecureHTTPLoads</key>
 				<false/>
 			</dict>

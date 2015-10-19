@@ -84,11 +84,11 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
     
     @IBAction func pinterestClicked(sender: AnyObject) {
         
-        PDKClient.sharedInstance().authenticateWithPermissions([PDKClientWritePublicPermissions], withSuccess: { (response) -> Void in
+        PDKClient.sharedInstance().authenticateWithPermissions([PDKClientWritePublicPermissions, PDKClientWriteRelationshipsPermissions, PDKClientWritePrivatePermissions, PDKClientReadPrivatePermissions, PDKClientReadPublicPermissions, PDKClientReadRelationshipsPermissions], withSuccess: { (response) -> Void in
             let prayerDate = self.sortedPrayers[self.currentIndex!] as! String
             if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
                 let imageUrl = NSURL(string: selectedPrayer.photoURL)
-                PDKClient.sharedInstance().createPinWithImageURL(imageUrl, link: NSURL(string: ""), onBoard: "", description: selectedPrayer.location, withSuccess: { (response) -> Void in
+                PDKPin.pinWithImageURL(imageUrl, link: NSURL(string: ""), suggestedBoardName: "", note: selectedPrayer.prayer, withSuccess: { () -> Void in
                     var x = 0
                     x++
                 }, andFailure: { (error) -> Void in
@@ -96,8 +96,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
                 })
             }
         }, andFailure: { (error) -> Void in
-            var x = 0
-            x++
+            print(error.localizedDescription)
         })
     }
     

@@ -34,7 +34,6 @@
 		1F006BAC1AC047A1006CA3AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F006BAA1AC047A1006CA3AA /* LaunchScreen.xib */; };
 		1F006BB81AC047A1006CA3AA /* PrayerOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */; };
 		1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F14DC7A1B0B636F004B38B4 /* Social.framework */; };
-		1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */; };
 		1F2390D41BCF0F4900C9E1E5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2390D31BCF0F4900C9E1E5 /* FBSDKCoreKit.framework */; };
 		1F2390D61BCF0F5400C9E1E5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2390D51BCF0F5400C9E1E5 /* FBSDKShareKit.framework */; };
 		1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */; };
@@ -111,7 +110,6 @@
 		1F006BB61AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006BB71AC047A1006CA3AA /* PrayerOfTheDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerOfTheDayTests.swift; sourceTree = "<group>"; };
 		1F14DC7A1B0B636F004B38B4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		1F2390D31BCF0F4900C9E1E5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1F2390D51BCF0F5400C9E1E5 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerContainerViewController.swift; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				1F006BA01AC047A1006CA3AA /* PrayerOfTheDay.xcdatamodeld */,
 				1F006B9C1AC047A1006CA3AA /* Supporting Files */,
 				1F76D4F51AC1A8A7004684F3 /* view controllers */,
-				1F1CEDDD1AD7328F00EF0299 /* Images-2.xcassets */,
 			);
 			path = PrayerOfTheDay;
 			sourceTree = "<group>";
@@ -449,7 +446,6 @@
 				1FA242261ACAE1D100C05D37 /* facebook.png in Resources */,
 				1FA2422B1ACAE1D100C05D37 /* youtube.png in Resources */,
 				1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */,
-				1F1CEDDE1AD7328F00EF0299 /* Images-2.xcassets in Resources */,
 				1F9ED4371AC43D7000DC2CE7 /* prayer-hands.png in Resources */,
 				1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */,
 				1F9ED42F1AC4351E00DC2CE7 /* Raleway-Medium.ttf in Resources */,

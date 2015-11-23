@@ -188,63 +188,38 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                     day1Image.image = UIImage(data: data)
                     checkForVerticalImage(day1Image)
                 }
-                day1Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day1Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             case 2:
                 if let data = selectedPrayer?.photo {
                     day2Image.image = UIImage(data: data)
                     checkForVerticalImage(day2Image)
                 }
-                day2Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day2Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             case 3:
                 if let data = selectedPrayer?.photo {
                     day3Image.image = UIImage(data: data)
                     checkForVerticalImage(day3Image)
                 }
-                day3Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day3Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             case 4:
                 if let data = selectedPrayer?.photo {
                     day4Image.image = UIImage(data: data)
                     checkForVerticalImage(day4Image)
                 }
-                day4Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day4Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             case 5:
                 if let data = selectedPrayer?.photo {
                     day5Image.image = UIImage(data: data)
                     checkForVerticalImage(day5Image)
                 }
-                day5Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day5Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             default:
                 if let data = selectedPrayer?.photo {
                     day6Image.image = UIImage(data: data)
                     checkForVerticalImage(day6Image)
                 }
-                day6Label.text = "\(getDayOfTheWeek(date)), \(date)"
+                day6Label.text = "\(Utilities.getDayOfTheWeek(date)), \(date)"
             }
-        }
-    }
-    
-    func getDayOfTheWeek(date: String)->String {
-        let formatter  = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let todayDate = formatter.dateFromString(date)!
-        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let day = myCalendar?.component(NSCalendarUnit.Weekday, fromDate: todayDate) as Int!
-        
-        switch(day) {
-        case 1:
-            return "SUNDAY"
-        case 2:
-            return "MONDAY"
-        case 3:
-            return "TUESDAY"
-        case 4:
-            return "WEDNESDAY"
-        case 5:
-            return "THURSDAY"
-        case 6:
-            return "FRIDAY"
-        default:
-            return "SATURDAY"
         }
     }
     

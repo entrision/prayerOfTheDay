@@ -84,4 +84,29 @@ class Utilities {
         return nil
 
     }
+    
+    class func getDayOfTheWeek(date: String)->String {
+        let formatter  = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let todayDate = formatter.dateFromString(date)!
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let day = myCalendar?.component(NSCalendarUnit.Weekday, fromDate: todayDate) as Int!
+        
+        switch(day) {
+        case 1:
+            return "SUNDAY"
+        case 2:
+            return "MONDAY"
+        case 3:
+            return "TUESDAY"
+        case 4:
+            return "WEDNESDAY"
+        case 5:
+            return "THURSDAY"
+        case 6:
+            return "FRIDAY"
+        default:
+            return "SATURDAY"
+        }
+    }
 }

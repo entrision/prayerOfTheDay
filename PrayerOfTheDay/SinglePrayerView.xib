@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,6 +36,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7F-ZC-HwX">
                                             <rect key="frame" x="8" y="429" width="584" height="12"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="1sc-yV-QKc"/>
                                             </constraints>
@@ -48,6 +49,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Prayer of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-ox-0dS">
                                             <rect key="frame" x="207" y="406" width="186" height="20"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="dF3-JA-aED"/>
                                                 <constraint firstAttribute="width" constant="186" id="fbf-TH-XBp"/>
@@ -61,6 +63,7 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFu-Gg-b8s">
                                             <rect key="frame" x="15" y="441" width="570" height="82"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                             <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="14"/>
@@ -71,6 +74,7 @@
                                         </textView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dhl-Eq-vdq">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Dhl-Eq-vdq" secondAttribute="height" multiplier="3:2" id="AKz-ak-Wkk"/>
@@ -84,6 +88,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="824-oX-sgA">
                                                     <rect key="frame" x="120" y="0.0" width="93" height="28"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                                     <state key="normal" title="Watch videos">
                                                         <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,6 +100,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ns-Y9-S5Y">
                                                     <rect key="frame" x="29" y="0.0" width="93" height="28"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                                     <state key="normal" title="View photos  |">
                                                         <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,12 +112,14 @@
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.operationblessing.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE9-U2-LAC">
                                                     <rect key="frame" x="54" y="20" width="192" height="21"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-cN-O8k">
                                                     <rect key="frame" x="215" y="0.0" width="55" height="28"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                                     <state key="normal" title="|  Donate">
                                                         <color key="titleColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,6 +130,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="300" id="YTd-wr-C3m"/>
@@ -132,6 +141,7 @@
                                             </variation>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="YFu-Gg-b8s" firstAttribute="leading" secondItem="X9s-wm-ynu" secondAttribute="leading" constant="15" id="148-uN-f2M"/>
@@ -151,6 +161,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <animations/>
                             <constraints>
                                 <constraint firstItem="X9s-wm-ynu" firstAttribute="leading" secondItem="7w3-ii-WgV" secondAttribute="leading" id="63j-KL-0zf"/>
                                 <constraint firstItem="X9s-wm-ynu" firstAttribute="top" secondItem="7w3-ii-WgV" secondAttribute="top" id="U14-Of-R8y"/>
@@ -159,6 +170,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="7w3-ii-WgV" secondAttribute="bottom" id="3w0-Mc-frP"/>
@@ -169,6 +181,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="xgm-cX-yJy" firstAttribute="top" secondItem="xxB-CD-gjS" secondAttribute="top" id="3jb-Ui-UmL"/>

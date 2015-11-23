@@ -24,7 +24,7 @@ class SinglePrayerView: UIView {
             
             prayer.text = thePrayer?.prayer
             prayer.textAlignment = .Center
-            location.text = thePrayer?.location
+            location.text = "\(Utilities.getDayOfTheWeek(thePrayer!.date)), \(thePrayer!.date) - \(thePrayer!.location)"
             
             if let data = thePrayer?.photo {
                 image.image = UIImage(data: data)

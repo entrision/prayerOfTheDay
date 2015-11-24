@@ -239,13 +239,14 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     }
     
     func checkForVerticalImage(imageView: UIImageView) {
-        
-        if imageView.image!.size.height > imageView.image!.size.width {
-            imageView.contentMode = UIViewContentMode.ScaleAspectFit
-            imageView.backgroundColor = UIColor.blackColor()
-        } else {
-            imageView.contentMode = UIViewContentMode.ScaleAspectFill
-            imageView.backgroundColor = UIColor.whiteColor()
+        if let image = imageView.image {
+            if image.size.height > imageView.image!.size.width {
+                imageView.contentMode = UIViewContentMode.ScaleAspectFit
+                imageView.backgroundColor = UIColor.blackColor()
+            } else {
+                imageView.contentMode = UIViewContentMode.ScaleAspectFill
+                imageView.backgroundColor = UIColor.whiteColor()
+            }
         }
     }
     

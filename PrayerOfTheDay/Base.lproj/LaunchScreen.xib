@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Raleway-Regular.ttf">
+        <array key="Raleway-Regular.ttf">
             <string>Raleway</string>
-        </mutableArray>
-        <mutableArray key="Raleway-SemiBold.ttf">
+        </array>
+        <array key="Raleway-SemiBold.ttf">
             <string>Raleway-SemiBold</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -20,44 +21,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOP-61-h2c">
-                    <rect key="frame" x="145" y="204" width="191" height="72"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa3-Ca-9r2">
-                            <rect key="frame" x="51" y="33" width="140" height="25"/>
-                            <animations/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prayer-hands.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q9m-jA-30h">
+                            <frame key="frameInset" minX="-1" minY="6" width="52" height="59"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa3-Ca-9r2">
+                            <frame key="frameInset" minX="51" minY="33" width="140" height="25"/>
                             <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="34"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prayer-hands.png" translatesAutoresizingMaskIntoConstraints="NO" id="mSP-sr-V6B">
-                            <rect key="frame" x="-1" y="12" width="59" height="52"/>
-                            <animations/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAILY PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DI-Cc-waL">
-                            <rect key="frame" x="51" y="8" width="140" height="21"/>
-                            <animations/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DAILY PHOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DI-Cc-waL">
+                            <frame key="frameInset" minX="51" minY="8" width="140" height="21"/>
                             <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="Xa3-Ca-9r2" firstAttribute="centerY" secondItem="NOP-61-h2c" secondAttribute="centerY" constant="9.5" id="C4a-ol-zGb"/>
+                        <constraint firstItem="2DI-Cc-waL" firstAttribute="centerY" secondItem="NOP-61-h2c" secondAttribute="centerY" constant="-17.5" id="EVc-nV-H5a"/>
+                        <constraint firstItem="Xa3-Ca-9r2" firstAttribute="centerX" secondItem="NOP-61-h2c" secondAttribute="centerX" constant="25.5" id="JUR-g1-F0K"/>
+                        <constraint firstItem="2DI-Cc-waL" firstAttribute="centerX" secondItem="NOP-61-h2c" secondAttribute="centerX" constant="25.5" id="W6n-S7-cPS"/>
                         <constraint firstAttribute="width" constant="191" id="dG6-zW-S0i"/>
                         <constraint firstAttribute="height" constant="72" id="xrK-nk-Ccw"/>
                     </constraints>
                 </view>
             </subviews>
-            <animations/>
-            <color key="backgroundColor" red="0.0078431372549019607" green="0.28235294117647058" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0078431372549019607" green="0.28235294117647058" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="NOP-61-h2c" secondAttribute="centerY" id="eP0-Fs-OYH"/>
                 <constraint firstAttribute="centerX" secondItem="NOP-61-h2c" secondAttribute="centerX" id="lb8-Ag-lmp"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="500" y="427"/>
         </view>
     </objects>
     <resources>

@@ -1,11 +1,10 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
-# Uncomment this line if you're using Swift
-# use_frameworks!
+#platform :ios, '8.0'
+#use_frameworks!
 
 target 'PrayerOfTheDay' do
     
-pod 'PinterestSDK', :git => 'git@github.com:pinterest/ios-pdk.git'
+pod 'PinterestSDK', '~> 1.0'
+pod 'AFNetworking', '~> 3.1'
 
 end
 

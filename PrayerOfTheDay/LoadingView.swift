@@ -48,7 +48,7 @@ class LoadingView: UIView {
     
     private func loadNib() -> LoadingView {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let view = bundle.loadNibNamed("LoadingView", owner: nil, options: nil)[0] as! LoadingView
+        let view = bundle.loadNibNamed("LoadingView", owner: nil, options: nil)![0] as! LoadingView
         return view
     }
 

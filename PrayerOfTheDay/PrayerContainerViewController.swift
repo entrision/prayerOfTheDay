@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+//import PinterestSDK
 
 class PrayerContainerViewController: OperationBlessingBaseViewController {
 
@@ -40,23 +41,23 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         
         if !viewsLoaded {
             
-            let sortedKeys = (prayers.allKeys as NSArray).sortedArrayUsingSelector(Selector("compare:"))
+            let sortedKeys = (prayers.allKeys as NSArray).sortedArrayUsingSelector(#selector(NSNumber.compare(_:)))
             for key in sortedKeys {
                 sortedPrayers.addObject(prayers.objectForKey(key)!)
             }
             
             let scrollArray = NSMutableArray()
-            for var i=0; i<sortedPrayers.count; i++ {
+            for i in 0 ..< sortedPrayers.count {
                 let prayerDate = sortedPrayers[i] as! String
                 let thePrayer = Utilities.getPrayerForDate(prayerDate)
                 
-                let singlePrayerView = NSBundle.mainBundle().loadNibNamed("SinglePrayerView", owner: self, options: nil)[0] as! SinglePrayerView
+                let singlePrayerView = NSBundle.mainBundle().loadNibNamed("SinglePrayerView", owner: self, options: nil)![0] as! SinglePrayerView
                 singlePrayerView.frame = theScrollView.bounds
                 singlePrayerView.thePrayer = thePrayer
                 scrollArray.addObject(singlePrayerView)
             }
             
-            for(var i=0; i<scrollArray.count; ++i) {
+            for i in 0 ..< scrollArray.count {
                 let theWidth = theScrollView.frame.size.width;
                 let frame = CGRectMake(theWidth*CGFloat(i), 0, theScrollView.frame.size.width, theScrollView.frame.size.height)
                 

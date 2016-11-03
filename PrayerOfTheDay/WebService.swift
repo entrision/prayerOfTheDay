@@ -23,6 +23,7 @@ class WebService: NSObject, NSURLConnectionDelegate {
     // --------------------------------------------------
     
     func get(webURL: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
+        print("in webservice get")
         let url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -34,14 +35,20 @@ class WebService: NSObject, NSURLConnectionDelegate {
             completionHandler: { (connResponse: NSURLResponse?, connData: NSData?, connError: NSError?) -> Void in
             
                 if let data = connData {
+                    
                     success(response: connResponse!, data: data)
                     
                 } else {
                     failure(error: connError!)
                 }
+                
+                
         })
 
     }
+    
+    
+    
 /*
     func post(webURL: NSString, arguements: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
         var url:NSURL = NSURL(string: baseAddress + webURL)!

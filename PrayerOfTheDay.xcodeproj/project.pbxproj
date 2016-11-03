@@ -63,7 +63,8 @@
 		1FB5DD501ACDB299001250DA /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5DD4E1ACDB299001250DA /* LoadingView.xib */; };
 		1FB5DD541ACDE8D3001250DA /* PhotoPrayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */; };
 		1FB5DD561ACDE8FC001250DA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5DD551ACDE8FC001250DA /* Utilities.swift */; };
-		2C2EC5E9AFFDAC0CBC920CC3 /* libPods-PrayerOfTheDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */; };
+		986A164D457B0DE342AAF9BA /* libPods-PrayerOfTheDayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6DD1E6E75E29493C359A4D /* libPods-PrayerOfTheDayTests.a */; };
+		D5BDDCC5089FED367C27E371 /* libPods-PrayerOfTheDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F057B24F4788377301FC567 /* libPods-PrayerOfTheDay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +102,7 @@
 		04DDCD041BD58A5800493C1D /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
 		04DDCD061BD58A6500493C1D /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = "../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.framework"; sourceTree = "<group>"; };
 		04FC30C51B444C3300609A5B /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
-		0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrayerOfTheDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F057B24F4788377301FC567 /* libPods-PrayerOfTheDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrayerOfTheDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B991AC047A1006CA3AA /* PrayerOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F006B9D1AC047A1006CA3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F006B9E1AC047A1006CA3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,8 +143,11 @@
 		1FB5DD4E1ACDB299001250DA /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		1FB5DD531ACDE8D3001250DA /* PhotoPrayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPrayer.swift; path = ../PhotoPrayer.swift; sourceTree = "<group>"; };
 		1FB5DD551ACDE8FC001250DA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
-		4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
+		24EAAA4CE5C7EFE171F2622D /* Pods-PrayerOfTheDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDayTests/Pods-PrayerOfTheDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		600A6AC22F45A8BFFB89ADCA /* Pods-PrayerOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
+		60207C97815D3C73B5EE2A89 /* Pods-PrayerOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
+		A24956A7BABE1410FB2574EA /* Pods-PrayerOfTheDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerOfTheDayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrayerOfTheDayTests/Pods-PrayerOfTheDayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6DD1E6E75E29493C359A4D /* libPods-PrayerOfTheDayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrayerOfTheDayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +172,7 @@
 				042A32A41BD5925D00898717 /* GoogleOpenSource.framework in Frameworks */,
 				0480FEAF1B2099B800547685 /* AddressBook.framework in Frameworks */,
 				1F14DC7B1B0B636F004B38B4 /* Social.framework in Frameworks */,
-				2C2EC5E9AFFDAC0CBC920CC3 /* libPods-PrayerOfTheDay.a in Frameworks */,
+				D5BDDCC5089FED367C27E371 /* libPods-PrayerOfTheDay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986A164D457B0DE342AAF9BA /* libPods-PrayerOfTheDayTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +211,8 @@
 				1F006B9B1AC047A1006CA3AA /* PrayerOfTheDay */,
 				1F006BB41AC047A1006CA3AA /* PrayerOfTheDayTests */,
 				1F006B9A1AC047A1006CA3AA /* Products */,
-				F5FEABB0E8FAA2BC264B94A3 /* Pods */,
 				5226270FB654C9D70492F6D3 /* Frameworks */,
+				6E4FCBD1CE53F69F1005FC41 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -345,16 +350,19 @@
 				04DDCD061BD58A6500493C1D /* GooglePlus.framework */,
 				04DDCD041BD58A5800493C1D /* GooglePlus.bundle */,
 				04DDCD021BD58A4700493C1D /* GoogleOpenSource.framework */,
-				0DAAC55A168A365F74F15D00 /* libPods-PrayerOfTheDay.a */,
+				0F057B24F4788377301FC567 /* libPods-PrayerOfTheDay.a */,
+				BF6DD1E6E75E29493C359A4D /* libPods-PrayerOfTheDayTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5FEABB0E8FAA2BC264B94A3 /* Pods */ = {
+		6E4FCBD1CE53F69F1005FC41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */,
-				46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */,
+				600A6AC22F45A8BFFB89ADCA /* Pods-PrayerOfTheDay.debug.xcconfig */,
+				60207C97815D3C73B5EE2A89 /* Pods-PrayerOfTheDay.release.xcconfig */,
+				A24956A7BABE1410FB2574EA /* Pods-PrayerOfTheDayTests.debug.xcconfig */,
+				24EAAA4CE5C7EFE171F2622D /* Pods-PrayerOfTheDayTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -366,12 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F006BBB1AC047A1006CA3AA /* Build configuration list for PBXNativeTarget "PrayerOfTheDay" */;
 			buildPhases = (
-				DE2BEA0B16CA2C0484197958 /* Check Pods Manifest.lock */,
+				74593EC85A2745C478CF03A5 /* [CP] Check Pods Manifest.lock */,
 				1F006B951AC047A1006CA3AA /* Sources */,
 				1F006B961AC047A1006CA3AA /* Frameworks */,
 				1F006B971AC047A1006CA3AA /* Resources */,
-				59491E1C12B84D9476C1196D /* Embed Pods Frameworks */,
-				50F9667D146EE91C22E069BC /* Copy Pods Resources */,
+				41138444EEC3B087A5CB856E /* [CP] Embed Pods Frameworks */,
+				8C97246E25CDAADC4A72D3AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,9 +394,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F006BBE1AC047A1006CA3AA /* Build configuration list for PBXNativeTarget "PrayerOfTheDayTests" */;
 			buildPhases = (
+				E478C54706BCA53D540ABFC7 /* [CP] Check Pods Manifest.lock */,
 				1F006BAD1AC047A1006CA3AA /* Sources */,
 				1F006BAE1AC047A1006CA3AA /* Frameworks */,
 				1F006BAF1AC047A1006CA3AA /* Resources */,
+				1669B8252ED42666EC9A0217 /* [CP] Embed Pods Frameworks */,
+				53DD65E921208250A4B5C95A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -413,9 +424,13 @@
 					1F006B981AC047A1006CA3AA = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = HXK9RLY6C2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					1F006BB01AC047A1006CA3AA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = HXK9RLY6C2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1F006B981AC047A1006CA3AA;
 					};
 				};
@@ -482,29 +497,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50F9667D146EE91C22E069BC /* Copy Pods Resources */ = {
+		1669B8252ED42666EC9A0217 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDayTests/Pods-PrayerOfTheDayTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59491E1C12B84D9476C1196D /* Embed Pods Frameworks */ = {
+		41138444EEC3B087A5CB856E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,14 +527,59 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE2BEA0B16CA2C0484197958 /* Check Pods Manifest.lock */ = {
+		53DD65E921208250A4B5C95A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDayTests/Pods-PrayerOfTheDayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74593EC85A2745C478CF03A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C97246E25CDAADC4A72D3AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDay/Pods-PrayerOfTheDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E478C54706BCA53D540ABFC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,8 +666,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = HXK9RLY6C2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -628,6 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -650,8 +713,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = HXK9RLY6C2;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -664,6 +729,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -671,12 +737,14 @@
 		};
 		1F006BBC1AC047A1006CA3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F108C6206C49D8E4BDFE081 /* Pods-PrayerOfTheDay.debug.xcconfig */;
+			baseConfigurationReference = 600A6AC22F45A8BFFB89ADCA /* Pods-PrayerOfTheDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HXK9RLY6C2;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -688,19 +756,23 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.entrision.dailyphotoprayer;
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		1F006BBD1AC047A1006CA3AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46AD2F79DA345353439858ED /* Pods-PrayerOfTheDay.release.xcconfig */;
+			baseConfigurationReference = 60207C97815D3C73B5EE2A89 /* Pods-PrayerOfTheDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Entrision LLC (HXK9RLY6C2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HXK9RLY6C2;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = PrayerOfTheDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -712,12 +784,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.entrision.dailyphotoprayer;
 				PRODUCT_NAME = PrayerOfTheDay;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PrayerOfTheDay/PrayerOfTheDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 		1F006BBF1AC047A1006CA3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24956A7BABE1410FB2574EA /* Pods-PrayerOfTheDayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -732,12 +808,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "OperationBlessing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrayerOfTheDay.app/PrayerOfTheDay";
 			};
 			name = Debug;
 		};
 		1F006BC01AC047A1006CA3AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24EAAA4CE5C7EFE171F2622D /* Pods-PrayerOfTheDayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -748,6 +826,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "OperationBlessing.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrayerOfTheDay.app/PrayerOfTheDay";
 			};
 			name = Release;

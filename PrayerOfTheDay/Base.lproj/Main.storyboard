@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tph-1X-JZx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tph-1X-JZx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Raleway-Bold.ttf">
+        <array key="Raleway-Bold.ttf">
             <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-            <string>Raleway-Bold</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="To4-M8-esh">
             <objects>
                 <navigationController id="Tph-1X-JZx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ir5-S0-wAr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ir5-S0-wAr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bBu-Ii-jpu"/>
@@ -43,126 +37,120 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-T6-bzz" userLabel="Image View - day 1">
-                                <rect key="frame" x="6" y="270" width="290" height="102"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="6" minY="270" width="290" height="102"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-EW-AMY" userLabel="Label - day 1">
-                                <rect key="frame" x="6" y="307" width="285" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="6" minY="307" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="PgX-9z-L1R"/>
                                     <constraint firstAttribute="width" constant="285" id="b2S-jv-vof"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-iS-gu3" userLabel="Image View - day 2">
-                                <rect key="frame" x="304" y="270" width="290" height="102"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="304" minY="270" width="290" height="102"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-Kt-VnA" userLabel="Label - day 2">
-                                <rect key="frame" x="304" y="307" width="285" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="304" minY="307" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="RHH-OK-1ch"/>
                                     <constraint firstAttribute="width" constant="285" id="tiK-EZ-0ga"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-kE-Il8" userLabel="Image View - day 3">
-                                <rect key="frame" x="6" y="336" width="290" height="124"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="6" minY="336" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcX-1L-cnb" userLabel="Label - day 3">
-                                <rect key="frame" x="6" y="460" width="285" height="21"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcX-1L-cnb" userLabel="Label - day 3">
+                                <frame key="frameInset" minX="6" minY="460" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="O3J-wm-EgW"/>
                                     <constraint firstAttribute="width" constant="285" id="R8q-tX-kL7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-ZQ-DiP" userLabel="Image View - day 4">
-                                <rect key="frame" x="304" y="336" width="290" height="124"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="304" minY="336" width="290" height="124"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="40" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxK-au-7NT" userLabel="Label - day 4">
-                                <rect key="frame" x="304" y="460" width="286" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="304" minY="460" width="286" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="RnV-P9-0Kv"/>
                                     <constraint firstAttribute="height" constant="21" id="pGa-n8-nNA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-mv-sBZ" userLabel="Image View - day 5">
-                                <rect key="frame" x="6" y="489" width="290" height="102"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="6" minY="489" width="290" height="102"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="50" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-yz-qBj" userLabel="Label - day 5">
-                                <rect key="frame" x="6" y="569" width="285" height="21"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="50" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-yz-qBj" userLabel="Label - day 5">
+                                <frame key="frameInset" minX="6" minY="569" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qQF-WG-eUQ"/>
                                     <constraint firstAttribute="width" constant="285" id="wfn-9s-edj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" tag="6" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-1W-gui" userLabel="Image View - day 6">
-                                <rect key="frame" x="304" y="489" width="290" height="102"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.89820075757575746" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minX="304" minY="489" width="290" height="102"/>
+                                <color key="backgroundColor" red="0.89820075035095215" green="0.89820075035095215" blue="0.89820075035095215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="60" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4Q-2C-UQj" userLabel="Label - day 6">
-                                <rect key="frame" x="304" y="569" width="286" height="21"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="60" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4Q-2C-UQj" userLabel="Label - day 6">
+                                <frame key="frameInset" minX="304" minY="569" width="286" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="doo-Op-EkS"/>
                                     <constraint firstAttribute="width" constant="286" id="eyi-eI-Xdw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-yI-e80" userLabel="Image View - today">
-                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" minY="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="tPA-uX-1CN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-dk-GN2">
-                                <rect key="frame" x="0.0" y="241" width="584" height="21"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TODAY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-dk-GN2">
+                                <frame key="frameInset" minY="241" width="584" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="INr-QZ-YMO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a9h-iS-gu3" firstAttribute="height" secondItem="0Xf-kE-Il8" secondAttribute="height" id="39x-57-XzE"/>
                             <constraint firstItem="0Xf-kE-Il8" firstAttribute="leading" secondItem="fQF-mv-sBZ" secondAttribute="leading" id="3wG-Up-Uxa"/>
@@ -240,94 +228,90 @@
                         <viewControllerLayoutGuide type="bottom" id="5R7-CK-V7U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MmI-om-1fM">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-X2-cNG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="461"/>
-                                <animations/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-X2-cNG">
+                                <frame key="frameInset" width="600" height="461"/>
                                 <connections>
                                     <outlet property="delegate" destination="ILM-9d-Lkj" id="Yd4-Os-5qL"/>
                                 </connections>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="461" width="600" height="75"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
+                                <frame key="frameInset" minY="461" width="600" height="75"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
-                                        <rect key="frame" x="150" y="35" width="300" height="27"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
+                                        <frame key="frameInset" minX="150" minY="35" width="300" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-4N-bgm" userLabel="Button - google">
-                                                <rect key="frame" x="193" y="3" width="22" height="22"/>
-                                                <animations/>
+                                                <frame key="frameInset" minX="193" minY="3" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="google.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="googleClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="pTc-fd-dgu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-Os-E3F" userLabel="Button - twitter">
-                                                <rect key="frame" x="85" y="3" width="22" height="22"/>
-                                                <animations/>
+                                                <frame key="frameInset" minX="85" minY="3" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="twitter.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="twitterClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="CDT-kg-Je6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Ch-Fpy" userLabel="Button - tumblr">
-                                                <rect key="frame" x="139" y="3" width="22" height="22"/>
-                                                <animations/>
+                                                <frame key="frameInset" minX="139" minY="3" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="tumblr.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="tumblrClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="olE-GI-PVP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-T3-hsH" userLabel="Button - facebook">
-                                                <rect key="frame" x="31" y="3" width="22" height="22"/>
-                                                <animations/>
+                                                <frame key="frameInset" minX="31" minY="3" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="facebook.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="facebookClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="Eyd-AP-jkh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeA-XP-mHl" userLabel="Button - pinterest">
-                                                <rect key="frame" x="247" y="3" width="22" height="22"/>
-                                                <animations/>
+                                                <frame key="frameInset" minX="247" minY="3" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="pinetrest.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="pinterestClicked:" destination="ILM-9d-Lkj" eventType="touchUpInside" id="k9k-UE-Y9V"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Deh-Fb-MIa"/>
                                             <constraint firstAttribute="height" constant="27" id="gxJ-nv-NER"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE THIS PHOTO PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-2I-Zpf">
-                                        <rect key="frame" x="150" y="8" width="300" height="21"/>
-                                        <animations/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHARE THIS PHOTO PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-2I-Zpf">
+                                        <frame key="frameInset" minX="150" minY="8" width="300" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="0Oo-he-knd"/>
                                             <constraint firstAttribute="width" constant="300" id="RdP-8f-F1q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="hjF-IE-rgF" secondAttribute="centerX" id="3qt-Bq-hi3"/>
                                     <constraint firstItem="XVk-2I-Zpf" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="8" id="JWE-iU-PTP"/>
@@ -337,8 +321,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5R7-CK-V7U" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="bottom" id="3gK-Nt-2jp"/>
                             <constraint firstItem="fTS-X2-cNG" firstAttribute="leading" secondItem="MmI-om-1fM" secondAttribute="leading" id="4Hi-QF-uqD"/>

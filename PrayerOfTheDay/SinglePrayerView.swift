@@ -24,7 +24,14 @@ class SinglePrayerView: UIView {
             
             prayer.text = thePrayer?.prayer
             prayer.textAlignment = .Center
-            location.text = "\(Utilities.getDayOfTheWeek(thePrayer!.date)), \(thePrayer!.date) - \(thePrayer!.location)"
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date = dateFormatter.dateFromString(thePrayer!.date)
+            dateFormatter.dateFormat = "MM-dd-yyyy"
+            let displayDate = dateFormatter.stringFromDate(date!)
+            
+            location.text = "\(Utilities.getDayOfTheWeek(thePrayer!.date)), \(displayDate) - \(thePrayer!.location)"
             
             if let data = thePrayer?.photo {
                 image.image = UIImage(data: data)
@@ -43,13 +50,15 @@ class SinglePrayerView: UIView {
     }
     
     @IBAction func photoButtonClicked(sender: UIButton) {
-        let targetURL = NSURL(string: "http://photos.ob.org")
+       // let targetURL = NSURL(string: "http://photos.ob.org")
+        let targetURL = NSURL(string: "https://www.ob.org/category/photos/")
         let application=UIApplication.sharedApplication()
         application.openURL(targetURL!);
     }
     
     @IBAction func videoButtonClicked(sender: UIButton) {
-        let targetURL = NSURL(string: "http://videos.ob.org")
+        //let targetURL = NSURL(string: "http://videos.ob.org")
+        let targetURL = NSURL(string: "https://www.ob.org/category/videos/")
         let application = UIApplication.sharedApplication()
         application.openURL(targetURL!);
     }

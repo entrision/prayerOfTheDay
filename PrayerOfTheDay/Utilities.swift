@@ -37,6 +37,53 @@ class Utilities {
         }
     }
     
+    class func editPhotoPrayerFromDictionary(values: NSDictionary, date: String) {
+ 
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName: "PhotoPrayer")
+        let searchQuery = NSPredicate(format: "date == %@", date)
+        
+        fetchRequest.predicate = searchQuery
+        
+        do {
+            let fetchResults = try context.executeFetchRequest(fetchRequest)
+            
+            if (fetchResults.count > 0) {
+               // let prayer = fetchResults[0] as! PhotoPrayer
+                let managedObject = fetchResults[0]
+
+                managedObject.setValue(values.objectForKey("id"), forKey: "serverID")
+                managedObject.setValue(values.objectForKey("prayer"), forKey: "prayer")
+                managedObject.setValue(values.objectForKey("location"), forKey: "location")
+                
+                // no idea why the URL is nested in the .... URL... WHY?!!
+                if let firstURL = values.objectForKey("url") as? NSDictionary {
+                    let webURL = NSURL(string: firstURL.objectForKey("url") as! String)
+                    let data = NSData(contentsOfURL: webURL!)
+                    managedObject.setValue(webURL?.absoluteString, forKey: "photoURL")
+                    managedObject.setValue(data, forKey: "photo")
+                }
+                
+                managedObject.setValue(values.objectForKey("for_date"), forKey: "date")
+                
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print(error)
+                }
+                
+                
+                // return prayer
+            } else {
+                //return nil
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+ 
     class func checkForPrayerOnDate(date: String) -> Bool {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context = appDelegate.managedObjectContext!

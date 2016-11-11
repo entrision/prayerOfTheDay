@@ -37,6 +37,8 @@
 		1F2390D41BCF0F4900C9E1E5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2390D31BCF0F4900C9E1E5 /* FBSDKCoreKit.framework */; };
 		1F2390D61BCF0F5400C9E1E5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2390D51BCF0F5400C9E1E5 /* FBSDKShareKit.framework */; };
 		1F94355D1B063E1500000527 /* PrayerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */; };
+		1F9A81051DD62E2A003CF44D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A81031DD62E2A003CF44D /* Fabric.framework */; };
+		1F9A81061DD62E2A003CF44D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A81041DD62E2A003CF44D /* Crashlytics.framework */; };
 		1F9ED42A1AC4351E00DC2CE7 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */; };
 		1F9ED42B1AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */; };
 		1F9ED42C1AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */; };
@@ -117,6 +119,8 @@
 		1F2390D31BCF0F4900C9E1E5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1F2390D51BCF0F5400C9E1E5 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		1F94355C1B063E1500000527 /* PrayerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerContainerViewController.swift; sourceTree = "<group>"; };
+		1F9A81031DD62E2A003CF44D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		1F9A81041DD62E2A003CF44D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		1F9ED4211AC4351E00DC2CE7 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		1F9ED4221AC4351E00DC2CE7 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1F9ED4231AC4351E00DC2CE7 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -158,8 +162,10 @@
 				1F2390D61BCF0F5400C9E1E5 /* FBSDKShareKit.framework in Frameworks */,
 				1F2390D41BCF0F4900C9E1E5 /* FBSDKCoreKit.framework in Frameworks */,
 				0480FEC31B2099FF00547685 /* UIKit.framework in Frameworks */,
+				1F9A81051DD62E2A003CF44D /* Fabric.framework in Frameworks */,
 				0480FEC11B2099FB00547685 /* SystemConfiguration.framework in Frameworks */,
 				04FC30C61B444C3300609A5B /* Pinterest.framework in Frameworks */,
+				1F9A81061DD62E2A003CF44D /* Crashlytics.framework in Frameworks */,
 				0480FEBF1B2099F300547685 /* Security.framework in Frameworks */,
 				0480FEBD1B2099ED00547685 /* MediaPlayer.framework in Frameworks */,
 				042A32A81BD5927600898717 /* GooglePlus.framework in Frameworks */,
@@ -190,6 +196,8 @@
 		1F006B901AC047A1006CA3AA = {
 			isa = PBXGroup;
 			children = (
+				1F9A81031DD62E2A003CF44D /* Fabric.framework */,
+				1F9A81041DD62E2A003CF44D /* Crashlytics.framework */,
 				1F2390D51BCF0F5400C9E1E5 /* FBSDKShareKit.framework */,
 				1F2390D31BCF0F4900C9E1E5 /* FBSDKCoreKit.framework */,
 				0480FEC21B2099FF00547685 /* UIKit.framework */,
@@ -380,6 +388,7 @@
 				1F006B971AC047A1006CA3AA /* Resources */,
 				41138444EEC3B087A5CB856E /* [CP] Embed Pods Frameworks */,
 				8C97246E25CDAADC4A72D3AA /* [CP] Copy Pods Resources */,
+				1F9A81021DD62E16003CF44D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -512,6 +521,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrayerOfTheDayTests/Pods-PrayerOfTheDayTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1F9A81021DD62E16003CF44D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 855974ef2dd090b3a62caf7ed07d7f0698facd2a a19d00f7686940b5139f4eae75faf2b88e4ba5fdf909eb50aa560cc935367030";
+		};
 		41138444EEC3B087A5CB856E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,7 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8C97246E25CDAADC4A72D3AA /* [CP] Copy Pods Resources */ = {
@@ -584,7 +606,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

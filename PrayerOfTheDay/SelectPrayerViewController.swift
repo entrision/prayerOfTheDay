@@ -32,6 +32,9 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.setUpLabels()
+        
         todayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         day1Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
         day2Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
@@ -61,6 +64,50 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func setUpLabels () {
+        todayLabel.layer.shadowRadius = 1.0
+        todayLabel.layer.masksToBounds = false
+        todayLabel.layer.shadowOffset = CGSizeZero
+        todayLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        todayLabel.layer.shadowOpacity = 1.0
+        
+        day1Label.layer.shadowRadius = 1.0
+        day1Label.layer.masksToBounds = false
+        day1Label.layer.shadowOffset = CGSizeZero
+        day1Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day1Label.layer.shadowOpacity = 1.0
+        
+        day2Label.layer.shadowRadius = 1.0
+        day2Label.layer.masksToBounds = false
+        day2Label.layer.shadowOffset = CGSizeZero
+        day2Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day2Label.layer.shadowOpacity = 1.0
+        
+        day3Label.layer.shadowRadius = 1.0
+        day3Label.layer.masksToBounds = false
+        day3Label.layer.shadowOffset = CGSizeZero
+        day3Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day3Label.layer.shadowOpacity = 1.0
+        
+        day4Label.layer.shadowRadius = 1.0
+        day4Label.layer.masksToBounds = false
+        day4Label.layer.shadowOffset = CGSizeZero
+        day4Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day4Label.layer.shadowOpacity = 1.0
+        
+        day5Label.layer.shadowRadius = 1.0
+        day5Label.layer.masksToBounds = false
+        day5Label.layer.shadowOffset = CGSizeZero
+        day5Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day5Label.layer.shadowOpacity = 1.0
+        
+        day6Label.layer.shadowRadius = 1.0
+        day6Label.layer.masksToBounds = false
+        day6Label.layer.shadowOffset = CGSizeZero
+        day6Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day6Label.layer.shadowOpacity = 1.0
     }
     
     // MARK: - Navigation

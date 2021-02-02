@@ -45,21 +45,28 @@ class SinglePrayerView: UIView {
     
     @IBAction func donateButtonClicked(sender: UIButton) {
         if let targetURL = URL(string: "https://secure.ob.org/site/Donation2?df_id=8000&8000.donation=form1") {
-            UIApplication.shared.openURL(targetURL);
+            if let navigationName = PODNotificationName.NavigatedToWeb.navigationName {
+                NotificationCenter.default.post(Notification(name: navigationName))
+            }
+            UIApplication.shared.open(targetURL, options: [:], completionHandler: nil)
         }
     }
     
     @IBAction func photoButtonClicked(sender: UIButton) {
-       // let targetURL = NSURL(string: "http://photos.ob.org")
         if let targetURL = URL(string: "https://www.ob.org/category/photos/") {
-            UIApplication.shared.openURL(targetURL);
+            if let navigationName = PODNotificationName.NavigatedToWeb.navigationName {
+                NotificationCenter.default.post(Notification(name: navigationName))
+            }
+            UIApplication.shared.open(targetURL, options: [:], completionHandler: nil)
         }
     }
     
     @IBAction func videoButtonClicked(sender: UIButton) {
-        //let targetURL = NSURL(string: "http://videos.ob.org")
         if let targetURL = URL(string: "https://www.ob.org/category/videos/") {
-            UIApplication.shared.openURL(targetURL);
+            if let navigationName = PODNotificationName.NavigatedToWeb.navigationName {
+                NotificationCenter.default.post(Notification(name: navigationName))
+            }
+            UIApplication.shared.open(targetURL, options: [:], completionHandler: nil)
         }
     }
 }

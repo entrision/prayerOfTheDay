@@ -8,6 +8,19 @@
 
 import UIKit
 
+enum PODNotificationName: String {
+    case NavigatedToWeb = "com.prayeroftheday.navigatedtoweb.notification"
+
+    var navigationName: NSNotification.Name? {
+        switch self {
+        case .NavigatedToWeb:
+            return NSNotification.Name(rawValue: self.rawValue)
+        default:
+            return nil
+        }
+    }
+}
+
 class SelectPrayerViewController: OperationBlessingBaseViewController {
 
     @IBOutlet var todayImage: UIImageView!
@@ -28,11 +41,10 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     var prayers = NSMutableDictionary()
     var foundPrayers = 0
     var screenLoaded = false
+    private var didNavigateToWeb = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         self.setUpLabels()
 
         todayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
@@ -49,6 +61,9 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         self.view.addSubview(loadingScreen)
         
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: UIApplication.willEnterForegroundNotification, object: nil)
+        if let navigationName = PODNotificationName.NavigatedToWeb.navigationName {
+            NotificationCenter.default.addObserver(self, selector: #selector(didNavigateToWebNotification(notification:)), name: navigationName, object: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -159,11 +174,11 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         
         //for var i = 0; i < 10; i++ { // max 30 searches
         for i in 0..<10 {
-            if (i > 0) {
+            if i > 0 {
                 let interval:TimeInterval = Double(-1*i*24*60*60)
                 searchDate = currentDate.addingTimeInterval(interval)
-            }
-            else {
+
+            } else {
                 print("this is the current date!!!")
                 
                 let date = NSDate()
@@ -188,7 +203,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
             
             let searchString = formatter.string(from: searchDate as Date)
   
-            if(!Utilities.checkForPrayerOnDate(date: searchString)) {
+            if Utilities.checkForPrayerOnDate(date: searchString) == false {
                 print("!Utilities.checkforprayerondate")
                 let path: String = "\(baseAddress)photos/?date=\(searchString)"
 
@@ -215,6 +230,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                             }
                         }
                     }
+
                 } catch let error as NSError {
                     print(error)
                 }
@@ -239,7 +255,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                     let data: Data =  try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response) as Data
                     
                     if let jsonObj = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? NSArray {
-                        if (jsonObj.count > 0) {
+                        if jsonObj.count > 0 {
                             if let values = jsonObj.object(at: 0) as? NSDictionary {
                                 //Utilities.createPhotoPrayerFromDictionary(values)
                                 Utilities.editPhotoPrayerFromDictionary(values: values, date: searchString)
@@ -255,6 +271,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                             }
                         }
                     }
+
                 } catch let error as NSError {
                     print(error)
                 }
@@ -355,10 +372,18 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     
     //MARK: Notifications
-    
+    @objc
+    func didNavigateToWebNotification(notification: NSNotification) {
+        didNavigateToWeb = true
+    }
+
     @objc func applicationWillEnterForeground(notification: NSNotification) {
+        guard didNavigateToWeb == false else {
+            didNavigateToWeb = false
+            return
+        }
         foundPrayers = 0
-        
+
         let loadingScreen = LoadingView(frame: self.view.frame)
         print("\(String(describing: loadingScreen.view?.frame))")
         loadingScreen.setLoadingLabel(message: "Loading Photo Prayers ...")

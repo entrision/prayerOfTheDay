@@ -32,9 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        if GPPURLHandler.handle(url, sourceApplication: sourceApplication, annotation: annotation) {
-            return true
-        } else if FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL, sourceApplication: sourceApplication, annotation: annotation) {
+//        if GPPURLHandler.handle(url, sourceApplication: sourceApplication, annotation: annotation) {
+//            return true
+//        } else
+        if FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL, sourceApplication: sourceApplication, annotation: annotation) {
             return true
         } else if PDKClient.sharedInstance().handleCallbackURL(url) {
             return true

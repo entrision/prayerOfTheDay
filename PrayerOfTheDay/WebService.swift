@@ -31,7 +31,7 @@ class WebService: NSObject, NSURLConnectionDelegate {
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         //request.setValue(apiToken, forHTTPHeaderField: "Authorization")
-        
+
         NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(),
                                                 completionHandler: { (connResponse: URLResponse?, connData: Data?, connError: Error?) -> Void in
             
@@ -42,14 +42,9 @@ class WebService: NSObject, NSURLConnectionDelegate {
                 } else if let connError = connError {
                     failure(connError as NSError)
                 }
-                
-                
         })
-
     }
-    
-    
-    
+
 /*
     func post(webURL: NSString, arguements: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
         var url:NSURL = NSURL(string: baseAddress + webURL)!

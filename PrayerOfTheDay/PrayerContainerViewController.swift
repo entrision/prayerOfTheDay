@@ -145,19 +145,20 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
                 shareURL = URL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer.photoURL)")!
             }
         
-            UIApplication.shared.openURL(shareURL)
+            UIApplication.shared.open(shareURL, options: [:], completionHandler: nil)
+
         }
     }
     
     @IBAction func googleClicked(sender: AnyObject) {
         
-        if let signIn = GPPSignIn.sharedInstance() {
-            signIn.shouldFetchGooglePlusUser = true
-            signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
-            signIn.delegate = self
-            signIn.scopes = [kGTLAuthScopePlusLogin]
-            signIn.authenticate()
-        }
+//        if let signIn = GPPSignIn.sharedInstance() {
+//            signIn.shouldFetchGooglePlusUser = true
+//            signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
+//            signIn.delegate = self
+//            signIn.scopes = [kGTLAuthScopePlusLogin]
+//            signIn.authenticate()
+//        }
     }
     
     @IBAction func facebookClicked(sender: AnyObject) {
@@ -212,11 +213,11 @@ extension PrayerContainerViewController: GPPSignInDelegate {
     func finished(withAuth auth: GTMOAuth2Authentication!, error: Error!) {
         let prayerDate = sortedPrayers[currentIndex!] as! String
         if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
-            if let shareBuilder = GPPShare.sharedInstance().nativeShareDialog() {
-                shareBuilder.attachImageData(selectedPrayer.photo as Data)
-                shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
-                shareBuilder.open()
-            }
+//            if let shareBuilder = GPPShare.sharedInstance().nativeShareDialog() {
+//                shareBuilder.attachImageData(selectedPrayer.photo as Data)
+//                shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
+//                shareBuilder.open()
+//            }
         }
     }
 

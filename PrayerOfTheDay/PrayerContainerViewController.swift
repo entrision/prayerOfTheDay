@@ -26,7 +26,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         super.viewDidLoad()
 
         theScrollView.delegate = self
-        theScrollView.pagingEnabled = true
+        theScrollView.isPagingEnabled = true
         theScrollView.showsHorizontalScrollIndicator = false
         theScrollView.showsVerticalScrollIndicator = false
         theScrollView.scrollsToTop = false
@@ -41,25 +41,25 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         
         if !viewsLoaded {
             
-            let sortedKeys = (prayers.allKeys as NSArray).sortedArrayUsingSelector(#selector(NSNumber.compare(_:)))
+            let sortedKeys = (prayers.allKeys as NSArray).sortedArray(using: #selector(NSNumber.compare(_:)))
             for key in sortedKeys {
-                sortedPrayers.addObject(prayers.objectForKey(key)!)
+                sortedPrayers.add(prayers.object(forKey: key)!)
             }
             
             let scrollArray = NSMutableArray()
             for i in 0 ..< sortedPrayers.count {
                 let prayerDate = sortedPrayers[i] as! String
-                let thePrayer = Utilities.getPrayerForDate(prayerDate)
+                let thePrayer = Utilities.getPrayerForDate(date: prayerDate)
                 
-                let singlePrayerView = NSBundle.mainBundle().loadNibNamed("SinglePrayerView", owner: self, options: nil)![0] as! SinglePrayerView
+                let singlePrayerView = Bundle.main.loadNibNamed("SinglePrayerView", owner: self, options: nil)?.first as! SinglePrayerView
                 singlePrayerView.frame = theScrollView.bounds
                 singlePrayerView.thePrayer = thePrayer
-                scrollArray.addObject(singlePrayerView)
+                scrollArray.add(singlePrayerView)
             }
             
             for i in 0 ..< scrollArray.count {
                 let theWidth = theScrollView.frame.size.width;
-                let frame = CGRectMake(theWidth*CGFloat(i), 0, theScrollView.frame.size.width, theScrollView.frame.size.height)
+                let frame = CGRect(x: theWidth * CGFloat(i), y: 0, width: theScrollView.frame.size.width, height: theScrollView.frame.size.height)
                 
                 let subview = UIView(frame: frame)
                 subview.addSubview(scrollArray[i] as! UIView)
@@ -67,16 +67,16 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
             }
             
             let width = self.theScrollView.frame.size.width * CGFloat(scrollArray.count)
-            let contentSize = CGSizeMake(width, self.theScrollView.frame.size.height);
+            let contentSize = CGSize(width: width, height: self.theScrollView.frame.size.height);
             theScrollView.contentSize = contentSize;
             
-            scrollToPage(startIndex!)
+            scrollToPage(page: startIndex!)
             viewsLoaded = true
         }
     }
     
     func scrollToPage(page: Int) {
-        let frame = CGRectMake(theScrollView.frame.size.width * CGFloat(page), 0, theScrollView.frame.size.width, theScrollView.frame.size.height)
+        let frame = CGRect(x: theScrollView.frame.size.width * CGFloat(page), y: 0, width: theScrollView.frame.size.width, height: theScrollView.frame.size.height)
         theScrollView.scrollRectToVisible(frame, animated: false)
     }
     
@@ -85,44 +85,45 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
     
     @IBAction func pinterestClicked(sender: AnyObject) {
         
-        PDKClient.sharedInstance().authenticateWithPermissions([PDKClientWritePublicPermissions, PDKClientWriteRelationshipsPermissions, PDKClientWritePrivatePermissions, PDKClientReadPrivatePermissions, PDKClientReadPublicPermissions, PDKClientReadRelationshipsPermissions], withSuccess: { (response) -> Void in
+        PDKClient.sharedInstance().authenticate(withPermissions: [PDKClientWritePublicPermissions, PDKClientWriteRelationshipsPermissions, PDKClientWritePrivatePermissions, PDKClientReadPrivatePermissions, PDKClientReadPublicPermissions, PDKClientReadRelationshipsPermissions], withSuccess: { (response) -> Void in
             let prayerDate = self.sortedPrayers[self.currentIndex!] as! String
-            if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
+            if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
                 let imageUrl = NSURL(string: selectedPrayer.photoURL)
-                PDKPin.pinWithImageURL(imageUrl, link: NSURL(string: ""), suggestedBoardName: "", note: selectedPrayer.prayer, withSuccess: { () -> Void in
+                PDKPin.pin(withImageURL: imageUrl as URL?, link: NSURL(string: "") as URL?, suggestedBoardName: "", note: selectedPrayer.prayer, withSuccess: { () -> Void in
                     var x = 0
-                    x++
+                    x += 1
                 }, andFailure: { (error) -> Void in
-                    print(error.localizedDescription)
+                    print(error?.localizedDescription as Any)
                 })
             }
         }, andFailure: { (error) -> Void in
-            print(error.localizedDescription)
+            print(error?.localizedDescription as Any)
         })
     }
     
     @IBAction func twitterClicked(sender: AnyObject) {
         
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             let prayerDate = sortedPrayers[currentIndex!] as! String
-            if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
+            if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
                 let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 let prayerString = "\(selectedPrayer.location) - \(selectedPrayer.prayer)" as String
-                if prayerString.characters.count > 114 {
-                    twitterSheet.setInitialText("\((prayerString as NSString).substringToIndex(110))...")
+                if prayerString.count > 114 {
+                    twitterSheet.setInitialText("\((prayerString as NSString).substring(to: 110))...")
                 } else {
                     twitterSheet.setInitialText(prayerString)
                 }
                 
                 let image = selectedPrayer.photo
-                twitterSheet.addImage(UIImage(data:image))
+                twitterSheet.add(UIImage(data: image as Data))
                 
-                self.presentViewController(twitterSheet, animated: true, completion: nil)
+                self.present(twitterSheet, animated: true, completion: nil)
             }
+
         } else {
-            let alert = UIAlertController(title: "Twitter", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Twitter", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
          
             
         }
@@ -131,47 +132,51 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
     @IBAction func tumblrClicked(sender: AnyObject) {
         
         let prayerDate = sortedPrayers[currentIndex!] as! String
-        if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-            
-            UIPasteboard.generalPasteboard().images = [UIImage(data: selectedPrayer.photo)!]
+        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
+            let data = selectedPrayer.photo as Data
+            guard let image = UIImage(data: data) else { return }
 
-            var shareURL = NSURL(string: "tumblr://x-callback-url/photo?caption=Daily%20Photo%20Prayer")
-            let canOpenURL = UIApplication.sharedApplication().canOpenURL(shareURL!)
+            UIPasteboard.general.images = [image]
+
+            var shareURL = URL(string: "tumblr://x-callback-url/photo?caption=Daily%20Photo%20Prayer")!
+            let canOpenURL = UIApplication.shared.canOpenURL(shareURL)
 
             if !canOpenURL {
-                shareURL = NSURL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer.photoURL)")
+                shareURL = URL(string: "http://tumblr.com/share?s=&v=3&t=Daily%20Photo%20Prayer&u=\(selectedPrayer.photoURL)")!
             }
         
-            UIApplication.sharedApplication().openURL(shareURL!)
+            UIApplication.shared.openURL(shareURL)
         }
     }
     
     @IBAction func googleClicked(sender: AnyObject) {
         
-        let signIn = GPPSignIn.sharedInstance()
-        signIn.shouldFetchGooglePlusUser = true
-        signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
-        signIn.delegate = self
-        signIn.scopes = [kGTLAuthScopePlusLogin]
-        signIn.authenticate()
+        if let signIn = GPPSignIn.sharedInstance() {
+            signIn.shouldFetchGooglePlusUser = true
+            signIn.clientID = "801561423457-lmampo6rktpa4d6bu32anaftoos1jgqi.apps.googleusercontent.com"
+            signIn.delegate = self
+            signIn.scopes = [kGTLAuthScopePlusLogin]
+            signIn.authenticate()
+        }
     }
     
     @IBAction func facebookClicked(sender: AnyObject) {
         
         let prayerDate = sortedPrayers[currentIndex!] as! String
-        if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
+        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
             
-            if UIApplication.sharedApplication().canOpenURL(NSURL(string: "fb://")!) || SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-                let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo), userGenerated: true)
+            if UIApplication.shared.canOpenURL(URL(string: "fb://")!) || SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+                let photo = FBSDKSharePhoto(image: UIImage(data: selectedPrayer.photo as Data), userGenerated: true)
                 let content = FBSDKSharePhotoContent()
-                content.photos = [photo]
-                FBSDKShareDialog.showFromViewController(self, withContent: content, delegate: self)
+                content.photos = [photo!]
+                FBSDKShareDialog.show(from: self, with: content, delegate: self)
+
             } else {
                 let theContent = FBSDKShareLinkContent()
-                theContent.imageURL = NSURL(string: selectedPrayer.photoURL)
+                theContent.imageURL = URL(string: selectedPrayer.photoURL)
                 theContent.contentTitle = "Daily Photo Prayer"
                 theContent.contentDescription = "\(selectedPrayer.location) - \(selectedPrayer.prayer)"
-                FBSDKShareDialog.showFromViewController(self, withContent: theContent, delegate: self)
+                FBSDKShareDialog.show(from: self, with: theContent, delegate: self)
             }
         }
     }
@@ -179,7 +184,7 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
 
 extension PrayerContainerViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let pageWidth = scrollView.frame.size.width;
         currentIndex = Int(floor((self.theScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1);
@@ -187,37 +192,36 @@ extension PrayerContainerViewController: UIScrollViewDelegate {
 }
 
 extension PrayerContainerViewController: FBSDKSharingDelegate {
+    func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
+    }
+
+    func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
+        print(error as Any)
+        let alert = UIAlertController(title: "Uh oh!", message: "Something went wrong when sharing to Facebook.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    func sharer(sharer: FBSDKSharing!, didCompleteWithResults results: [NSObject : AnyObject]!) {
+    func sharerDidCancel(_ sharer: FBSDKSharing!) {
         
     }
-    
-    func sharer(sharer: FBSDKSharing!, didFailWithError error: NSError!) {
-        print(error)
-        let alert = UIAlertController(title: "Uh oh!", message: "Something went wrong when sharing to Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func sharerDidCancel(sharer: FBSDKSharing!) {
-        
-    }
+
 }
 
 extension PrayerContainerViewController: GPPSignInDelegate {
-    
-    func finishedWithAuth(auth: GTMOAuth2Authentication,  error: NSError ) -> Void{
-        
+    func finished(withAuth auth: GTMOAuth2Authentication!, error: Error!) {
         let prayerDate = sortedPrayers[currentIndex!] as! String
-        if let selectedPrayer = Utilities.getPrayerForDate(prayerDate) {
-            let shareBuilder = GPPShare.sharedInstance().nativeShareDialog()
-            shareBuilder.attachImageData(selectedPrayer.photo)
-            shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
-            shareBuilder.open()
+        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
+            if let shareBuilder = GPPShare.sharedInstance().nativeShareDialog() {
+                shareBuilder.attachImageData(selectedPrayer.photo as Data)
+                shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
+                shareBuilder.open()
+            }
         }
     }
-    
-    func didDisconnectWithError ( error: NSError) -> Void{
+
+    func didDisconnectWithError(_ error: Error!) {
         debugPrint("TEST2")
     }
+
 }

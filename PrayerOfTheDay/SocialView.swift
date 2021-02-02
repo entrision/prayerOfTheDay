@@ -14,7 +14,7 @@ class SocialView: UIView {
         super.awakeFromNib()
         
         layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGrayColor().CGColor
+        layer.borderColor = UIColor.lightGray.cgColor
     }
 
 }

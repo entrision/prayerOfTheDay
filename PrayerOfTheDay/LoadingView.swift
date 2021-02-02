@@ -20,7 +20,7 @@ class LoadingView: UIView {
         super.init(frame: frame)
         let viewTemp = self.loadNib()
         viewTemp.frame = self.bounds
-        viewTemp.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        viewTemp.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         self.view = viewTemp
         
         self.view?.spinnerView.startAnimating()
@@ -31,8 +31,8 @@ class LoadingView: UIView {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
-    
-    override func awakeAfterUsingCoder(aDecoder: NSCoder) -> AnyObject? {
+
+    override func awakeAfter(using coder: NSCoder) -> Any? {
         if self.subviews.count == 0 {
             let viewTemp = self.loadNib()
             viewTemp.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ class LoadingView: UIView {
     }
     
     private func loadNib() -> LoadingView {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let view = bundle.loadNibNamed("LoadingView", owner: nil, options: nil)![0] as! LoadingView
         return view
     }

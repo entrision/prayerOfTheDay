@@ -23,43 +23,43 @@ class SinglePrayerView: UIView {
         didSet {
             
             prayer.text = thePrayer?.prayer
-            prayer.textAlignment = .Center
+            prayer.textAlignment = .center
             
-            let dateFormatter = NSDateFormatter()
+            let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            let date = dateFormatter.dateFromString(thePrayer!.date)
+            let date = dateFormatter.date(from: thePrayer!.date)
             dateFormatter.dateFormat = "MM-dd-yyyy"
-            let displayDate = dateFormatter.stringFromDate(date!)
+            let displayDate = dateFormatter.string(from: date!)
             
-            location.text = "\(Utilities.getDayOfTheWeek(thePrayer!.date)), \(displayDate) - \(thePrayer!.location)"
+            location.text = "\(Utilities.getDayOfTheWeek(date: thePrayer!.date)), \(displayDate) - \(thePrayer!.location)"
             
             if let data = thePrayer?.photo {
-                image.image = UIImage(data: data)
+                image.image = UIImage(data: data as Data)
                 
                 if image.image!.size.height > image.image!.size.width {
-                    image.contentMode = UIViewContentMode.ScaleAspectFit
+                    image.contentMode = UIView.ContentMode.scaleAspectFit
                 }
             }
         }
     }
     
     @IBAction func donateButtonClicked(sender: UIButton) {
-        let targetURL = NSURL(string: "https://secure.ob.org/site/Donation2?df_id=8000&8000.donation=form1")
-        let application=UIApplication.sharedApplication()
-        application.openURL(targetURL!);
+        if let targetURL = URL(string: "https://secure.ob.org/site/Donation2?df_id=8000&8000.donation=form1") {
+            UIApplication.shared.openURL(targetURL);
+        }
     }
     
     @IBAction func photoButtonClicked(sender: UIButton) {
        // let targetURL = NSURL(string: "http://photos.ob.org")
-        let targetURL = NSURL(string: "https://www.ob.org/category/photos/")
-        let application=UIApplication.sharedApplication()
-        application.openURL(targetURL!);
+        if let targetURL = URL(string: "https://www.ob.org/category/photos/") {
+            UIApplication.shared.openURL(targetURL);
+        }
     }
     
     @IBAction func videoButtonClicked(sender: UIButton) {
         //let targetURL = NSURL(string: "http://videos.ob.org")
-        let targetURL = NSURL(string: "https://www.ob.org/category/videos/")
-        let application = UIApplication.sharedApplication()
-        application.openURL(targetURL!);
+        if let targetURL = URL(string: "https://www.ob.org/category/videos/") {
+            UIApplication.shared.openURL(targetURL);
+        }
     }
 }

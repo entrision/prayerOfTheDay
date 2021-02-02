@@ -14,32 +14,33 @@ class WebService: NSObject, NSURLConnectionDelegate {
     
     override init() {
         super.init()
-        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
-        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        baseAddress = settings.objectForKey("baseAddress") as! NSString
+        if let path = Bundle.main.path(forResource: "settings", ofType: "plist"),
+           let settings:NSMutableDictionary = (NSMutableDictionary(contentsOfFile: path) as NSMutableDictionary?) {
+            baseAddress = settings.object(forKey: "baseAddress") as? NSString
+        }
     }
     
     // MARK: - base methods
     // --------------------------------------------------
     
-    func get(webURL: NSString, success: (response: NSURLResponse, data: NSData)->(), failure: (error:NSError)->()) {
+    func get(webURL: NSString, success: (_ response: URLResponse, _ data: NSData)->(), failure: (_ error:NSError)->()) {
         print("in webservice get")
         let url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "GET"
+        let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
+        request.httpMethod = "GET"
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         //request.setValue(apiToken, forHTTPHeaderField: "Authorization")
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(),
-            completionHandler: { (connResponse: NSURLResponse?, connData: NSData?, connError: NSError?) -> Void in
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(),
+                                                completionHandler: { (connResponse: URLResponse?, connData: Data?, connError: Error?) -> Void in
             
-                if let data = connData {
+                if let data = connData,
+                   let connResponse = connResponse {
+                    success(connResponse, data as NSData)
                     
-                    success(response: connResponse!, data: data)
-                    
-                } else {
-                    failure(error: connError!)
+                } else if let connError = connError {
+                    failure(connError as NSError)
                 }
                 
                 

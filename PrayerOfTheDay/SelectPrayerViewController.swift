@@ -34,21 +34,21 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
 
         
         self.setUpLabels()
-        
-        todayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day1Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day2Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day3Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day4Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day5Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
-        day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "prayerClicked:"))
+
+        todayImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day1Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day2Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day3Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day4Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day5Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
+        day6Image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prayerClicked(gesture:))))
         
         let loadingScreen = LoadingView(frame: self.view.frame)
-        loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
+        loadingScreen.setLoadingLabel(message: "Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillEnterForeground:"), name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(notification:)), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,68 +56,68 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if (!screenLoaded) {
             loadPrayers()
         }
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func setUpLabels () {
         todayLabel.layer.shadowRadius = 1.0
         todayLabel.layer.masksToBounds = false
-        todayLabel.layer.shadowOffset = CGSizeZero
-        todayLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        todayLabel.layer.shadowOffset = CGSize.zero
+        todayLabel.layer.shadowColor = UIColor.black.cgColor
         todayLabel.layer.shadowOpacity = 1.0
         
         day1Label.layer.shadowRadius = 1.0
         day1Label.layer.masksToBounds = false
-        day1Label.layer.shadowOffset = CGSizeZero
-        day1Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day1Label.layer.shadowOffset = CGSize.zero
+        day1Label.layer.shadowColor = UIColor.black.cgColor
         day1Label.layer.shadowOpacity = 1.0
         
         day2Label.layer.shadowRadius = 1.0
         day2Label.layer.masksToBounds = false
-        day2Label.layer.shadowOffset = CGSizeZero
-        day2Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day2Label.layer.shadowOffset = CGSize.zero
+        day2Label.layer.shadowColor = UIColor.black.cgColor
         day2Label.layer.shadowOpacity = 1.0
         
         day3Label.layer.shadowRadius = 1.0
         day3Label.layer.masksToBounds = false
-        day3Label.layer.shadowOffset = CGSizeZero
-        day3Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day3Label.layer.shadowOffset = CGSize.zero
+        day3Label.layer.shadowColor = UIColor.black.cgColor
         day3Label.layer.shadowOpacity = 1.0
         
         day4Label.layer.shadowRadius = 1.0
         day4Label.layer.masksToBounds = false
-        day4Label.layer.shadowOffset = CGSizeZero
-        day4Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day4Label.layer.shadowOffset = CGSize.zero
+        day4Label.layer.shadowColor = UIColor.black.cgColor
         day4Label.layer.shadowOpacity = 1.0
         
         day5Label.layer.shadowRadius = 1.0
         day5Label.layer.masksToBounds = false
-        day5Label.layer.shadowOffset = CGSizeZero
-        day5Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day5Label.layer.shadowOffset = CGSize.zero
+        day5Label.layer.shadowColor = UIColor.black.cgColor
         day5Label.layer.shadowOpacity = 1.0
         
         day6Label.layer.shadowRadius = 1.0
         day6Label.layer.masksToBounds = false
-        day6Label.layer.shadowOffset = CGSizeZero
-        day6Label.layer.shadowColor = UIColor.blackColor().CGColor
+        day6Label.layer.shadowOffset = CGSize.zero
+        day6Label.layer.shadowColor = UIColor.black.cgColor
         day6Label.layer.shadowOpacity = 1.0
     }
     
     // MARK: - Navigation
     // -------------------------------------------
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //var singlePrayerVC = segue.destinationViewController as! SinglePrayerViewController
         //singlePrayerVC.prayerDate = sender as! String
         
-        let containerVC = segue.destinationViewController as! PrayerContainerViewController
+        let containerVC = segue.destination as! PrayerContainerViewController
         //containerVC.startDate = sender as! String
         containerVC.startIndex = (sender as! Int)
         containerVC.prayers = prayers
@@ -126,13 +126,13 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     // MARK: - gesture handler
     // -------------------------------------------
-    
+    @objc
     func prayerClicked(gesture: UITapGestureRecognizer) {
         let image:UIView = gesture.view!
         let day = image.tag
         
-        if prayers.objectForKey(day) != nil {
-            self.performSegueWithIdentifier("SinglePrayerSegue", sender: day)
+        if prayers.object(forKey: day) != nil {
+            self.performSegue(withIdentifier: "SinglePrayerSegue", sender: day)
         }
 
         /*
@@ -153,60 +153,62 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         let currentDate = NSDate()
         var searchDate = currentDate
         
-        let path = NSBundle.mainBundle().pathForResource("settings", ofType: "plist")
-        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) as NSMutableDictionary!
-        let baseAddress = settings.objectForKey("baseAddress") as! NSString
+        let path = Bundle.main.path(forResource: "settings", ofType: "plist")
+        let settings:NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!) ?? [:]
+        let baseAddress = settings.object(forKey: "baseAddress") as! NSString
         
-        for var i = 0; i < 10; i++ { // max 30 searches
+        //for var i = 0; i < 10; i++ { // max 30 searches
+        for i in 0..<10 {
             if (i > 0) {
-                let interval:NSTimeInterval = Double(-1*i*24*60*60)
-                searchDate = currentDate.dateByAddingTimeInterval(interval)
+                let interval:TimeInterval = Double(-1*i*24*60*60)
+                searchDate = currentDate.addingTimeInterval(interval)
             }
             else {
                 print("this is the current date!!!")
                 
                 let date = NSDate()
-                let calendar = NSCalendar.currentCalendar()
-                let components = calendar.components([ .Hour, .Minute, .Second], fromDate: date)
-                let hour = components.hour
-                print(hour)
+                let calendar = NSCalendar.current
+                let components = calendar.dateComponents([ .hour, .minute, .second], from: date as Date)
+                if let hour = components.hour {
+                    print(hour as Any)
                 
-                if(hour <= 8){
-                    print("in the continue")
-                    continue
+                    if hour <= 8 {
+                        print("in the continue")
+                        continue
+                    }
                 }
             }
             
-            let formatter = NSDateFormatter()
+            let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             
-            let displayFormatter = NSDateFormatter()
+            let displayFormatter = DateFormatter()
             displayFormatter.dateFormat = "MM-dd-yyyy"
-            let displayString = displayFormatter.stringFromDate(searchDate)
+            let displayString = displayFormatter.string(from: searchDate as Date)
             
-            let searchString = formatter.stringFromDate(searchDate)
+            let searchString = formatter.string(from: searchDate as Date)
   
-            if(!Utilities.checkForPrayerOnDate(searchString)) {
+            if(!Utilities.checkForPrayerOnDate(date: searchString)) {
                 print("!Utilities.checkforprayerondate")
                 let path: String = "\(baseAddress)photos/?date=\(searchString)"
 
                 let url: NSURL = NSURL(string: path)!
-                let request = NSURLRequest(URL: url)
-                var response: NSURLResponse?
+                let request = NSURLRequest(url: url as URL)
+                var response: URLResponse?
                 
                 do {
-                    let data: NSData =  try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+                    let data: NSData =  try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response) as NSData
      
-                    if let jsonObj = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? NSArray {
+                    if let jsonObj = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? NSArray {
                         if (jsonObj.count > 0) {
-                            if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
-                                Utilities.createPhotoPrayerFromDictionary(values)
-                                self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString, displayDate: displayString)
+                            if let values = jsonObj.object(at: 0) as? NSDictionary {
+                                Utilities.createPhotoPrayerFromDictionary(values: values)
+                                self.loadPrayerUIforDayAndDate(day: self.foundPrayers, date: searchString, displayDate: displayString)
                                 
-                                self.prayers.setObject(searchString, forKey: foundPrayers)
-                                foundPrayers++
+                                self.prayers.setObject(searchString, forKey: foundPrayers as NSCopying)
+                                foundPrayers += 1
                                 
-                                if (checkForFullLoad(i)) {
+                                if (checkForFullLoad(iterator: i)) {
                                     print("check for full load break")
                                     break
                                 }
@@ -223,30 +225,30 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
                 prayers.setObject(searchString, forKey: foundPrayers)
                 foundPrayers++
                 */
-                if (checkForFullLoad(i)) {
+                if (checkForFullLoad(iterator: i)) {
                     print("top check for full load")
                     break
                 }
                 let path: String = "\(baseAddress)photos/?date=\(searchString)"
                 
                 let url: NSURL = NSURL(string: path)!
-                let request = NSURLRequest(URL: url)
-                var response: NSURLResponse?
+                let request = NSURLRequest(url: url as URL)
+                var response: URLResponse?
                 
                 do {
-                    let data: NSData =  try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+                    let data: Data =  try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response) as Data
                     
-                    if let jsonObj = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as? NSArray {
+                    if let jsonObj = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? NSArray {
                         if (jsonObj.count > 0) {
-                            if let values = jsonObj.objectAtIndex(0) as? NSDictionary {
+                            if let values = jsonObj.object(at: 0) as? NSDictionary {
                                 //Utilities.createPhotoPrayerFromDictionary(values)
-                                Utilities.editPhotoPrayerFromDictionary(values, date: searchString)
-                                self.loadPrayerUIforDayAndDate(self.foundPrayers, date: searchString, displayDate: displayString)
+                                Utilities.editPhotoPrayerFromDictionary(values: values, date: searchString)
+                                self.loadPrayerUIforDayAndDate(day: self.foundPrayers, date: searchString, displayDate: displayString)
                                 
-                                self.prayers.setObject(searchString, forKey: foundPrayers)
-                                foundPrayers++
+                                self.prayers.setObject(searchString, forKey: foundPrayers as NSCopying)
+                                foundPrayers += 1
                                 
-                                if (checkForFullLoad(i)) {
+                                if (checkForFullLoad(iterator: i)) {
                                     print("check for full load break")
                                     break
                                 }
@@ -272,53 +274,53 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     }
     
     func loadPrayerUIforDayAndDate(day: Int, date: String, displayDate: String) {
-        let selectedPrayer = Utilities.getPrayerForDate(date)
+        let selectedPrayer = Utilities.getPrayerForDate(date: date)
         
         if selectedPrayer != nil  {
 
             switch (day) {
             case 0:
                 if let data = selectedPrayer?.photo {
-                    todayImage.image = UIImage(data: data)
-                    checkForVerticalImage(todayImage)
+                    todayImage.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: todayImage)
                 }
                 todayLabel.text = "TODAY'S PHOTO PRAYER | \(displayDate)"
             case 1:
                 if let data = selectedPrayer?.photo {
-                    day1Image.image = UIImage(data: data)
-                    checkForVerticalImage(day1Image)
+                    day1Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day1Image)
                 }
-                day1Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day1Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             case 2:
                 if let data = selectedPrayer?.photo {
-                    day2Image.image = UIImage(data: data)
-                    checkForVerticalImage(day2Image)
+                    day2Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day2Image)
                 }
-                day2Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day2Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             case 3:
                 if let data = selectedPrayer?.photo {
-                    day3Image.image = UIImage(data: data)
-                    checkForVerticalImage(day3Image)
+                    day3Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day3Image)
                 }
-                day3Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day3Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             case 4:
                 if let data = selectedPrayer?.photo {
-                    day4Image.image = UIImage(data: data)
-                    checkForVerticalImage(day4Image)
+                    day4Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day4Image)
                 }
-                day4Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day4Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             case 5:
                 if let data = selectedPrayer?.photo {
-                    day5Image.image = UIImage(data: data)
-                    checkForVerticalImage(day5Image)
+                    day5Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day5Image)
                 }
-                day5Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day5Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             default:
                 if let data = selectedPrayer?.photo {
-                    day6Image.image = UIImage(data: data)
-                    checkForVerticalImage(day6Image)
+                    day6Image.image = UIImage(data: data as Data)
+                    checkForVerticalImage(imageView: day6Image)
                 }
-                day6Label.text = "\(Utilities.getDayOfTheWeek(date)), \(displayDate)"
+                day6Label.text = "\(Utilities.getDayOfTheWeek(date: date)), \(displayDate)"
             }
         }
     }
@@ -342,11 +344,11 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     func checkForVerticalImage(imageView: UIImageView) {
         if let image = imageView.image {
             if image.size.height > imageView.image!.size.width {
-                imageView.contentMode = UIViewContentMode.ScaleAspectFit
-                imageView.backgroundColor = UIColor.blackColor()
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.backgroundColor = UIColor.black
             } else {
-                imageView.contentMode = UIViewContentMode.ScaleAspectFill
-                imageView.backgroundColor = UIColor.whiteColor()
+                imageView.contentMode = UIView.ContentMode.scaleAspectFill
+                imageView.backgroundColor = UIColor.white
             }
         }
     }
@@ -354,19 +356,18 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
     
     //MARK: Notifications
     
-    func applicationWillEnterForeground(notification: NSNotification) {
+    @objc func applicationWillEnterForeground(notification: NSNotification) {
         foundPrayers = 0
         
         let loadingScreen = LoadingView(frame: self.view.frame)
-        print("\(loadingScreen.view?.frame)")
-        loadingScreen.setLoadingLabel("Loading Photo Prayers ...")
+        print("\(String(describing: loadingScreen.view?.frame))")
+        loadingScreen.setLoadingLabel(message: "Loading Photo Prayers ...")
         loadingScreen.tag = 70
         self.view.addSubview(loadingScreen)
-        
-        dispatch_async(dispatch_get_main_queue(), {
+
+        DispatchQueue.main.async {
             self.loadPrayers()
-        })
-        
+        }
 
         //Commenting until we can find a way to make async request
 //        if screenLoaded {

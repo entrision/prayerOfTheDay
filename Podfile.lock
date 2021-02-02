@@ -23,6 +23,12 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1)
   - PinterestSDK (~> 1.0)
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - PinterestSDK
+    - SSKeychain
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   PinterestSDK: 6c6d92cc749e6520d1b6f1e75410c6fd1d05844c
@@ -30,4 +36,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f299a22e0cfc9edc53af061e5ae735e1087242f4
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.10.1

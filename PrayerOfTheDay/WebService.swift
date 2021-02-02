@@ -23,7 +23,7 @@ class WebService: NSObject, NSURLConnectionDelegate {
     // MARK: - base methods
     // --------------------------------------------------
     
-    func get(webURL: NSString, success: (_ response: URLResponse, _ data: NSData)->(), failure: (_ error:NSError)->()) {
+    func get(webURL: NSString, success: @escaping (_ response: URLResponse, _ data: NSData)->(), failure: @escaping (_ error:NSError)->()) {
         print("in webservice get")
         let url:NSURL = NSURL(string: NSString(format: "@@", baseAddress, webURL) as String)!
         let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL)

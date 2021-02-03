@@ -239,52 +239,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-X2-cNG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="481"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="516"/>
                                 <connections>
                                     <outlet property="delegate" destination="ILM-9d-Lkj" id="Yd4-Os-5qL"/>
                                 </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Pq-3CI" customClass="SocialView" customModule="PrayerOfTheDay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="481" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="516" width="600" height="40"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-IE-rgF" userLabel="View - button view">
-                                        <rect key="frame" x="150" y="35" width="300" height="27"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rf-Os-E3F" userLabel="Button - twitter">
-                                                <rect key="frame" x="101.5" y="3" width="22" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="twitter.png">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Ch-Fpy" userLabel="Button - tumblr">
-                                                <rect key="frame" x="176.5" y="3" width="22" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="tumblr.png">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-T3-hsH" userLabel="Button - facebook">
-                                                <rect key="frame" x="26.5" y="3" width="22" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="facebook.png">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeA-XP-mHl" userLabel="Button - pinterest">
-                                                <rect key="frame" x="251.5" y="3" width="22" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="pinetrest.png">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Deh-Fb-MIa"/>
-                                            <constraint firstAttribute="height" constant="27" id="gxJ-nv-NER"/>
-                                        </constraints>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE THIS PHOTO PRAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-2I-Zpf">
                                         <rect key="frame" x="150" y="8" width="300" height="21"/>
                                         <constraints>
@@ -297,13 +259,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="hjF-IE-rgF" secondAttribute="centerX" id="3qt-Bq-hi3"/>
                                     <constraint firstItem="XVk-2I-Zpf" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="8" id="JWE-iU-PTP"/>
-                                    <constraint firstAttribute="height" constant="75" id="UK3-9P-IQJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="UK3-9P-IQJ"/>
                                     <constraint firstAttribute="centerX" secondItem="XVk-2I-Zpf" secondAttribute="centerX" id="e9T-9M-f7h"/>
-                                    <constraint firstItem="hjF-IE-rgF" firstAttribute="top" secondItem="cZX-Pq-3CI" secondAttribute="top" constant="35" id="jYv-tz-1Kj"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ndw-Hf-aSK" appends="YES" id="YIr-IU-VqH"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -324,14 +288,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygo-NO-Z2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ndw-Hf-aSK">
+                    <connections>
+                        <action selector="shareit:" destination="ILM-9d-Lkj" id="LN6-qk-IeZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="430" y="502"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="facebook.png" width="32" height="32"/>
-        <image name="pinetrest.png" width="32" height="32"/>
-        <image name="tumblr.png" width="32" height="32"/>
-        <image name="twitter.png" width="32" height="32"/>
-    </resources>
 </document>

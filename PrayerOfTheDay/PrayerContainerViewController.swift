@@ -8,7 +8,6 @@
 
 import UIKit
 import Social
-//import PinterestSDK
 
 class PrayerContainerViewController: OperationBlessingBaseViewController {
 
@@ -101,6 +100,16 @@ class PrayerContainerViewController: OperationBlessingBaseViewController {
         })
     }
     
+    @IBAction func shareit(_ sender: Any) {
+        let prayerDate = sortedPrayers[currentIndex!] as! String
+        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
+
+            let activityController = UIActivityViewController(activityItems: [selectedPrayer.photo as Data, "\(selectedPrayer.location) - \(selectedPrayer.prayer)"],
+                                                              applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+        }
+    }
+
     @IBAction func twitterClicked(sender: AnyObject) {
         
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
@@ -209,20 +218,20 @@ extension PrayerContainerViewController: FBSDKSharingDelegate {
 
 }
 
-extension PrayerContainerViewController: GPPSignInDelegate {
-    func finished(withAuth auth: GTMOAuth2Authentication!, error: Error!) {
-        let prayerDate = sortedPrayers[currentIndex!] as! String
-        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
-//            if let shareBuilder = GPPShare.sharedInstance().nativeShareDialog() {
-//                shareBuilder.attachImageData(selectedPrayer.photo as Data)
-//                shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
-//                shareBuilder.open()
-//            }
-        }
-    }
-
-    func didDisconnectWithError(_ error: Error!) {
-        debugPrint("TEST2")
-    }
-
-}
+//extension PrayerContainerViewController: GPPSignInDelegate {
+//    func finished(withAuth auth: GTMOAuth2Authentication!, error: Error!) {
+//        let prayerDate = sortedPrayers[currentIndex!] as! String
+//        if let selectedPrayer = Utilities.getPrayerForDate(date: prayerDate) {
+////            if let shareBuilder = GPPShare.sharedInstance().nativeShareDialog() {
+////                shareBuilder.attachImageData(selectedPrayer.photo as Data)
+////                shareBuilder.setPrefillText("\(selectedPrayer.location) - \(selectedPrayer.prayer)")
+////                shareBuilder.open()
+////            }
+//        }
+//    }
+//
+//    func didDisconnectWithError(_ error: Error!) {
+//        debugPrint("TEST2")
+//    }
+//
+//}

@@ -15,10 +15,9 @@ enum PODNotificationName: String {
         switch self {
         case .NavigatedToWeb:
             return NSNotification.Name(rawValue: self.rawValue)
-        default:
-            return nil
         }
     }
+
 }
 
 class SelectPrayerViewController: OperationBlessingBaseViewController {
@@ -350,14 +349,14 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         
         return false
     }
-    
+
     func removeLoadingView() {
         print("remove loading view")
         let loadingView = self.view.viewWithTag(70)
         loadingView?.removeFromSuperview()
         screenLoaded = true
     }
-    
+
     func checkForVerticalImage(imageView: UIImageView) {
         if let image = imageView.image {
             if image.size.height > imageView.image!.size.width {
@@ -369,8 +368,7 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
             }
         }
     }
-    
-    
+
     //MARK: Notifications
     @objc
     func didNavigateToWebNotification(notification: NSNotification) {
@@ -393,11 +391,6 @@ class SelectPrayerViewController: OperationBlessingBaseViewController {
         DispatchQueue.main.async {
             self.loadPrayers()
         }
-
-        //Commenting until we can find a way to make async request
-//        if screenLoaded {
-//            self.foundPrayers = 0
-//            self.loadPrayers()
-//        }
     }
+
 }
